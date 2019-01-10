@@ -1,9 +1,10 @@
 # current projects
 
-\# copyright Pete Langley 2018
-\#
-\# don't have more than three things on the go at once
-
+```
+# copyright Pete Langley 2018
+#
+# don't have more than three things on the go at once
+```
 
 ## 2) Github User Stats
 - pre-compute the rank and store that in the DB table, then use as key in react
@@ -161,3 +162,11 @@ user's method "functions the same"
 ## 27) Update slash revamp portfolio site to include tech micromaterials
 
 ## 28) Ensure names and styles in python projects adhere to PEP8
+
+## 29) Set `NODE_ENV=production` in all node-backed apps
+
+## 30) Turn Stress in the Speech Stream into a Python module to take in a word and output the reasons why it has a given pronunciation
+- key syllable
+- prefixes
+- affixes
+- origin of the root
