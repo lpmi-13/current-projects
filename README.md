@@ -6,14 +6,6 @@
 # don't have more than three things on the go at once
 ```
 
-## 2) Github User Stats
-- pre-compute the rank and store that in the DB table, then use as key in react
-- include rank in the Models and return ordered by that
-- in search results, show both old/new stats if both exist.
-- add a User screen returning a user view for the clicked user (v2)
-- update data ingested to store every repo merged into (v2)
-- add an Add screen with the ability to enter a user to add to the list (for both original and updated list) (v3)
-
 ## 3) AWL/AVL vocab API
 \# open question as to whether we need an API to just send back 
 \#the lists? Maybe do this after we have the application that uses 
@@ -134,8 +126,6 @@ Micromaterials-API, derivations-API, avl-API)
 ## 20) Audit all sites for Accessibility/UX
 - Fix contrasts, add alt tags to every image
 - Add custom 4XX/5XX error pages
-- Add Favicon to pages
-(Grammarbuffet, Micromaterials, GithubUserStats)
 
 ## 21) Dockerize backends of existing apps
 - AnRedd
@@ -157,9 +147,7 @@ user's method "functions the same"
 ## 26) Content security policy in nginx (script-src)
 - grammarbuffet, done
 - micromaterials, outstanding
-- statsbuffet, outstanding
-
-## 27) Update slash revamp portfolio site to include tech micromaterials
+- statsbuffet, done 
 
 ## 28) Ensure names and styles in python projects adhere to PEP8
 
@@ -170,3 +158,15 @@ user's method "functions the same"
 - prefixes
 - affixes
 - origin of the root
+
+## 31) Update Nginx configs to use proxy_pass instead of rewrite
+
+## 2) Github User Stats
+- update data pipeline to use the gharchive json dumps (v2)
+- add a User screen returning a user view for the clicked user (v2)
+- update data ingested to store every repo merged into (v2)
+- add an Add screen with the ability to enter a user to add to the list (for both original and updated list) (v3)
+
+## 32) Run images through optimizers
+- grammarbuffet
+- lpmi-13.github.io
