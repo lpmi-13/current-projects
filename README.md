@@ -40,6 +40,7 @@ factor10 generator that takes any site and increases everything by
 ## 5) minimals
 - use youtube data api to get data for the whole channel
 -need to revamp the processing pipeline to garbage collect after the conversion is done, also to stop and clean up after 100(?) videos have been processed.
+- need to update pipeline to only care about vowels
 
 ## 6) React Native shaker App
 - need a proof of concept hello world made and installing on a 
@@ -89,7 +90,7 @@ levels
 - package for Windows/Mac/Linux
 - output whether the terms in the analyzed paper fall far from the average stats for each token
 - output outliers for sentiment in terminology (possibly tailor for US-UK english)
-- collate and output stats for baselines based on papers scraped of Arxiv?
+- collate and output stats for baselines based on papers scraped off Arxiv?
 
 ## 1) classroom-css
 - have a local app with the CFG html and css running
@@ -109,6 +110,8 @@ levels
 
 ## 18) Deploy static apps just from Nginx
 - Touchwords
+- SentenceFactory
+- AnRedd (once backend is dockerized)
 - AnTweet (frontend)
 
 ## 19) Audit all sites for security
@@ -162,6 +165,7 @@ user's method "functions the same"
 ## 31) Update Nginx configs to use proxy_pass instead of rewrite
 
 ## 2) Github User Stats
+- add ability to run in dev mode with docker (v2)
 - update data pipeline to use the gharchive json dumps (v2)
 - add a User screen returning a user view for the clicked user (v2)
 - update data ingested to store every repo merged into (v2)
@@ -170,3 +174,39 @@ user's method "functions the same"
 ## 32) Run images through optimizers
 - grammarbuffet
 - lpmi-13.github.io
+
+## 33) Add Minimals to portfolio
+
+## 34) PWA box grid game with preact & CSS Grid
+- https://hackernoon.com/how-to-create-a-pwa-game-using-preact-in-5-steps-tutorial-c8b177037c80
+
+## 35) test out AR with react web app
+- https://github.com/nitin42/React-Web-AR
+
+## 36) mock out turning a github user's contribution data into a sim-city web UI
+- each programming language is a type of zone (commercial, industrial, residential...possibly map to compiled vs scripting vs ??? languages)
+- height is based on number of merged PRs
+- density is based on chronology?
+- area is based on number of repos contributed to
+
+## 37) Attempt to redo text highlighting in textarea
+- https://github.com/keustma/react-highlighted-textarea
+
+## 38) Git micromaterial about reflog
+
+## 39) rap poetry mashup
+- get source for shakespeare at poetrydb.org
+- http://poetrydb.org/author/shakespeare/title (all titles endpoint)
+- http://poetrydb.org/title/A%20Lover's%20Complaint (title endpoint)
+- use Genius API (with python wrapper) to get rap lyrics
+- get all shakespeare, then compute number of words to get a balanced
+sampling by normalizing the same number from other rappers we wanna mashup
+- DON'T FORGET TO REPLACE THE BAD WORDS!!!
+
+## 40) Command line sentence parser
+- start with parse trees
+- look at the source code for ascii art generators in python
+- possibly also linux package?
+- v2 is a full dependency parse
+
+## 41) Add reflog-power to portfolio
