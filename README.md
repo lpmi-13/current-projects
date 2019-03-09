@@ -210,3 +210,9 @@ sampling by normalizing the same number from other rappers we wanna mashup
 - v2 is a full dependency parse
 
 ## 41) Add reflog-power to portfolio
+
+## 42) Academic corpus to analyze form/function stuff
+- how are writers critiquing existing research
+- how are writers hedging
+- what is the frequency distribution of adverbials (compare/contrast, order, frequency, etc)
+- what is the order of clauses, and how is this related to the discourse structure of the arguments/claims made
