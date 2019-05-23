@@ -13,7 +13,7 @@
 \# also, do we actually want to integrate catvar data in this?
 
 - script out expansion (XX, XXS) => { NN/VBP, NNS/VBZ }
-- script out mapping from finer POS tags to course tags (VBP,VBG,VB,VBZ) => (V)
+- script out mapping from finer POS tags to coarse tags (VBP,VBG,VB,VBZ) => (V)
 - need a backend to store the data (depending on structure, may
 prefer postgres as we want relations) 
 - MVP of the quiz is academic texts with certain words (from AWL) removed to be replaced by the users (cloze test)
@@ -171,14 +171,7 @@ user's method "functions the same"
 - update data ingested to store every repo merged into (v2)
 - add an Add screen with the ability to enter a user to add to the list (for both original and updated list) (v3)
 
-## 32) Run images through optimizers
-- grammarbuffet
-- lpmi-13.github.io
-
 ## 33) Add Minimals to portfolio
-
-## 34) PWA box grid game with preact & CSS Grid
-- https://hackernoon.com/how-to-create-a-pwa-game-using-preact-in-5-steps-tutorial-c8b177037c80
 
 ## 35) test out AR with react web app
 - https://github.com/nitin42/React-Web-AR
@@ -191,8 +184,6 @@ user's method "functions the same"
 
 ## 37) Attempt to redo text highlighting in textarea
 - https://github.com/keustma/react-highlighted-textarea
-
-## 38) Git micromaterial about reflog
 
 ## 39) rap poetry mashup
 - get source for shakespeare at poetrydb.org
@@ -216,3 +207,6 @@ sampling by normalizing the same number from other rappers we wanna mashup
 - how are writers hedging
 - what is the frequency distribution of adverbials (compare/contrast, order, frequency, etc)
 - what is the order of clauses, and how is this related to the discourse structure of the arguments/claims made
+
+## 43) PWA grid game for word stress in academic word list words
+- need to find an API to grab word stress...dictionary.com?
