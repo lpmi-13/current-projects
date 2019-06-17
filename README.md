@@ -8,6 +8,8 @@
 
 ## 41) Add reflog-power to portfolio
 
+## 46) Add licenses to all active repos
+
 ## 43) PWA grid game for word stress in academic word list words
 - finalize data structure for this
 - MVP is all the stress data in the initial JS bundle
@@ -216,3 +218,9 @@ sampling by normalizing the same number from other rappers we wanna mashup
 
 ## 45) Complete Dockerized version of bitextor
 - need to run through at least one time with a subset of the data
+
+## 47) Use the Youtube API to pull in a rap song lyrics video
+- display predicted stress pattern for lyrics
+- possibly grab these lyrics from the genius API?
+- MVP might be predicting based on content/function words
+- Eventually want a system that combines auditory data from the actual songs with NLP-based stress prediction algorithms
