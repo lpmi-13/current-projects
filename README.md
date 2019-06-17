@@ -6,6 +6,12 @@
 # don't have more than three things on the go at once
 ```
 
+## 41) Add reflog-power to portfolio
+
+## 43) PWA grid game for word stress in academic word list words
+- finalize data structure for this
+- MVP is all the stress data in the initial JS bundle
+
 ## 3) AWL/AVL vocab API
 \# open question as to whether we need an API to just send back 
 \#the lists? Maybe do this after we have the application that uses 
@@ -108,8 +114,7 @@ levels
 - AnRedd
 - AnWriting?
 
-## 18) Deploy static apps just from Nginx
-- Touchwords
+## 18) Deploy static apps just from Netlify
 - SentenceFactory
 - AnRedd (once backend is dockerized)
 - AnTweet (frontend)
@@ -145,8 +150,6 @@ JS assertions library (chai/expect/enzyme/etc)
 to write a method to replace it...give feedback on whether the
 user's method "functions the same"
 
-## 24) Investigate logging on githubuserstats
-
 ## 26) Content security policy in nginx (script-src)
 - grammarbuffet, done
 - micromaterials, outstanding
@@ -161,8 +164,6 @@ user's method "functions the same"
 - prefixes
 - affixes
 - origin of the root
-
-## 31) Update Nginx configs to use proxy_pass instead of rewrite
 
 ## 2) Github User Stats
 - add ability to run in dev mode with docker (v2)
@@ -200,7 +201,6 @@ sampling by normalizing the same number from other rappers we wanna mashup
 - possibly also linux package?
 - v2 is a full dependency parse
 
-## 41) Add reflog-power to portfolio
 
 ## 42) Academic corpus to analyze form/function stuff
 - how are writers critiquing existing research
@@ -208,5 +208,11 @@ sampling by normalizing the same number from other rappers we wanna mashup
 - what is the frequency distribution of adverbials (compare/contrast, order, frequency, etc)
 - what is the order of clauses, and how is this related to the discourse structure of the arguments/claims made
 
-## 43) PWA grid game for word stress in academic word list words
-- need to find an API to grab word stress...dictionary.com?
+
+## 44) Use pre-computed word vectors to highlight weird/unexpected word usage
+- try with both ELMo and FastText vectors
+(are vectors/embeddings the best way to check this? We essentially just need contextualized word information for the same word across two corpora)
+- need a semi-mid sized corpus to investigate (github readme corpus?)
+
+## 45) Complete Dockerized version of bitextor
+- need to run through at least one time with a subset of the data
