@@ -224,3 +224,7 @@ sampling by normalizing the same number from other rappers we wanna mashup
 - possibly grab these lyrics from the genius API?
 - MVP might be predicting based on content/function words
 - Eventually want a system that combines auditory data from the actual songs with NLP-based stress prediction algorithms
+
+## 48) See if any alternate patterns are appropriate for the service workers
+- network then cache for everything?
+- never cache for sw, always cache for others?
