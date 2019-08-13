@@ -6,9 +6,12 @@
 # don't have more than three things on the go at once
 ```
 
-## 41) Add reflog-power to portfolio
+## 33) Add Minimals to portfolio
 
-## 46) Add licenses to all active repos
+## 39) rap poetry mashup
+- get all shakespeare, then compute number of words to get a balanced
+sampling by normalizing the same number from other rappers we wanna mashup
+- DON'T FORGET TO REPLACE THE BAD WORDS!!!
 
 ## 43) PWA grid game for word stress in academic word list words
 - finalize data structure for this
@@ -136,6 +139,7 @@ Micromaterials-API, derivations-API, avl-API)
 ## 20) Audit all sites for Accessibility/UX
 - Fix contrasts, add alt tags to every image
 - Add custom 4XX/5XX error pages
+- Add labels for all inputs
 
 ## 21) Dockerize backends of existing apps
 - AnRedd
@@ -153,7 +157,6 @@ to write a method to replace it...give feedback on whether the
 user's method "functions the same"
 
 ## 26) Content security policy in nginx (script-src)
-- grammarbuffet, done
 - micromaterials, outstanding
 - statsbuffet, done 
 
@@ -174,7 +177,6 @@ user's method "functions the same"
 - update data ingested to store every repo merged into (v2)
 - add an Add screen with the ability to enter a user to add to the list (for both original and updated list) (v3)
 
-## 33) Add Minimals to portfolio
 
 ## 35) test out AR with react web app
 - https://github.com/nitin42/React-Web-AR
@@ -188,14 +190,6 @@ user's method "functions the same"
 ## 37) Attempt to redo text highlighting in textarea
 - https://github.com/keustma/react-highlighted-textarea
 
-## 39) rap poetry mashup
-- get source for shakespeare at poetrydb.org
-- http://poetrydb.org/author/shakespeare/title (all titles endpoint)
-- http://poetrydb.org/title/A%20Lover's%20Complaint (title endpoint)
-- use Genius API (with python wrapper) to get rap lyrics
-- get all shakespeare, then compute number of words to get a balanced
-sampling by normalizing the same number from other rappers we wanna mashup
-- DON'T FORGET TO REPLACE THE BAD WORDS!!!
 
 ## 40) Command line sentence parser
 - start with parse trees
@@ -216,9 +210,6 @@ sampling by normalizing the same number from other rappers we wanna mashup
 (are vectors/embeddings the best way to check this? We essentially just need contextualized word information for the same word across two corpora)
 - need a semi-mid sized corpus to investigate (github readme corpus?)
 
-## 45) Complete Dockerized version of bitextor
-- need to run through at least one time with a subset of the data
-
 ## 47) Use the Youtube API to pull in a rap song lyrics video
 - display predicted stress pattern for lyrics
 - possibly grab these lyrics from the genius API?
@@ -228,3 +219,7 @@ sampling by normalizing the same number from other rappers we wanna mashup
 ## 48) See if any alternate patterns are appropriate for the service workers
 - network then cache for everything?
 - never cache for sw, always cache for others?
+
+## 49) Create simple micromaterials for call/bind/apply
+
+## 50) Make a gatsby site for https://github.com/florinpop17/app-ideas
