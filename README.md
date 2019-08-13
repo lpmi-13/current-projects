@@ -6,8 +6,6 @@
 # don't have more than three things on the go at once
 ```
 
-## 33) Add Minimals to portfolio
-
 ## 39) rap poetry mashup
 - get all shakespeare, then compute number of words to get a balanced
 sampling by normalizing the same number from other rappers we wanna mashup
@@ -223,3 +221,18 @@ user's method "functions the same"
 ## 49) Create simple micromaterials for call/bind/apply
 
 ## 50) Make a gatsby site for https://github.com/florinpop17/app-ideas
+
+## 51) Compare spoken interview prep to "average" developer corpus
+- train speech-to-text model for one specific user
+- user speaks in response to written prompts for common interview questions
+- collect corpus of developer podcasts (possibly cluster by topic/level?)
+- compare lexico-grammatical features of user's response to features of the corpus
+(vocabulary, lexical density, length of response (applicable?), expected frequency counts for common terms (data, function, etc?), amount of subordinate structure...
+- compare suprasegmental features of user's response to corpus (feasible?)
+(intonation patterns, speed of response, stress patterns (these should be predictable at the word level perhaps)
+
+## 52) Build out gatsby site for earth hero
+- forms (possibly tricky...free tier is 100 responses, but we might not need this)
+- email (could wire up to serverless functions maybe?)
+- JS features (carousels and such)
+- all content with *similar* styling
