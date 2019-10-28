@@ -6,11 +6,6 @@
 # don't have more than three things on the go at once
 ```
 
-## 39) rap poetry mashup
-- get all shakespeare, then compute number of words to get a balanced
-sampling by normalizing the same number from other rappers we wanna mashup
-- DON'T FORGET TO REPLACE THE BAD WORDS!!!
-
 ## 43) PWA grid game for word stress in academic word list words
 - finalize data structure for this
 - MVP is all the stress data in the initial JS bundle
@@ -111,6 +106,7 @@ levels
 - check expected file sha1 hashes as well as commit presence
 
 ## 16) Write tests for all React projects
+- especially a11y tests with cypress
 
 ## 17) Rewrite previous projects in React
 - AnTweet
@@ -138,6 +134,7 @@ Micromaterials-API, derivations-API, avl-API)
 - Fix contrasts, add alt tags to every image
 - Add custom 4XX/5XX error pages
 - Add labels for all inputs
+- make sure all frontends have cypress a11y tests
 
 ## 21) Dockerize backends of existing apps
 - AnRedd
@@ -236,3 +233,24 @@ user's method "functions the same"
 - email (could wire up to serverless functions maybe?)
 - JS features (carousels and such)
 - all content with *similar* styling
+
+## 53) Browser-based micromaterial to test out async promise strategies
+
+## 54) Create spectrogram analysis to identify stress/pitch/volume
+- can we get this information from spectrograms of words? (probably not)
+- can we get this information from spectrograms of longer phrases? (maybe)
+- can we just mark where these peak a certain delta above the mean? (definitely)
+- can we then use those data points to train a system to identify the stresses
+in an extended audio sample? (interesting question)
+- eventually we could just use that to create a mobile app the vibrates along
+with the stress in a TED talk in a mobile app (react native, naturally!)
+
+## 55) Create a testing framework to demonstrate good/bad tech interview questions
+- is the question (either in F2F interview or tech test) testing what you think it is?
+
+## 56) Create corpus of "dev talk" from podcast transcripts
+- Find good representative dev podcasts (probably FE to start)
+- write script to get transcripts (and possibly audio as well)
+- Create corpus of "dev talk"
+
+## 57) Recreate CV in HTML with Gatsby
