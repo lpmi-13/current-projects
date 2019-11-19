@@ -254,3 +254,50 @@ with the stress in a TED talk in a mobile app (react native, naturally!)
 - Create corpus of "dev talk"
 
 ## 57) Recreate CV in HTML with Gatsby
+
+## 58) Create simple tIPnder web app
+- offline-first SPA with preact
+- swipe left for private network IP, right for public IP range
+- immediate feedback on whether you were correct
+
+## 59) Use template to redo demo of IaC in Digital Ocean
+- https://github.com/gordonmurray/packer_ansible_inspec_terraform_aws
+- ...but do it with Digital Ocean instead of AWS
+
+## 60) Use vector comparison to find poorly written exam distractors
+- maybe BERT would be better for this, not sure
+- get data set of exams with questions/distractors
+- is it possible to get a data set with item analysis and also data on which
+questions students got correct/incorrect?
+
+## 61) Even simpler IP and Bitmask slider visualization
+- 255.255.248.0   in binary: 11111111 11111111 11111000 00000000
+                           -----------------------------------
+                           I counted twenty-one 1s             -------> /21
+- make a slider UI and just update the values as the user slides the values
+to the left or right (probably put the click handler on the entire div
+- possibly add feature to update the network address as the values change:
+128.42.5.4      in binary: 10000000 00101010 00000101 00000100
+255.255.248.0   in binary: 11111111 11111111 11111000 00000000
+                           ----------------------------------- [Logical AND]
+                           10000000 00101010 00000000 00000000 ------> 128.42.0.0
+- possibly also add feature to calculate broadcast address:
+128.42.5.4      in binary: 10000000 00101010 00000101 00000100
+Host bit mask            : 00000000 00000000 00000hhh hhhhhhhh
+                           ----------------------------------- [Force host bits]
+                           10000000 00101010 00000111 11111111 ----> 128.42.7.255
+- also possibly add calculation of maximum number of hosts in a subnet:
+To find the maximum number of hosts, look at the number of binary bits in the host number above. The easiest way to do this is to subtract the netmask length from 32 (number of bits in an IPv4 address). This gives you the number of host bits in the address. At that point...
+
+Maximum Number of hosts = 2\*\*(32 - netmask\_length) - 2
+
+The reason we subtract 2 above is because the all-ones and all-zeros host numbers are reserved. The all-zeros host number is the network number; the all-ones host number is the broadcast address.
+
+Using the example subnet of 128.42.0.0/21 above, the number of hosts is...
+
+Maximum Number of hosts = 2\*\*(32 - 21) - 2 = 2048 - 2 = 2046
+
+- ...I also realize this isn't in any way "simpler", so just do whatever is feasible, based on https://networkengineering.stackexchange.com/questions/7106/how-do-you-calculate-the-prefix-network-subnet-and-host-numbers
+
+## 62) Static app visualizer for whether two hosts are on the same network
+- same reference as above, just further down the page
