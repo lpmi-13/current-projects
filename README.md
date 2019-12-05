@@ -5,10 +5,16 @@
 #
 # don't have more than three things on the go at once
 ```
+## 52) Build out gatsby site for earth hero
+- forms (possibly tricky...free tier is 100 responses, but we might not need this)
+- email (could wire up to serverless functions maybe?)
+- JS features (carousels and such)
+- all content with *similar* styling
 
-## 43) PWA grid game for word stress in academic word list words
-- finalize data structure for this
-- MVP is all the stress data in the initial JS bundle
+## 58) Create simple tIPnder web app
+- offline-first SPA with preact
+- swipe left for private network IP, right for public IP range
+- immediate feedback on whether you were correct
 
 ## 3) AWL/AVL vocab API
 \# open question as to whether we need an API to just send back 
@@ -228,11 +234,6 @@ user's method "functions the same"
 - compare suprasegmental features of user's response to corpus (feasible?)
 (intonation patterns, speed of response, stress patterns (these should be predictable at the word level perhaps)
 
-## 52) Build out gatsby site for earth hero
-- forms (possibly tricky...free tier is 100 responses, but we might not need this)
-- email (could wire up to serverless functions maybe?)
-- JS features (carousels and such)
-- all content with *similar* styling
 
 ## 53) Browser-based micromaterial to test out async promise strategies
 
@@ -255,14 +256,6 @@ with the stress in a TED talk in a mobile app (react native, naturally!)
 
 ## 57) Recreate CV in HTML with Gatsby
 
-## 58) Create simple tIPnder web app
-- offline-first SPA with preact
-- swipe left for private network IP, right for public IP range
-- immediate feedback on whether you were correct
-
-## 59) Use template to redo demo of IaC in Digital Ocean
-- https://github.com/gordonmurray/packer_ansible_inspec_terraform_aws
-- ...but do it with Digital Ocean instead of AWS
 
 ## 60) Use vector comparison to find poorly written exam distractors
 - maybe BERT would be better for this, not sure
@@ -301,3 +294,7 @@ Maximum Number of hosts = 2\*\*(32 - 21) - 2 = 2048 - 2 = 2046
 
 ## 62) Static app visualizer for whether two hosts are on the same network
 - same reference as above, just further down the page
+
+## 63) Browser based interface to give practice solving recursion problems
+- good programmers aren't better at this because they're smarter, just because they've had more practice doing it.
+- generate 100 or so similar recursion problems (or possibly a new one every hour?) and have users solve it via coding in the UI
