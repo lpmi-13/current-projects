@@ -8,8 +8,6 @@
 ## 52) Build out gatsby site for earth hero
 - forms (possibly tricky...free tier is 100 responses, but we might not need this)
 - email (could wire up to serverless functions maybe?)
-- JS features (carousels and such)
-- all content with *similar* styling
 
 ## 58) Create simple tIPnder web app
 - offline-first SPA with preact
@@ -298,3 +296,20 @@ Maximum Number of hosts = 2\*\*(32 - 21) - 2 = 2048 - 2 = 2046
 ## 63) Browser based interface to give practice solving recursion problems
 - good programmers aren't better at this because they're smarter, just because they've had more practice doing it.
 - generate 100 or so similar recursion problems (or possibly a new one every hour?) and have users solve it via coding in the UI
+
+## 64) Put the n-gram tracing approach to authorship attribution in a docker container
+- possibly put it somewhere behind a web interface where we can fire texts at it?
+- use python
+
+## 65) Create a native app to record speech and stretch the octave range
+- English usually involves between 2-2.5 octaves in normal conversational speech
+- Some cultures don't use very wide octave ranges (whether out of politeness or habit)
+- The lack of range can suggest things to English listeners (boredom/disinterest/etc), so should not be unconsciously repeated from 1st culture out of habit.
+
+## 66) Remake the python conversational bot treasure hunt via web interface
+- Needs a log in, or no way to remember where the user "left off"
+- should be enough to keep the same script and put users into a simple postgres DB
+- possibly consider using serverless functions for auth
+
+## 67) App and/or website with peer-reviews simplifications of scientific concepts
+- Summaries that are gold standard
