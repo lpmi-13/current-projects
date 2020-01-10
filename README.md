@@ -6,10 +6,11 @@
 # don't have more than three things on the go at once
 ```
 ## 52) Build out gatsby site for earth hero
-- forms (possibly tricky...free tier is 100 responses, but we might not need this)
-- email (could wire up to serverless functions maybe?)
+- style privacy policy page
+- fix console warnings
 
 ## 58) Create simple tIPnder web app
+- get a mockup in figma
 - offline-first SPA with preact
 - swipe left for private network IP, right for public IP range
 - immediate feedback on whether you were correct
@@ -70,6 +71,7 @@ syllables. The list needs to be filterable on number of syllables
 as well as which syllable has the primary stress (there could be two stresses for 4-syllable words, so possible major and minor stress)
 - need a way to procedurally generate a path through squares in a
 react UI (MVP is squares, eventually we do hexagons)
+- possibly use https://github.com/Hellenic/react-hexgrid
 - need to map the stress patterns onto these hexagons
 
 ## 10) Pypobot
@@ -170,6 +172,7 @@ user's method "functions the same"
 - origin of the root
 
 ## 2) Github User Stats
+- possibly do all this via gatsby and generate a page per search result?
 - add ability to run in dev mode with docker (v2)
 - update data pipeline to use the gharchive json dumps (v2)
 - add a User screen returning a user view for the clicked user (v2)
@@ -313,3 +316,11 @@ Maximum Number of hosts = 2\*\*(32 - 21) - 2 = 2048 - 2 = 2046
 
 ## 67) App and/or website with peer-reviews simplifications of scientific concepts
 - Summaries that are gold standard
+
+## 68) Cards Against How Might We - web app version
+- put https://github.com/BethFox/CaHMW online as a webapp
+
+## 69) Test out training Text to Speech Model
+- play around with https://github.com/r9y9/wavenet_vocoder to see how much data is needed for a passable TTS model
+- possibly get single speaker samples from youtube
+- identify costs for running something in the cloud for a unique user
