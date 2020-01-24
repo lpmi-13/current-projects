@@ -5,15 +5,7 @@
 #
 # don't have more than three things on the go at once
 ```
-## 52) Build out gatsby site for earth hero
-- style privacy policy page
-- fix console warnings
 
-## 58) Create simple tIPnder web app
-- get a mockup in figma
-- offline-first SPA with preact
-- swipe left for private network IP, right for public IP range
-- immediate feedback on whether you were correct
 
 ## 3) AWL/AVL vocab API
 \# open question as to whether we need an API to just send back 
@@ -210,6 +202,7 @@ user's method "functions the same"
 ## 44) Use pre-computed word vectors to highlight weird/unexpected word usage
 - try with both ELMo and FastText vectors
 (are vectors/embeddings the best way to check this? We essentially just need contextualized word information for the same word across two corpora)
+- do the same, but with Bert
 - need a semi-mid sized corpus to investigate (github readme corpus?)
 
 ## 47) Use the Youtube API to pull in a rap song lyrics video
@@ -257,6 +250,8 @@ with the stress in a TED talk in a mobile app (react native, naturally!)
 
 ## 57) Recreate CV in HTML with Gatsby
 
+## 58) Make tIPnder web app a PWA
+- offline-first SPA with preact
 
 ## 60) Use vector comparison to find poorly written exam distractors
 - maybe BERT would be better for this, not sure
@@ -324,3 +319,46 @@ Maximum Number of hosts = 2\*\*(32 - 21) - 2 = 2048 - 2 = 2046
 - play around with https://github.com/r9y9/wavenet_vocoder to see how much data is needed for a passable TTS model
 - possibly get single speaker samples from youtube
 - identify costs for running something in the cloud for a unique user
+
+## 70) Blog post about using TTS to automate micromaterials in a foundations ESL course
+
+## 71) Investigate ability to automate creation of videos of an automated system creating programming micromaterials
+- eg, creating incomplete recursive functions
+- then after a time delay, showing the solution
+- unclear what other input would be helpful/useful during this visual input...sounds?
+
+## 72) Use Kialo to generate compare/contrast materials
+- still need to export discussions manually (boo)
+- Kialo-Parser only works with python2 (possibly PR?)
+- generate a more robust data structure to ingest into a web app
+- create simple web interface to show one argument, and have users select the either a supporting statement or a counterstatement (possibly add adverbial conjunctions?)
+
+## 73) estimate AWS costs of different infra configs
+- follow https://medium.com/@bjorn_248/estimating-aws-infrastructure-cost-from-terraform-templates-307fae53e4bd
+- possibly pull everything into one repo
+- at the very least have some sample exercises that can be run against an existing AWS cloud environment
+
+## 74) Implement BookFace as a mobile app in React Native
+- Facebook, but no data leaves
+- A place to write notes in a well-designed format about family/friends
+- Set reminders for yourself to send Xmas cards, birthday cards, etc
+- Instead of people adding you, only you add people
+- Kind of like a digital rolodex
+
+## 75) Collaborate with Julia (B@rk) on using the e-zines to fuel TechEd materials
+
+## 76) Set up static site to track micromaterials on github
+- possibly gatsby (needs a search though...)
+https://www.gatsbyjs.org/packages/gatsby-plugin-local-search/
+https://www.gatsbyjs.org/docs/adding-search-with-js-search/
+- use GitHub API to pull down all issues labelled as micromaterials
+- filter for bad words
+
+## 77) map out different tech skill areas to target with TechEd
+- networking
+- security
+- a11y
+- functions
+- design
+- vocab
+- documentation(?)
