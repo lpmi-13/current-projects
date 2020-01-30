@@ -5,7 +5,12 @@
 #
 # don't have more than three things on the go at once
 ```
+## 70) Blog post about using TTS to automate micromaterials in a foundations ESL course
 
+## 73) estimate AWS costs of different infra configs
+- follow https://medium.com/@bjorn_248/estimating-aws-infrastructure-cost-from-terraform-templates-307fae53e4bd
+- possibly pull everything into one repo
+- at the very least have some sample exercises that can be run against an existing AWS cloud environment
 
 ## 3) AWL/AVL vocab API
 \# open question as to whether we need an API to just send back 
@@ -250,9 +255,6 @@ with the stress in a TED talk in a mobile app (react native, naturally!)
 
 ## 57) Recreate CV in HTML with Gatsby
 
-## 58) Make tIPnder web app a PWA
-- offline-first SPA with preact
-
 ## 60) Use vector comparison to find poorly written exam distractors
 - maybe BERT would be better for this, not sure
 - get data set of exams with questions/distractors
@@ -320,8 +322,6 @@ Maximum Number of hosts = 2\*\*(32 - 21) - 2 = 2048 - 2 = 2046
 - possibly get single speaker samples from youtube
 - identify costs for running something in the cloud for a unique user
 
-## 70) Blog post about using TTS to automate micromaterials in a foundations ESL course
-
 ## 71) Investigate ability to automate creation of videos of an automated system creating programming micromaterials
 - eg, creating incomplete recursive functions
 - then after a time delay, showing the solution
@@ -333,10 +333,6 @@ Maximum Number of hosts = 2\*\*(32 - 21) - 2 = 2048 - 2 = 2046
 - generate a more robust data structure to ingest into a web app
 - create simple web interface to show one argument, and have users select the either a supporting statement or a counterstatement (possibly add adverbial conjunctions?)
 
-## 73) estimate AWS costs of different infra configs
-- follow https://medium.com/@bjorn_248/estimating-aws-infrastructure-cost-from-terraform-templates-307fae53e4bd
-- possibly pull everything into one repo
-- at the very least have some sample exercises that can be run against an existing AWS cloud environment
 
 ## 74) Implement BookFace as a mobile app in React Native
 - Facebook, but no data leaves
@@ -362,3 +358,14 @@ https://www.gatsbyjs.org/docs/adding-search-with-js-search/
 - design
 - vocab
 - documentation(?)
+
+## 78) Investigate ways to automate testing with a screenreader
+- could we use Speech to Text models to analyze...something...?
+- make sure it doesn't read the whole thing at once
+
+## 79) Mock up professional website/blog example
+- http://jaspermontana.com/
+- try out with gatsby
+- choose nice hero image
+- include twitter feed on right side
+- about/research/media/publications
