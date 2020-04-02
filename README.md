@@ -5,12 +5,31 @@
 #
 # don't have more than three things on the go at once
 ```
-## 70) Blog post about using TTS to automate micromaterials in a foundations ESL course
 
-## 73) estimate AWS costs of different infra configs
-- follow https://medium.com/@bjorn_248/estimating-aws-infrastructure-cost-from-terraform-templates-307fae53e4bd
-- possibly pull everything into one repo
-- at the very least have some sample exercises that can be run against an existing AWS cloud environment
+## 82) Update Grammarbuffet
+- add a11y tests
+
+## 81) Update portfolio (lpmi-13.github.io)
+- add security and a11y tests
+- add tiles for rhymez and stress-match
+- add tile for ipinder
+
+## 2) Github User Stats
+
+tech stuff
+- possibly do all this via gatsby and generate a page per search result?
+- add ability to run in dev mode with docker (v2)
+
+UI stuff
+- add a User screen returning a user view for the clicked user (v2)
+- show graphic with different sizes spheres representing number of commits per unique repo (eg, pypobot cretes many very small circles)
+
+- add an Add screen with the ability to enter a user to add to the list (for both original and updated list) (v3)
+
+
+#############################################################
+#############################################################
+#############################################################
 
 ## 3) AWL/AVL vocab API
 \# open question as to whether we need an API to just send back 
@@ -29,14 +48,11 @@ differences...possibly yield a higher dataset (since we're not concerned with th
 for this particular app)
 - eventually would be nice to track logins and aggregate progress
 
-
-#############################################################
-#############################################################
-#############################################################
-
 ## 8) Parson Problems
 - start with python and javascript
-- need MVP with three different ones to present in a frontend
+- need MVP with three different ones just hardcoded to present in a frontend
+- eventually move to grabbing from github repos
+- add ability to filter by "complexity" if possible
 - need to give feedback on whether successfully reordered or not
 
 ## 4) put up factor10 to a factor of 10 (potentially just make a
@@ -168,14 +184,6 @@ user's method "functions the same"
 - affixes
 - origin of the root
 
-## 2) Github User Stats
-- possibly do all this via gatsby and generate a page per search result?
-- add ability to run in dev mode with docker (v2)
-- update data pipeline to use the gharchive json dumps (v2)
-- add a User screen returning a user view for the clicked user (v2)
-- update data ingested to store every repo merged into (v2)
-- add an Add screen with the ability to enter a user to add to the list (for both original and updated list) (v3)
-
 
 ## 35) test out AR with react web app
 - https://github.com/nitin42/React-Web-AR
@@ -185,9 +193,11 @@ user's method "functions the same"
 - height is based on number of merged PRs
 - density is based on chronology?
 - area is based on number of repos contributed to
+- make this into a VR area? like a landscape...commits as height, contributors as area, forks as roads...
 
 ## 37) Attempt to redo text highlighting in textarea
 - https://github.com/keustma/react-highlighted-textarea
+- https://github.com/mcamac/react-text-annotate
 
 
 ## 40) Command line sentence parser
@@ -261,39 +271,11 @@ with the stress in a TED talk in a mobile app (react native, naturally!)
 - is it possible to get a data set with item analysis and also data on which
 questions students got correct/incorrect?
 
-## 61) Even simpler IP and Bitmask slider visualization
-- 255.255.248.0   in binary: 11111111 11111111 11111000 00000000
-                           -----------------------------------
-                           I counted twenty-one 1s             -------> /21
-- make a slider UI and just update the values as the user slides the values
-to the left or right (probably put the click handler on the entire div
-- possibly add feature to update the network address as the values change:
-128.42.5.4      in binary: 10000000 00101010 00000101 00000100
-255.255.248.0   in binary: 11111111 11111111 11111000 00000000
-                           ----------------------------------- [Logical AND]
-                           10000000 00101010 00000000 00000000 ------> 128.42.0.0
-- possibly also add feature to calculate broadcast address:
-128.42.5.4      in binary: 10000000 00101010 00000101 00000100
-Host bit mask            : 00000000 00000000 00000hhh hhhhhhhh
-                           ----------------------------------- [Force host bits]
-                           10000000 00101010 00000111 11111111 ----> 128.42.7.255
-- also possibly add calculation of maximum number of hosts in a subnet:
-To find the maximum number of hosts, look at the number of binary bits in the host number above. The easiest way to do this is to subtract the netmask length from 32 (number of bits in an IPv4 address). This gives you the number of host bits in the address. At that point...
-
-Maximum Number of hosts = 2\*\*(32 - netmask\_length) - 2
-
-The reason we subtract 2 above is because the all-ones and all-zeros host numbers are reserved. The all-zeros host number is the network number; the all-ones host number is the broadcast address.
-
-Using the example subnet of 128.42.0.0/21 above, the number of hosts is...
-
-Maximum Number of hosts = 2\*\*(32 - 21) - 2 = 2048 - 2 = 2046
-
-- ...I also realize this isn't in any way "simpler", so just do whatever is feasible, based on https://networkengineering.stackexchange.com/questions/7106/how-do-you-calculate-the-prefix-network-subnet-and-host-numbers
-
 ## 62) Static app visualizer for whether two hosts are on the same network
-- same reference as above, just further down the page
+- similar to netmask-slider, but with only the above question instead of sliding
 
 ## 63) Browser based interface to give practice solving recursion problems
+- code sandbox with partially completed recursive functions
 - good programmers aren't better at this because they're smarter, just because they've had more practice doing it.
 - generate 100 or so similar recursion problems (or possibly a new one every hour?) and have users solve it via coding in the UI
 
@@ -321,6 +303,16 @@ Maximum Number of hosts = 2\*\*(32 - 21) - 2 = 2048 - 2 = 2046
 - play around with https://github.com/r9y9/wavenet_vocoder to see how much data is needed for a passable TTS model
 - possibly get single speaker samples from youtube
 - identify costs for running something in the cloud for a unique user
+
+## 70) Blog post about using TTS to automate micromaterials in a foundations ESL course
+- get audio
+- turn it into transcripts
+- use transcripts for force-alignment
+- get all the AWL (and also possibly new AWL words), as well as the context (entire sentence or window?)
+- get all the relative clauses
+- get all the -ed simple past tenses
+- get all the -s nouns and -s third person simple present verbs
+- include blending in audio materials
 
 ## 71) Investigate ability to automate creation of videos of an automated system creating programming micromaterials
 - eg, creating incomplete recursive functions
@@ -369,3 +361,53 @@ https://www.gatsbyjs.org/docs/adding-search-with-js-search/
 - choose nice hero image
 - include twitter feed on right side
 - about/research/media/publications
+
+## 80) Micromaterial for linux CLI commands
+- grep, sed, cat, | , tee, split, ls, wc, rm, mv, cp, pwd, mkdir, tar, find, awk,
+sort, uniq, tail, ps, df, du, chmod, chown, ifconfig, uname, less, env, netstat,
+dig, head, shuf, tree, cut, lsof
+
+
+
+## 83) Plan out a teched site
+- include git micromaterials
+- include ipinder
+
+## 84) Investigate ways to build out a "methodology" of TechEd
+- following : Lee, J. S. (2019). Quantity and diversity of informal digital learning of English. Language
+Learning & Technology, 23(1), 114–126. https://doi.org/10125/44675
+- ...basically, find out if quantity affects enjoyment/engagement in the same way, and whether diversity of materials affects quantitative outcomes (performance)
+- also investigate how to frame Form-Focused and Meaning-Focused in the context of software (syntax/linting vs asserts that a function does what it is supposed to)
+
+## 85) Get a python REPL working in the browser
+- https://hacks.mozilla.org/2019/04/pyodide-bringing-the-scientific-python-stack-to-the-browser/
+- could be easier to just follow some of the online codesandbox tutorials
+- the idea is to also write some tests that verify when learns have "correctly" written the function or completed the function
+- similar to #63
+
+## 86) Simple web UI to drag a value and perform integer overflows
+- signed 32-bit integers can only go so high until they become negative
+- drag values and watch the output "wrap around"
+
+## 87) Corpus of JS (map, reduce, filter)
+- get authentic examples of these three functions (possibly others?)
+- present in a web UI (use the coding sandbox format/scaffold)
+- strip out bits and have the users put them back in...or something
+
+## 88) Corpus of data structures (maps, arrays, b-trees...)
+- how would we recognize these in scrapes of source code?
+- how would we then generate them from rules?
+
+## 89) Corpus of function types/signatures
+- how would we recognize these from source code? Are there differences between different languages (probably, but need to quantify)
+- how would we generate these (language-specific)
+
+## 90) Make simple microservice to show how to calculate resource reservation
+- https://medium.com/@vlad.fedosov/how-to-calculate-resources-reservation-for-ecs-task-3c68a1e12725
+- (X / 100) * Y * 1.3)
+where:
+* X — current CPU utilization (percentage)
+* Y — value you specified in Task parameters
+* 1.3 — buffer capacity you want to reserve for workload spikes (Note: 1.3 value may not fit everyone’s needs, it’s just a baseline)
+- knowreservations.netlify.com
+
