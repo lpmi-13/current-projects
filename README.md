@@ -6,13 +6,22 @@
 # don't have more than three things on the go at once
 ```
 
-## 82) Update Grammarbuffet
-- add a11y tests
+## 93) Add git micromaterial for sub-modules
 
 ## 81) Update portfolio (lpmi-13.github.io)
-- add security and a11y tests
 - add tiles for rhymez and stress-match
-- add tile for ipinder
+- add tile for netmask-slider
+
+## 76) Set up static site to track micromaterials on github
+- possibly gatsby (needs a search though...)
+https://www.gatsbyjs.org/packages/gatsby-plugin-local-search/
+https://www.gatsbyjs.org/docs/adding-search-with-js-search/
+- filter for bad words
+
+
+#############################################################
+#############################################################
+#############################################################
 
 ## 2) Github User Stats
 
@@ -25,11 +34,6 @@ UI stuff
 - show graphic with different sizes spheres representing number of commits per unique repo (eg, pypobot cretes many very small circles)
 
 - add an Add screen with the ability to enter a user to add to the list (for both original and updated list) (v3)
-
-
-#############################################################
-#############################################################
-#############################################################
 
 ## 3) AWL/AVL vocab API
 \# open question as to whether we need an API to just send back 
@@ -95,6 +99,7 @@ react UI (MVP is squares, eventually we do hexagons)
   has first and second, usw...)
 - need to refactor to allow user to type in text for replacements as opposed to pure string replacement
 - need to perform extended error checking in each readme instead of only checking for hardcoded error
+
 
 ## 11) CodeReader
 - start with python
@@ -169,10 +174,6 @@ JS assertions library (chai/expect/enzyme/etc)
 - programmatically remove particular methods and ask the user
 to write a method to replace it...give feedback on whether the
 user's method "functions the same"
-
-## 26) Content security policy in nginx (script-src)
-- micromaterials, outstanding
-- statsbuffet, done 
 
 ## 28) Ensure names and styles in python projects adhere to PEP8
 
@@ -263,7 +264,9 @@ with the stress in a TED talk in a mobile app (react native, naturally!)
 - write script to get transcripts (and possibly audio as well)
 - Create corpus of "dev talk"
 
-## 57) Recreate CV in HTML with Gatsby
+## 57) Recreate CV in HTML with Gatsby (or something)
+- possibly use https://github.com/lpmi-13/universal-resume
+- also possibly use https://github.com/lpmi-13/Reactive-Resume
 
 ## 60) Use vector comparison to find poorly written exam distractors
 - maybe BERT would be better for this, not sure
@@ -335,16 +338,11 @@ questions students got correct/incorrect?
 
 ## 75) Collaborate with Julia (B@rk) on using the e-zines to fuel TechEd materials
 
-## 76) Set up static site to track micromaterials on github
-- possibly gatsby (needs a search though...)
-https://www.gatsbyjs.org/packages/gatsby-plugin-local-search/
-https://www.gatsbyjs.org/docs/adding-search-with-js-search/
-- use GitHub API to pull down all issues labelled as micromaterials
-- filter for bad words
 
 ## 77) map out different tech skill areas to target with TechEd
 - networking
 - security
+(outline the main learning objectives in hackone syllabus)
 - a11y
 - functions
 - design
@@ -357,8 +355,7 @@ https://www.gatsbyjs.org/docs/adding-search-with-js-search/
 
 ## 79) Mock up professional website/blog example
 - http://jaspermontana.com/
-- try out with gatsby
-- choose nice hero image
+- add tabs (maybe on the navbar?) for different pages: (about/research/news)
 - include twitter feed on right side
 - about/research/media/publications
 
@@ -411,3 +408,16 @@ where:
 * 1.3 — buffer capacity you want to reserve for workload spikes (Note: 1.3 value may not fit everyone’s needs, it’s just a baseline)
 - knowreservations.netlify.com
 
+## 91) Add quadratic and linear regression to graphit
+- quadratic is just ploting the start/end/highest-lowest point
+- linear regression is create points on a scatter plot and see how it changes the line
+(possibly do something similar for logistic regression, but that might be way too complex)
+
+## 92) fix stress-game on larger screens
+
+## 94) Create micromaterial for practicing CI stuff
+- possibly use Henry's approach to accessing github and committing
+- github actions fire on commit
+- the UI shows the result of the CI build
+- one repo has things broken...each branch (possibly by number) has a more complex problem to find and fix
+- first three problems (failing test, wrong action name, secret not available in ENV, artifact not available for subsequent step)
