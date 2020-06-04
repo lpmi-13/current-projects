@@ -5,12 +5,18 @@
 #
 # don't have more than three things on the go at once
 ```
+## 63) Browser based interface to give practice solving recursion problems and/or HOFs
+- code sandbox with partially completed recursive functions
+- good programmers aren't better at this because they're smarter, just because they've had more practice doing it.
+- generate 100 or so similar recursion problems (or possibly a new one every hour?) and have users solve it via coding in the UI
+- user sees one incomplete higher order function
+- user needs to complete the function
+- user presses button
+- system runs a test against the output of the function for a given input
+- if the output is correct for the test input, then user got it right
+
 
 ## 93) Add git micromaterial for sub-modules
-
-## 81) Update portfolio (lpmi-13.github.io)
-- add tiles for rhymez and stress-match
-- add tile for netmask-slider
 
 ## 76) Set up static site to track micromaterials on github
 - possibly gatsby (needs a search though...)
@@ -248,6 +254,7 @@ user's method "functions the same"
 ## 53) Browser-based micromaterial to test out async promise strategies
 
 ## 54) Create spectrogram analysis to identify stress/pitch/volume
+- investigate whether we can do that following https://24ways.org/2017/feeding-the-audio-graph/
 - can we get this information from spectrograms of words? (probably not)
 - can we get this information from spectrograms of longer phrases? (maybe)
 - can we just mark where these peak a certain delta above the mean? (definitely)
@@ -276,11 +283,6 @@ questions students got correct/incorrect?
 
 ## 62) Static app visualizer for whether two hosts are on the same network
 - similar to netmask-slider, but with only the above question instead of sliding
-
-## 63) Browser based interface to give practice solving recursion problems
-- code sandbox with partially completed recursive functions
-- good programmers aren't better at this because they're smarter, just because they've had more practice doing it.
-- generate 100 or so similar recursion problems (or possibly a new one every hour?) and have users solve it via coding in the UI
 
 ## 64) Put the n-gram tracing approach to authorship attribution in a docker container
 - possibly put it somewhere behind a web interface where we can fire texts at it?
@@ -355,7 +357,6 @@ questions students got correct/incorrect?
 
 ## 79) Mock up professional website/blog example
 - http://jaspermontana.com/
-- add tabs (maybe on the navbar?) for different pages: (about/research/news)
 - include twitter feed on right side
 - about/research/media/publications
 
@@ -421,3 +422,33 @@ where:
 - the UI shows the result of the CI build
 - one repo has things broken...each branch (possibly by number) has a more complex problem to find and fix
 - first three problems (failing test, wrong action name, secret not available in ENV, artifact not available for subsequent step)
+
+## 95) Create corpus of aws docs
+- scrape all https://docs.aws.amazon.com
+- get list of all links
+- get text from all links (can scrapy do this? probably...but bs4 can for sure)
+
+## 96) create simple UI visualization for creating subnets in a network
+- how big is the network
+- how many subnets can we have? what size can they be
+- have CIDR ranges for all of them
+
+## 97) create micromaterial to generate and test the top ten OWASP vulnerabilities
+- possibly run a scanner across 10 github repos at a time
+- pull out vulnerabilities, and add then to a "vulnerability corpus"?
+- cluster by type of vulnerability
+- could even have the system fix them slowly, then use that to create a video?
+
+## 98) put pandoc into a docker container to get the JS links on blogs to render
+- conceptually very simple, but just need to have a way to actually render the JS
+- so we probably need to do it inside chromium (with puppeteer?)
+- then grab the rendered html and pass it to pandoc to save into a pocket account
+- possibly try the start-server-and-test format, to wait for the HTML to actually
+be rendered inside of a simple webserver, then just access the page via curl or something
+- currently (kind of) working command to clone entire site:
+wget -mk --convert-links --adjust-extension --page-requisites --no-parent -r --follow-tags=iframe -w 3 -e robots=off URL_GOES_HERE
+
+## 99) Make a simple web page to take a phrase/sentence and exaggerate the pitch contours
+
+- follow the approach in https://24ways.org/2017/feeding-the-audio-graph/
+- show the visualization both before and after the "stretching"
