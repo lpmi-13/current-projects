@@ -345,6 +345,7 @@ questions students got correct/incorrect?
 - networking
 - security
 (outline the main learning objectives in hackone syllabus)
+(also include https://sec.eff.org/ )
 - a11y
 - functions
 - design
@@ -452,3 +453,16 @@ wget -mk --convert-links --adjust-extension --page-requisites --no-parent -r --f
 
 - follow the approach in https://24ways.org/2017/feeding-the-audio-graph/
 - show the visualization both before and after the "stretching"
+- possibly model after https://github.com/evykassirer/pink-trombone-bangbangcon
+- also check out https://github.com/zakaton/Pink-Trombone
+
+## 100) create react-native app mockups for both Kitchen Rescue and Dog Whistler
+- asks for various inputs (text, motion, taps)
+- outputs the same recommendations every time
+- Reduce your menu, don't freeze your food, clean the kitchen
+- Don't treat your dogs like people, give them exercise, calm assertive energy
+
+## 101) create micromaterial to practice DNS record stuff
+- understanding (select a particular record type from context)
+- application (write out the record type and value from context)
+- A/MX/AAAA/CNAME/ALIAS
