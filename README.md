@@ -466,3 +466,8 @@ wget -mk --convert-links --adjust-extension --page-requisites --no-parent -r --f
 - understanding (select a particular record type from context)
 - application (write out the record type and value from context)
 - A/MX/AAAA/CNAME/ALIAS
+
+## 102) create mobile app to connect images to core-meanings
+- based on the EFL Notes blog post "Funky Images"
+- one central character that does stuff based on how you swipe
+- possibly incorporate a text element...show word in sentence and change it based on where the gesture moves to (left makes it past tense, right makes it future, circles in the middle makes it continuous, circles on the left makes it past continuous...)
