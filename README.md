@@ -15,14 +15,14 @@
 - system runs a test against the output of the function for a given input
 - if the output is correct for the test input, then user got it right
 
+## 109) kubernetes the hard way, for digital ocean
 
 ## 93) Add git micromaterial for sub-modules
-
-## 76) Set up static site to track micromaterials on github
-- possibly gatsby (needs a search though...)
-https://www.gatsbyjs.org/packages/gatsby-plugin-local-search/
-https://www.gatsbyjs.org/docs/adding-search-with-js-search/
-- filter for bad words
+https://medium.com/@porteneuve/mastering-git-submodules-34c65e940407
+https://medium.com/@porteneuve/mastering-git-subtrees-943d29a798ec
+https://www.philosophicalhacker.com/post/using-git-submodules-effectively/
+https://chrisjean.com/git-submodules-adding-using-removing-and-updating/
+https://github.blog/2016-02-01-working-with-submodules/
 
 
 #############################################################
@@ -340,6 +340,12 @@ questions students got correct/incorrect?
 
 ## 75) Collaborate with Julia (B@rk) on using the e-zines to fuel TechEd materials
 
+## 76) Set up static site to track micromaterials on github
+- possibly gatsby (needs a search though...)
+https://www.gatsbyjs.org/packages/gatsby-plugin-local-search/
+https://www.gatsbyjs.org/docs/adding-search-with-js-search/
+- filter for bad words
+
 
 ## 77) map out different tech skill areas to target with TechEd
 - networking
@@ -351,6 +357,7 @@ questions students got correct/incorrect?
 - design
 - vocab
 - documentation(?)
+
 
 ## 78) Investigate ways to automate testing with a screenreader
 - could we use Speech to Text models to analyze...something...?
@@ -387,6 +394,7 @@ Learning & Technology, 23(1), 114–126. https://doi.org/10125/44675
 ## 86) Simple web UI to drag a value and perform integer overflows
 - signed 32-bit integers can only go so high until they become negative
 - drag values and watch the output "wrap around"
+- possibly use a clock as a visual example (subtract 1 minute from 1PM and get 12:59PM...a bigger number)
 
 ## 87) Corpus of JS (map, reduce, filter)
 - get authentic examples of these three functions (possibly others?)
@@ -461,6 +469,8 @@ wget -mk --convert-links --adjust-extension --page-requisites --no-parent -r --f
 - outputs the same recommendations every time
 - Reduce your menu, don't freeze your food, clean the kitchen
 - Don't treat your dogs like people, give them exercise, calm assertive energy
+https://medium.com/@wanglouin1990925/getting-started-with-react-native-in-2020-build-your-first-app-ffc36b8fcb9c
+https://heartbeat.fritz.ai/getting-started-with-react-native-and-expo-using-hooks-in-2020-fb466c25b04c
 
 ## 101) create micromaterial to practice DNS record stuff
 - understanding (select a particular record type from context)
@@ -471,3 +481,27 @@ wget -mk --convert-links --adjust-extension --page-requisites --no-parent -r --f
 - based on the EFL Notes blog post "Funky Images"
 - one central character that does stuff based on how you swipe
 - possibly incorporate a text element...show word in sentence and change it based on where the gesture moves to (left makes it past tense, right makes it future, circles in the middle makes it continuous, circles on the left makes it past continuous...)
+
+## 103) create corpus of very basic python stuff
+- lists, loops, conditions, dictionaries
+- grab a bunch of python repos off of github
+- how do we detect these things...create an AST?
+
+## 104) create simple micromaterial for using dev-tools lighthouse audit
+- put it in a webapp that opens chrome dev tools automatically
+- bake in one thing per audit category that needs fixing
+- walk people through fixing stuff, with one fix/category per git tag
+- users can check out the specific tags to see the fixes (or just git log them)
+
+## 105) K8s the hard way for Digital Ocean
+
+## 106) inline/block html micromaterial
+- base this off b0rk's simple graphic
+
+## 107) k8s the hard way on linode
+
+## 108) mobile app to teach nonverbal floor bid cues
+- the fish
+- possibly hand gestures
+- automated script on repeat...stops and yields the floor
+
