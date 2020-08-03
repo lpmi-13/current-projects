@@ -5,6 +5,15 @@
 #
 # don't have more than three things on the go at once
 ```
+
+## 100) create react-native app mockups for both Kitchen Rescue and Dog Whistler
+- asks for various inputs (text, motion, taps)
+- outputs the same recommendations every time
+- Reduce your menu, don't freeze your food, clean the kitchen
+- Don't treat your dogs like people, give them exercise, calm assertive energy
+https://medium.com/@wanglouin1990925/getting-started-with-react-native-in-2020-build-your-first-app-ffc36b8fcb9c
+https://heartbeat.fritz.ai/getting-started-with-react-native-and-expo-using-hooks-in-2020-fb466c25b04c
+
 ## 63) Browser based interface to give practice solving recursion problems and/or HOFs
 - code sandbox with partially completed recursive functions
 - good programmers aren't better at this because they're smarter, just because they've had more practice doing it.
@@ -15,19 +24,12 @@
 - system runs a test against the output of the function for a given input
 - if the output is correct for the test input, then user got it right
 
-## 109) kubernetes the hard way, for digital ocean
+## 112) very basic list of micromaterials in a repo/README.md
+- list all of the ones from github
+- find some others in the wild and list those as well
+- possibly order by learning objectives targeted (knowledge/comprehension/application)
 
-## 93) Add git micromaterial for sub-modules
-https://medium.com/@porteneuve/mastering-git-submodules-34c65e940407
-https://medium.com/@porteneuve/mastering-git-subtrees-943d29a798ec
-https://www.philosophicalhacker.com/post/using-git-submodules-effectively/
-https://chrisjean.com/git-submodules-adding-using-removing-and-updating/
-https://github.blog/2016-02-01-working-with-submodules/
-
-
-#############################################################
-#############################################################
-#############################################################
+---
 
 ## 2) Github User Stats
 
@@ -464,13 +466,6 @@ wget -mk --convert-links --adjust-extension --page-requisites --no-parent -r --f
 - possibly model after https://github.com/evykassirer/pink-trombone-bangbangcon
 - also check out https://github.com/zakaton/Pink-Trombone
 
-## 100) create react-native app mockups for both Kitchen Rescue and Dog Whistler
-- asks for various inputs (text, motion, taps)
-- outputs the same recommendations every time
-- Reduce your menu, don't freeze your food, clean the kitchen
-- Don't treat your dogs like people, give them exercise, calm assertive energy
-https://medium.com/@wanglouin1990925/getting-started-with-react-native-in-2020-build-your-first-app-ffc36b8fcb9c
-https://heartbeat.fritz.ai/getting-started-with-react-native-and-expo-using-hooks-in-2020-fb466c25b04c
 
 ## 101) create micromaterial to practice DNS record stuff
 - understanding (select a particular record type from context)
@@ -494,6 +489,7 @@ https://heartbeat.fritz.ai/getting-started-with-react-native-and-expo-using-hook
 - users can check out the specific tags to see the fixes (or just git log them)
 
 ## 105) K8s the hard way for Digital Ocean
+- everything's working apart from the routing...possibly look into ways to replicate the AWS CLI route tables function
 
 ## 106) inline/block html micromaterial
 - base this off b0rk's simple graphic
@@ -504,4 +500,19 @@ https://heartbeat.fritz.ai/getting-started-with-react-native-and-expo-using-hook
 - the fish
 - possibly hand gestures
 - automated script on repeat...stops and yields the floor
+
+## 109) Stresseoke
+- take lyrics from genius.com and display them below an embedded component showing a youtube video
+- possible to sync lyrics with spoken words (via color/size/etc?)
+- what's the best way to compute expected stress pattern (90% is probably good enough)
+- how to show stress in words (resizing/animation/bolding?)
+
+## 110) Template for formative assessment of micromaterials
+- https://questions.wizardzines.com/
+
+## 111) draft micromaterials for economics concepts
+- affects of inflation on asset prices/bond prices/debt/etc
+- basically, I don't understand any of this stuff, so would be nice to have a very basic material to gives feedback on ability to apply these concepts
+- eg, UI shows current futures pricing for a particular asset and also forecasted inflation, then user selects whether futures price will go up or down
+- (hard level, user selects rough estimate for how much the price will go up or down)
 
