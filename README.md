@@ -490,6 +490,8 @@ wget -mk --convert-links --adjust-extension --page-requisites --no-parent -r --f
 
 ## 105) K8s the hard way for Digital Ocean
 - everything's working apart from the routing...possibly look into ways to replicate the AWS CLI route tables function
+- this script from KTHW-Vagrant might be a good strategy
+https://github.com/kinvolk/kubernetes-the-hard-way-vagrant/blob/master/scripts/vagrant-setup-routes.bash
 
 ## 106) inline/block html micromaterial
 - base this off b0rk's simple graphic
@@ -516,3 +518,7 @@ wget -mk --convert-links --adjust-extension --page-requisites --no-parent -r --f
 - eg, UI shows current futures pricing for a particular asset and also forecasted inflation, then user selects whether futures price will go up or down
 - (hard level, user selects rough estimate for how much the price will go up or down)
 
+## 113) Create micromaterial for merging submodule into main repo
+- we have a repo that uses a submodule
+- we want to stop tracking the submodule via a remote
+- we "unhook" the tracking and just add it to the main repo
