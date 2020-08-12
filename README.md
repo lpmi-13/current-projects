@@ -522,3 +522,13 @@ https://github.com/kinvolk/kubernetes-the-hard-way-vagrant/blob/master/scripts/v
 - we have a repo that uses a submodule
 - we want to stop tracking the submodule via a remote
 - we "unhook" the tracking and just add it to the main repo
+
+## 114) micromaterial to show/calculate highest number of connections for an RDS database on AWS
+- DBInstanceClassMemory/12582880...so for t2.micro with 512MB RAM, (512 * 1024 * 1024) / 12582880 => 40-ish
+
+## 115) create some sort of difficulty ranking for https://github.com/danistefanovic/build-your-own-x
+- one single metric probably won't work for every project (different languages, tools to measure things, etc)
+- something universal could be a good first step (eg, lines of code)
+- mock up a simple WebUI where you can explore simple metrics about these, and just pull the source from this repo...probably clone and preprocess as a separate repo
+- sub-topic...would it be helpful to create a project that just outputs lines of code in a given repo? This may or may not already exist, and github probably already has it somewhere. Ditto with number or files.
+- other possible metrics: number of functions, average function size, average distance from variable to invocation (no idea if this is even feasible, but would be cool)
