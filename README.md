@@ -7,12 +7,7 @@
 ```
 
 ## 100) create react-native app mockups for both Kitchen Rescue and Dog Whistler
-- asks for various inputs (text, motion, taps)
-- outputs the same recommendations every time
-- Reduce your menu, don't freeze your food, clean the kitchen
-- Don't treat your dogs like people, give them exercise, calm assertive energy
-https://medium.com/@wanglouin1990925/getting-started-with-react-native-in-2020-build-your-first-app-ffc36b8fcb9c
-https://heartbeat.fritz.ai/getting-started-with-react-native-and-expo-using-hooks-in-2020-fb466c25b04c
+- get a version building and deployed to app store
 
 ## 63) Browser based interface to give practice solving recursion problems and/or HOFs
 - code sandbox with partially completed recursive functions
@@ -24,10 +19,10 @@ https://heartbeat.fritz.ai/getting-started-with-react-native-and-expo-using-hook
 - system runs a test against the output of the function for a given input
 - if the output is correct for the test input, then user got it right
 
-## 112) very basic list of micromaterials in a repo/README.md
-- list all of the ones from github
-- find some others in the wild and list those as well
-- possibly order by learning objectives targeted (knowledge/comprehension/application)
+## 113) Create micromaterial for merging submodule into main repo
+- we have a repo that uses a submodule
+- we want to stop tracking the submodule via a remote
+- we "unhook" the tracking and just add it to the main repo
 
 ---
 
@@ -518,10 +513,6 @@ https://github.com/kinvolk/kubernetes-the-hard-way-vagrant/blob/master/scripts/v
 - eg, UI shows current futures pricing for a particular asset and also forecasted inflation, then user selects whether futures price will go up or down
 - (hard level, user selects rough estimate for how much the price will go up or down)
 
-## 113) Create micromaterial for merging submodule into main repo
-- we have a repo that uses a submodule
-- we want to stop tracking the submodule via a remote
-- we "unhook" the tracking and just add it to the main repo
 
 ## 114) micromaterial to show/calculate highest number of connections for an RDS database on AWS
 - DBInstanceClassMemory/12582880...so for t2.micro with 512MB RAM, (512 * 1024 * 1024) / 12582880 => 40-ish
@@ -532,3 +523,19 @@ https://github.com/kinvolk/kubernetes-the-hard-way-vagrant/blob/master/scripts/v
 - mock up a simple WebUI where you can explore simple metrics about these, and just pull the source from this repo...probably clone and preprocess as a separate repo
 - sub-topic...would it be helpful to create a project that just outputs lines of code in a given repo? This may or may not already exist, and github probably already has it somewhere. Ditto with number or files.
 - other possible metrics: number of functions, average function size, average distance from variable to invocation (no idea if this is even feasible, but would be cool)
+
+## 116) Publicly praise places that are using good code review comment structure
+
+look at these for templates:
+- https://conventionalcomments.org/
+- https://www.netlify.com/blog/2020/03/05/feedback-ladders-how-we-encode-code-reviews-at-netlify/
+
+- write a github scraper that looks at the big orgs (where to get a list of these?) and scrapes all the PR's from each project
+- very simple MVP at to whether the comments show any systemic structure (maybe via pulling out the similarities at a very high level)
+- then use this data to create a web app to show the companies that are doing this a bunch (look at the two resources above and target those companies first, as baselines)
+- use https://github.com/typescript-cheatsheets/react-typescript-cheatsheet/
+(basically `npx create-react-app --template typescript`)
+
+## 117) Make this into a webapp
+- https://github.com/cardsagainstcontainers
+- maybe also use typescript
