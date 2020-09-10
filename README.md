@@ -9,24 +9,24 @@
 ## 100) create react-native app mockups for both Kitchen Rescue and Dog Whistler
 - get a version building and deployed to app store
 
-## 63) Browser based interface to give practice solving recursion problems and/or HOFs
-- code sandbox with partially completed recursive functions
-- good programmers aren't better at this because they're smarter, just because they've had more practice doing it.
-- generate 100 or so similar recursion problems (or possibly a new one every hour?) and have users solve it via coding in the UI
-- user sees one incomplete higher order function
-- user needs to complete the function
-- user presses button
-- system runs a test against the output of the function for a given input
-- if the output is correct for the test input, then user got it right
+## 8) Parson Problems
+- start with python and javascript
+- need MVP with three different ones just hardcoded to present in a frontend
+- eventually move to grabbing from github repos
+- add ability to filter by "complexity" if possible
+- need to give feedback on whether successfully reordered or not
+- get input from the #accessibility channel about how best to make this usable via screen readers
 
-## 113) Create micromaterial for merging submodule into main repo
-- we have a repo that uses a submodule
-- we want to stop tracking the submodule via a remote
-- we "unhook" the tracking and just add it to the main repo
+## 56) Create corpus of "dev talk" from podcast transcripts
+- Find good representative dev podcasts (probably FE to start)
+- write script to get transcripts (and possibly audio as well)
+- Create corpus of "dev talk"
 
 ---
 
 ## 2) Github User Stats
+
+- get something working with github actions to just log the latest in the Purcell/lpmi-13 race for unique repos merged to.
 
 tech stuff
 - possibly do all this via gatsby and generate a page per search result?
@@ -55,12 +55,6 @@ differences...possibly yield a higher dataset (since we're not concerned with th
 for this particular app)
 - eventually would be nice to track logins and aggregate progress
 
-## 8) Parson Problems
-- start with python and javascript
-- need MVP with three different ones just hardcoded to present in a frontend
-- eventually move to grabbing from github repos
-- add ability to filter by "complexity" if possible
-- need to give feedback on whether successfully reordered or not
 
 ## 4) put up factor10 to a factor of 10 (potentially just make a
 factor10 generator that takes any site and increases everything by
@@ -84,6 +78,8 @@ https://medium.com/react-native-training/using-sensors-in-react-native-b194d0ad9
 - need to train models for each of these
 - need to filter out the translations for stopwords
 - need to output a whole bunch of these into a DB
+- try with GPT-2 (or maybe 3)
+https://talkpython.fm/episodes/show/1/eve-restful-apis-for-humans
 
 ## 9) Stress Maze
 - need a list of words (both general and academic lists) of 2/3/4
@@ -263,10 +259,7 @@ with the stress in a TED talk in a mobile app (react native, naturally!)
 ## 55) Create a testing framework to demonstrate good/bad tech interview questions
 - is the question (either in F2F interview or tech test) testing what you think it is?
 
-## 56) Create corpus of "dev talk" from podcast transcripts
-- Find good representative dev podcasts (probably FE to start)
-- write script to get transcripts (and possibly audio as well)
-- Create corpus of "dev talk"
+
 
 ## 57) Recreate CV in HTML with Gatsby (or something)
 - possibly use https://github.com/lpmi-13/universal-resume
@@ -280,6 +273,16 @@ questions students got correct/incorrect?
 
 ## 62) Static app visualizer for whether two hosts are on the same network
 - similar to netmask-slider, but with only the above question instead of sliding
+
+## 63) Browser based interface to give practice solving recursion problems and/or HOFs
+- code sandbox with partially completed recursive functions
+- good programmers aren't better at this because they're smarter, just because they've had more practice doing it.
+- generate 100 or so similar recursion problems (or possibly a new one every hour?) and have users solve it via coding in the UI
+- user sees one incomplete higher order function
+- user needs to complete the function
+- user presses button
+- system runs a test against the output of the function for a given input
+- if the output is correct for the test input, then user got it right
 
 ## 64) Put the n-gram tracing approach to authorship attribution in a docker container
 - possibly put it somewhere behind a web interface where we can fire texts at it?
