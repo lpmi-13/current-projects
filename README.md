@@ -10,12 +10,11 @@
 - get a version building and deployed to app store
 
 ## 8) Parson Problems
-- start with python and javascript
-- need MVP with three different ones just hardcoded to present in a frontend
-- eventually move to grabbing from github repos
+- add javascript option
+- add ruby option
 - add ability to filter by "complexity" if possible
-- need to give feedback on whether successfully reordered or not
 - get input from the #accessibility channel about how best to make this usable via screen readers
+- investigate using JS-based AST parsers in the browser to evaluate the "correctness" of the re-order instead of just the literal order
 
 ## 56) Create corpus of "dev talk" from podcast transcripts
 - Find good representative dev podcasts (probably FE to start)
@@ -27,6 +26,8 @@
 ## 2) Github User Stats
 
 - get something working with github actions to just log the latest in the Purcell/lpmi-13 race for unique repos merged to.
+- apparently the API has changed, and the legacy code doesn't work anymore, so this needs to be built from scratch (or at least the issues part)
+- https://api.github.com/search/issues?q=type:pr%20is:merged%20author:lpmi-13 still bring back what we want, so might just use that as a workaround, since I'm only doing it for two users, essentially
 
 tech stuff
 - possibly do all this via gatsby and generate a page per search result?
@@ -283,6 +284,10 @@ questions students got correct/incorrect?
 - user presses button
 - system runs a test against the output of the function for a given input
 - if the output is correct for the test input, then user got it right
+- for implementation, see about running JS testing libraries in the browser:
+https://medium.com/dailyjs/running-mocha-tests-as-native-es6-modules-in-a-browser-882373f2ecb0
+https://stackoverflow.com/questions/33080182/how-do-i-get-node-js-mocha-to-run-test-in-browser
+https://stackoverflow.com/questions/42857778/how-do-you-run-mocha-tests-in-the-browser
 
 ## 64) Put the n-gram tracing approach to authorship attribution in a docker container
 - possibly put it somewhere behind a web interface where we can fire texts at it?
@@ -542,3 +547,14 @@ look at these for templates:
 ## 117) Make this into a webapp
 - https://github.com/cardsagainstcontainers
 - maybe also use typescript
+
+## 118) Somehow contribute to a catalog of resources for Tech Ed (but ed in general)
+- https://hackeducation.com/
+- reusability paradox describes codeacademy/freecodecamp/etc very well...the usefulness is inversely corelated to its reusability. Stated another way, the more actually focused something is, the less it can be used in a decontextualized way (which is obvious, in one sense)
+- https://opencontent.org/blog/archives/3854
+(posits that the way to escape this paradox is to make something open-source, and therefore inherently reusable/remixable)
+
+# 119) Functions but with cloze completions
+- if we can parse lots of languages with JS in the browser, we should be able to remove 1-2 lines from a function and ask the user to supply what they "should" be
+- we can then provide feedback on whether the function actually "runs"
+- we can also provide feedback on whether the re-written function "does the same thing" (this is related to the functionality of #63)
