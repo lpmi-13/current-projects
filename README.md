@@ -6,20 +6,22 @@
 # don't have more than three things on the go at once
 ```
 
-## 100) create react-native app mockups for both Kitchen Rescue and Dog Whistler
-- get a version building and deployed to app store
-
 ## 8) Parson Problems
 - add javascript option
 - add ruby option
 - add ability to filter by "complexity" if possible
 - get input from the #accessibility channel about how best to make this usable via screen readers
 - investigate using JS-based AST parsers in the browser to evaluate the "correctness" of the re-order instead of just the literal order
+- investigate only storing the beginning/ending of the function lines from the github source code and using github as an open API to grab this stuff at runtime (disadvantage would be that code changes, though this is also technically an issue if we are storing pointers to line numbers anyway)
+- see if there's a way to turn loops (maybe this should be in a different micromaterial) into blocks, as evan suggested.
 
-## 56) Create corpus of "dev talk" from podcast transcripts
-- Find good representative dev podcasts (probably FE to start)
-- write script to get transcripts (and possibly audio as well)
-- Create corpus of "dev talk"
+# 122) Micromaterial to visualize placing ECS tasks into instances in a cluster
+- make sure the task reservations (CPU/RAM) are variable and also that the VM specs are variable
+- probably just drag and drop "taks" into VMs to watch how mismatches might throw specific errors: unable to place task because no container instances met all of its requirements
+- see if anyone on awsnewbies or cloudnewbies finds this useful
+
+## 100) create react-native app mockups for both Kitchen Rescue and Dog Whistler
+- get a version building and deployed to app store
 
 ---
 
@@ -260,11 +262,10 @@ with the stress in a TED talk in a mobile app (react native, naturally!)
 ## 55) Create a testing framework to demonstrate good/bad tech interview questions
 - is the question (either in F2F interview or tech test) testing what you think it is?
 
-
-
-## 57) Recreate CV in HTML with Gatsby (or something)
-- possibly use https://github.com/lpmi-13/universal-resume
-- also possibly use https://github.com/lpmi-13/Reactive-Resume
+## 56) Create corpus of "dev talk" from podcast transcripts
+- Find good representative dev podcasts (probably FE to start)
+- write script to get transcripts (and possibly audio as well)
+- Create corpus of "dev talk"
 
 ## 60) Use vector comparison to find poorly written exam distractors
 - maybe BERT would be better for this, not sure
@@ -367,11 +368,6 @@ https://www.gatsbyjs.org/docs/adding-search-with-js-search/
 ## 78) Investigate ways to automate testing with a screenreader
 - could we use Speech to Text models to analyze...something...?
 - make sure it doesn't read the whole thing at once
-
-## 79) Mock up professional website/blog example
-- http://jaspermontana.com/
-- include twitter feed on right side
-- about/research/media/publications
 
 ## 80) Micromaterial for linux CLI commands
 - grep, sed, cat, | , tee, split, ls, wc, rm, mv, cp, pwd, mkdir, tar, find, awk,
@@ -480,11 +476,6 @@ wget -mk --convert-links --adjust-extension --page-requisites --no-parent -r --f
 - one central character that does stuff based on how you swipe
 - possibly incorporate a text element...show word in sentence and change it based on where the gesture moves to (left makes it past tense, right makes it future, circles in the middle makes it continuous, circles on the left makes it past continuous...)
 
-## 103) create corpus of very basic python stuff
-- lists, loops, conditions, dictionaries
-- grab a bunch of python repos off of github
-- how do we detect these things...create an AST?
-
 ## 104) create simple micromaterial for using dev-tools lighthouse audit
 - put it in a webapp that opens chrome dev tools automatically
 - bake in one thing per audit category that needs fixing
@@ -558,3 +549,40 @@ look at these for templates:
 - if we can parse lots of languages with JS in the browser, we should be able to remove 1-2 lines from a function and ask the user to supply what they "should" be
 - we can then provide feedback on whether the function actually "runs"
 - we can also provide feedback on whether the re-written function "does the same thing" (this is related to the functionality of #63)
+
+# 120) Comprehension-based material to match problems and formal constructs
+- "The semantics of a for statement (a program component) are mixed up with what the for statement is used for in the particular context. Vainio and Sajaniemi [2007] describe such violations of robustness principles as common, attributing this in part to the tendency in CS1 courses to associate each type of problem with only a single kind of programming construct, and each programming construct with a single kind of problem."
+
+# 121) A VR (AR?) game to visualize and play with objects/classes/OO stuff
+- classes would possibly be 2D squares that could be filled with data and other properties and converted to 3D cubes.
+- the user can move them around and see the connections between them.
+- the user can also run a particular program forward or backward and watch the system (in terms of physical "objects") interact
+- this system could be designed to take in any arbitrary program to be visualized
+
+
+# 123) Micromaterial to practice creating an allow list via regex for web form validation
+- ideally with a bunch of inputs listed and asking for a regex that would allow through only the ones we know we want
+- possibly more rather than less hand-holding, though also make this configurable
+
+# 124) Micromaterials to practice using ssh command line utility and step through common use cases and troubleshooting
+- maybe wrap it in a go binary to enable custom sending of feedback
+- ...also maybe look at creating a WASM binary from ssh and doing something in a web UI
+
+# 125) Create micromaterial for discovering and setting/updating permissions
+- windows & mac & linux
+
+# 126) Look at corpus of hackyourfuture.be written language
+- go to the site and apply (add note about just looking)
+
+# 127) Micromaterial where learners identify the line number where the mistake is
+- there's a bug
+- there's an error message
+- there's a function
+- users need to click/identify/choose which line has the error
+
+# 128) Micromaterial to show app/load balancer latencies and how it affects autoscaling groups
+- When EC2 instances have processes that can't respond fast enough, requests start backing up.
+- When these requests stop being all responded to, some of them are probably helath checks
+- When enough health checks fail, the ELB will take the EC2 out of service
+- When one of the EC2 instances gets killed, the rest experience higher load, and then all fail.
+- show this is a web app where users can adjust latency of response, period for health check, and requests per second
