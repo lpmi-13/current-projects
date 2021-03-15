@@ -14,6 +14,7 @@
 - investigate using JS-based AST parsers in the browser to evaluate the "correctness" of the re-order instead of just the literal order
 - investigate only storing the beginning/ending of the function lines from the github source code and using github as an open API to grab this stuff at runtime (disadvantage would be that code changes, though this is also technically an issue if we are storing pointers to line numbers anyway)
 - see if there's a way to turn loops (maybe this should be in a different micromaterial) into blocks, as evan suggested.
+- bunch of different parsers here: https://github.com/fkling/astexplorer
 
 # 122) Micromaterial to visualize placing ECS tasks into instances in a cluster
 - make sure the task reservations (CPU/RAM) are variable and also that the VM specs are variable
@@ -586,3 +587,11 @@ look at these for templates:
 - When enough health checks fail, the ELB will take the EC2 out of service
 - When one of the EC2 instances gets killed, the rest experience higher load, and then all fail.
 - show this is a web app where users can adjust latency of response, period for health check, and requests per second
+
+#129) Create a corpus of content on the MDN docs
+- also check the glossary to see if those terms could be better
+
+#130) Use Ben's lidar thing to visualize tcp traffic going between containers
+- containers since you can have fine-grained control over tcpstuff without needing anyone to install anything except docker
+- needs lots of exploratory data analysis, since I'm not even sure what things are going to be interesting
+- possibly look at the tcp traffic involved in a basic rails app (frontend/backend/database), and be able to filter for stuff(?) in the browser
