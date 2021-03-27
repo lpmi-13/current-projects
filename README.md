@@ -595,3 +595,9 @@ look at these for templates:
 - containers since you can have fine-grained control over tcpstuff without needing anyone to install anything except docker
 - needs lots of exploratory data analysis, since I'm not even sure what things are going to be interesting
 - possibly look at the tcp traffic involved in a basic rails app (frontend/backend/database), and be able to filter for stuff(?) in the browser
+
+# 130) Use tensorflow JS to make a Simon Says for simple English practice
+- calculate where people's hands are and give simple commands (either written or audio) like "move your left hand up", "move your right hand down", or "keep both hands up".
+- give automated feedback about whether they did it correctly.
+- we don't have any depth information, just 2D, so have to stay with up/down/left/right.
+- Possibly create a game interface, where two people "compete" for longest streak, and take turns holding the phone.
