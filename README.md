@@ -6,23 +6,18 @@
 # don't have more than three things on the go at once
 ```
 
-## 8) Parson Problems
-- add javascript option
-- add ruby option
-- add ability to filter by "complexity" if possible
-- get input from the #accessibility channel about how best to make this usable via screen readers
-- investigate using JS-based AST parsers in the browser to evaluate the "correctness" of the re-order instead of just the literal order
-- investigate only storing the beginning/ending of the function lines from the github source code and using github as an open API to grab this stuff at runtime (disadvantage would be that code changes, though this is also technically an issue if we are storing pointers to line numbers anyway)
-- see if there's a way to turn loops (maybe this should be in a different micromaterial) into blocks, as evan suggested.
-- bunch of different parsers here: https://github.com/fkling/astexplorer
+## 107) k8s the hard way on linode
+should be fairly similar to the DO version
 
 # 122) Micromaterial to visualize placing ECS tasks into instances in a cluster
 - make sure the task reservations (CPU/RAM) are variable and also that the VM specs are variable
 - probably just drag and drop "taks" into VMs to watch how mismatches might throw specific errors: unable to place task because no container instances met all of its requirements
 - see if anyone on awsnewbies or cloudnewbies finds this useful
 
-## 100) create react-native app mockups for both Kitchen Rescue and Dog Whistler
-- get a version building and deployed to app store
+# 136) Create micromaterial for tcpdump
+- possibly related to #130 above, but even just for locally running VMs in a well-defined subnet.
+- have a script to pick which of the 3 (or however many) VMs/containers is the "noisy one" and make it quiet down.
+- terminal-based micromaterial
 
 ---
 
@@ -84,6 +79,16 @@ https://medium.com/react-native-training/using-sensors-in-react-native-b194d0ad9
 - need to output a whole bunch of these into a DB
 - try with GPT-2 (or maybe 3)
 https://talkpython.fm/episodes/show/1/eve-restful-apis-for-humans
+
+## 8) Parson Problems
+- add javascript option
+- add ruby option
+- add ability to filter by "complexity" if possible
+- get input from the #accessibility channel about how best to make this usable via screen readers
+- investigate using JS-based AST parsers in the browser to evaluate the "correctness" of the re-order instead of just the literal order
+- investigate only storing the beginning/ending of the function lines from the github source code and using github as an open API to grab this stuff at runtime (disadvantage would be that code changes, though this is also technically an issue if we are storing pointers to line numbers anyway)
+- see if there's a way to turn loops (maybe this should be in a different micromaterial) into blocks, as evan suggested.
+- bunch of different parsers here: https://github.com/fkling/astexplorer
 
 ## 9) Stress Maze
 - need a list of words (both general and academic lists) of 2/3/4
@@ -302,7 +307,8 @@ https://stackoverflow.com/questions/42857778/how-do-you-run-mocha-tests-in-the-b
 
 ## 66) Remake the python conversational bot treasure hunt via web interface
 - Needs a log in, or no way to remember where the user "left off"
-- should be enough to keep the same script and put users into a simple postgres DB
+(this coule be done with firebase, like in Reactive-Resume)
+- should be enough to keep the same script and put users into a simple data schema
 - possibly consider using serverless functions for auth
 
 ## 67) App and/or website with peer-reviews simplifications of scientific concepts
@@ -345,7 +351,7 @@ https://stackoverflow.com/questions/42857778/how-do-you-run-mocha-tests-in-the-b
 - Instead of people adding you, only you add people
 - Kind of like a digital rolodex
 
-## 75) Collaborate with Julia (B@rk) on using the e-zines to fuel TechEd materials
+## 75) Collaborate with Julia Evans (B@rk) on using the e-zines to fuel TechEd materials
 
 ## 76) Set up static site to track micromaterials on github
 - possibly gatsby (needs a search though...)
@@ -374,7 +380,6 @@ https://www.gatsbyjs.org/docs/adding-search-with-js-search/
 - grep, sed, cat, | , tee, split, ls, wc, rm, mv, cp, pwd, mkdir, tar, find, awk,
 sort, uniq, tail, ps, df, du, chmod, chown, ifconfig, uname, less, env, netstat,
 dig, head, shuf, tree, cut, lsof
-
 
 
 ## 83) Plan out a teched site
@@ -466,6 +471,8 @@ wget -mk --convert-links --adjust-extension --page-requisites --no-parent -r --f
 - possibly model after https://github.com/evykassirer/pink-trombone-bangbangcon
 - also check out https://github.com/zakaton/Pink-Trombone
 
+## 100) create react-native app mockups for both Kitchen Rescue and Dog Whistler
+- get a version building and deployed to app store
 
 ## 101) create micromaterial to practice DNS record stuff
 - understanding (select a particular record type from context)
@@ -483,15 +490,9 @@ wget -mk --convert-links --adjust-extension --page-requisites --no-parent -r --f
 - walk people through fixing stuff, with one fix/category per git tag
 - users can check out the specific tags to see the fixes (or just git log them)
 
-## 105) K8s the hard way for Digital Ocean
-- everything's working apart from the routing...possibly look into ways to replicate the AWS CLI route tables function
-- this script from KTHW-Vagrant might be a good strategy
-https://github.com/kinvolk/kubernetes-the-hard-way-vagrant/blob/master/scripts/vagrant-setup-routes.bash
-
 ## 106) inline/block html micromaterial
 - base this off b0rk's simple graphic
 
-## 107) k8s the hard way on linode
 
 ## 108) mobile app to teach nonverbal floor bid cues
 - the fish
@@ -503,9 +504,6 @@ https://github.com/kinvolk/kubernetes-the-hard-way-vagrant/blob/master/scripts/v
 - possible to sync lyrics with spoken words (via color/size/etc?)
 - what's the best way to compute expected stress pattern (90% is probably good enough)
 - how to show stress in words (resizing/animation/bolding?)
-
-## 110) Template for formative assessment of micromaterials
-- https://questions.wizardzines.com/
 
 ## 111) draft micromaterials for economics concepts
 - affects of inflation on asset prices/bond prices/debt/etc
@@ -601,3 +599,26 @@ look at these for templates:
 - give automated feedback about whether they did it correctly.
 - we don't have any depth information, just 2D, so have to stay with up/down/left/right.
 - Possibly create a game interface, where two people "compete" for longest streak, and take turns holding the phone.
+
+# 131) Automate a "break a system and then fix it" activity
+
+- probably easiest to do with a homelab in a very predictable configuration (4-5 VMs with private IPs)
+- Get some ansible playbooks (or some other IAC tool) that can spin up a very simple service architecture: Database, backend server, cache, SIMPLE frontend web server
+- set up montoring dashboards and logging (grafana and ELK stuff)
+- plan out 3 "fail scenarios", and fire one randomly
+
+# 132) Figure out a way to add in authentic examples to https://codethesaur.us
+- probably needs to involve the datastore
+- maaaaaaybe could be grabbed in a github action and hardcoded?
+- a very far way off from this, but a similar-minded project that could benefit from authentic examples from real code
+
+# 133) Turn pulse game concept into an app (or something)
+- incorporate the 120 scenarios from Hooper's old Pulse concept
+- would probably have to be a mobile app
+- paired with a bluetooth device that can sense heartrate
+
+# 135) Visualize crashing a DB with connections
+- when services scale up, if they're expecting to create a connection to a database, a massive scale up means a flood of new connections.
+- If too many processes try to open too many connections, it kills the DB...but it would be nice to see how (in dashboards/logs)
+- possibly use a docker MongoDB replicaset for this, though how to spin up 50+ containers locally might be trickier.
+
