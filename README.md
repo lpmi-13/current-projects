@@ -7,7 +7,7 @@
 ```
 
 ## 107) k8s the hard way on linode
-should be fairly similar to the DO version
+everything finished but that damned DNS...
 
 # 122) Micromaterial to visualize placing ECS tasks into instances in a cluster
 - make sure the task reservations (CPU/RAM) are variable and also that the VM specs are variable
@@ -622,3 +622,12 @@ look at these for templates:
 - If too many processes try to open too many connections, it kills the DB...but it would be nice to see how (in dashboards/logs)
 - possibly use a docker MongoDB replicaset for this, though how to spin up 50+ containers locally might be trickier.
 
+# 136) Kubernetes the hard way on Vultr
+- similar to linode, most likely
+
+# 137) Kubernetes the hard way on Sigmacloud
+- this is going to be *very* bootstrapped, since they have no VPC, no load balancers, and no CLI...just a REST API.
+- probably gonna try and make a golang cli to actually complete this one
+
+# 138) Kubernetes the hard way on liquid web
+- this one does have a CLI, so probably slightly easier than Sigmacloud
