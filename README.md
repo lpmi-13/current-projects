@@ -14,7 +14,7 @@
 - probably just drag and drop "taks" into VMs to watch how mismatches might throw specific errors: unable to place task because no container instances met all of its requirements
 - see if anyone on awsnewbies or cloudnewbies finds this useful
 
-# 136) Create micromaterial for tcpdump
+# 137) Create micromaterial for tcpdump
 - possibly related to #130 above, but even just for locally running VMs in a well-defined subnet.
 - have a script to pick which of the 3 (or however many) VMs/containers is the "noisy one" and make it quiet down.
 - terminal-based micromaterial
@@ -586,10 +586,10 @@ look at these for templates:
 - When one of the EC2 instances gets killed, the rest experience higher load, and then all fail.
 - show this is a web app where users can adjust latency of response, period for health check, and requests per second
 
-#129) Create a corpus of content on the MDN docs
+# 129) Create a corpus of content on the MDN docs
 - also check the glossary to see if those terms could be better
 
-#130) Use Ben's lidar thing to visualize tcp traffic going between containers
+# 130) Use Ben's lidar thing to visualize tcp traffic going between containers
 - containers since you can have fine-grained control over tcpstuff without needing anyone to install anything except docker
 - needs lots of exploratory data analysis, since I'm not even sure what things are going to be interesting
 - possibly look at the tcp traffic involved in a basic rails app (frontend/backend/database), and be able to filter for stuff(?) in the browser
@@ -627,3 +627,29 @@ look at these for templates:
 - this is going to be *very* bootstrapped, since they have no VPC, no load balancers, and no CLI...just a REST API.
 - probably gonna try and make a golang cli to actually complete this one
 
+# 139) Get a pitch together for a P1PP micromaterial course/material/something
+- "chaos engineering without the chaos" (get a way better slogan)
+- predictably break a system and get automated feedback about whether you fixed it
+- needs alerts
+- needs dashboards
+- needs logs
+- needs a "system" to perturb
+- needs metadata about what actions were taken and when
+- "controlled chaos"
+- https://education.ardanlabs.com/
+
+# 140) Create a twitch stream for the "Chaotic Good" project
+- think of a better name
+- invite notable SRE personalities and have them fix a simulated outage
+- Get some *basic* AWS environments built out in terraform, ready to deploy before the stream
+- Create 3-5 different scenarios for outages, and create the alerts for these (we can put it all in source transparently, but we need a _secret_ way to select which one gets triggered...probably via me kicking off _something_ on my side)
+- Figure out how to auth in the guests (plus also create SSH keys to be sent to them beforehand) via IAM roles
+- figure out the best platform to send alerts to (some people might prefer slack or discord or?)
+- Figure out how to reliably stream the action (it probably can't be their screen, since that doesn't scale if they don't stream).
+- Do we include a post-mortem (hopefully yes, but probably based on time constraints)
+- Do we include any "phone a friend" capability?
+
+# 141) Slide Deck for Chaotic Good project
+- Show need for faster iterations of learning from production outages in "safe" environment
+- It's an activity to contextualize what Google already does with Wheel of Misfortune
+- Need good examples to make it relatable
