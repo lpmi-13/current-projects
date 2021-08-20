@@ -6,18 +6,29 @@
 # don't have more than three things on the go at once
 ```
 
-# 136) Kubernetes the hard way on Vultr
-- similar to linode, most likely
+## 74) Implement BookFace as a mobile app in React Native
+- working title: Solodex
+- Facebook, but no data leaves
+- A place to write notes in a well-designed format about family/friends
+- Set reminders for yourself to send Xmas cards, birthday cards, etc
+- Instead of people adding you, only you add people
+- Kind of like a digital rolodex
 
-# 122) Micromaterial to visualize placing ECS tasks into instances in a cluster
-- make sure the task reservations (CPU/RAM) are variable and also that the VM specs are variable
-- probably just drag and drop "taks" into VMs to watch how mismatches might throw specific errors: unable to place task because no container instances met all of its requirements
-- see if anyone on awsnewbies or cloudnewbies finds this useful
+# 140) Create a twitch stream for the "Chaotic Good" project
+- think of a better name
+- invite notable SRE personalities and have them fix a simulated outage
+- Get some *basic* AWS environments built out in terraform, ready to deploy before the stream
+- Create 3-5 different scenarios for outages, and create the alerts for these (we can put it all in source transparently, but we need a _secret_ way to select which one gets triggered...probably via me kicking off _something_ on my side)
+- Figure out how to auth in the guests (plus also create SSH keys to be sent to them beforehand) via IAM roles
+- figure out the best platform to send alerts to (some people might prefer slack or discord or?)
+- Figure out how to reliably stream the action (it probably can't be their screen, since that doesn't scale if they don't stream).
+- Do we include a post-mortem (hopefully yes, but probably based on time constraints)
+- Do we include any "phone a friend" capability?
 
-# 137) Create micromaterial for tcpdump
-- possibly related to #130 above, but even just for locally running VMs in a well-defined subnet.
-- have a script to pick which of the 3 (or however many) VMs/containers is the "noisy one" and make it quiet down.
-- terminal-based micromaterial
+# 141) Slide Deck for Chaotic Good project
+- Show need for faster iterations of learning from production outages in "safe" environment
+- It's an activity to contextualize what Google already does with Wheel of Misfortune
+- Need good examples to make it relatable
 
 ---
 
@@ -344,12 +355,6 @@ https://stackoverflow.com/questions/42857778/how-do-you-run-mocha-tests-in-the-b
 - create simple web interface to show one argument, and have users select the either a supporting statement or a counterstatement (possibly add adverbial conjunctions?)
 
 
-## 74) Implement BookFace as a mobile app in React Native
-- Facebook, but no data leaves
-- A place to write notes in a well-designed format about family/friends
-- Set reminders for yourself to send Xmas cards, birthday cards, etc
-- Instead of people adding you, only you add people
-- Kind of like a digital rolodex
 
 ## 75) Collaborate with Julia Evans (B@rk) on using the e-zines to fuel TechEd materials
 
@@ -559,6 +564,11 @@ look at these for templates:
 - this system could be designed to take in any arbitrary program to be visualized
 
 
+# 122) Micromaterial to visualize placing ECS tasks into instances in a cluster
+- make sure the task reservations (CPU/RAM) are variable and also that the VM specs are variable
+- probably just drag and drop "taks" into VMs to watch how mismatches might throw specific errors: unable to place task because no container instances met all of its requirements
+- see if anyone on awsnewbies or cloudnewbies finds this useful
+
 # 123) Micromaterial to practice creating an allow list via regex for web form validation
 - ideally with a bunch of inputs listed and asking for a regex that would allow through only the ones we know we want
 - possibly more rather than less hand-holding, though also make this configurable
@@ -622,6 +632,10 @@ look at these for templates:
 - If too many processes try to open too many connections, it kills the DB...but it would be nice to see how (in dashboards/logs)
 - possibly use a docker MongoDB replicaset for this, though how to spin up 50+ containers locally might be trickier.
 
+# 136) Create micromaterial for tcpdump
+- possibly related to #130 above, but even just for locally running VMs in a well-defined subnet.
+- have a script to pick which of the 3 (or however many) VMs/containers is the "noisy one" and make it quiet down.
+- terminal-based micromaterial
 
 # 137) Kubernetes the hard way on Sigmacloud
 - this is going to be *very* bootstrapped, since they have no VPC, no load balancers, and no CLI...just a REST API.
@@ -638,18 +652,12 @@ look at these for templates:
 - "controlled chaos"
 - https://education.ardanlabs.com/
 
-# 140) Create a twitch stream for the "Chaotic Good" project
-- think of a better name
-- invite notable SRE personalities and have them fix a simulated outage
-- Get some *basic* AWS environments built out in terraform, ready to deploy before the stream
-- Create 3-5 different scenarios for outages, and create the alerts for these (we can put it all in source transparently, but we need a _secret_ way to select which one gets triggered...probably via me kicking off _something_ on my side)
-- Figure out how to auth in the guests (plus also create SSH keys to be sent to them beforehand) via IAM roles
-- figure out the best platform to send alerts to (some people might prefer slack or discord or?)
-- Figure out how to reliably stream the action (it probably can't be their screen, since that doesn't scale if they don't stream).
-- Do we include a post-mortem (hopefully yes, but probably based on time constraints)
-- Do we include any "phone a friend" capability?
 
-# 141) Slide Deck for Chaotic Good project
-- Show need for faster iterations of learning from production outages in "safe" environment
-- It's an activity to contextualize what Google already does with Wheel of Misfortune
-- Need good examples to make it relatable
+# 142) Find some gaps in scaleway cli and submit a PR
+- Easiest way to do this would be to start working on the k8s-the-hard-way walkthrough with it and see where the gaps are
+
+# 143) K8s the hard way on scaleway
+- Possible that the CLI, which is very new, needs some functionality added to be able to complete the walkthrough
+
+# 144) K8s the hard way on hetzner
+- they have a CLI, so this should be fairly straightforward. Have not investigated their network abstractions at all.
