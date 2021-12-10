@@ -49,15 +49,15 @@ UI stuff
 - add an Add screen with the ability to enter a user to add to the list (for both original and updated list) (v3)
 
 ## 3) AWL/AVL vocab API
-\# open question as to whether we need an API to just send back 
-\#the lists? Maybe do this after we have the application that uses 
+\# open question as to whether we need an API to just send back
+\#the lists? Maybe do this after we have the application that uses
 \#the data...
 \# also, do we actually want to integrate catvar data in this?
 
 - script out expansion (XX, XXS) => { NN/VBP, NNS/VBZ }
 - script out mapping from finer POS tags to coarse tags (VBP,VBG,VB,VBZ) => (V)
 - need a backend to store the data (depending on structure, may
-prefer postgres as we want relations) 
+prefer postgres as we want relations)
 - MVP of the quiz is academic texts with certain words (from AWL) removed to be replaced by the users (cloze test)
 - needs to be manually re-coded for words that span classes (stress --> NN/VB)
 - second stage MVP might be to combine the data, and not differentiate between the original list
@@ -76,7 +76,7 @@ factor10 generator that takes any site and increases everything by
 - need to update pipeline to only care about vowels
 
 ## 6) React Native shaker App
-- need a proof of concept hello world made and installing on a 
+- need a proof of concept hello world made and installing on a
 local device
 https://medium.com/react-native-training/using-sensors-in-react-native-b194d0ad9167
 - need a list of words (2-syllable, alternating stress)
@@ -659,5 +659,25 @@ look at these for templates:
 # 143) K8s the hard way on scaleway
 - Possible that the CLI, which is very new, needs some functionality added to be able to complete the walkthrough
 
-# 144) K8s the hard way on hetzner
-- they have a CLI, so this should be fairly straightforward. Have not investigated their network abstractions at all.
+# 145) Homelab network expansion
+- get one pi for just prometheus/grafana
+- fire up three VMs on the mini (also decide what to put in three VMs)
+- step though https://grafana.com/blog/2019/08/22/homelab-security-with-ossec-loki-prometheus-and-grafana-on-a-raspberry-pi/
+
+# 146) K8s the hard way on OVH
+- they have a defunct CLI and not really great API docs, so this one might require a bit of upfront work to actually even get a command line client working
+
+# 147) Match up songs for lyrics plus karaoke tune
+- grab beats per minute (tempo) from spotify API for a number of different artists
+- https://www.uswitch.com/broadband/every-countrys-favourite-karaoke-song-mapped/
+- https://github.com/benjojo/bpm
+- also look at using metadata from the spotify audio features API
+- output pairs of songs from different genres that have similar factors (x, 2x, 1/2x, etc) and sing karaoke with the melody of one and the lyrics of another
+
+# 148) set up a simple AWS environment with a three-tiered architecture and then break it
+- related to #140
+- https://jaxenter.com/chaos-engineering-cpu-spike-174107.html
+- get a list of other things to cause problems
+- figure out a good base domain to have for my examples (do-some-chaotic-good.com)?
+- figure out a good base domain to have for my examples (do-some-chaotic-good.com...?)...AWS can register .com domains, so just pick one and use that as the base piped into the terraform code
+- use some ideas from https://www.thevoid.community/ open incident database
