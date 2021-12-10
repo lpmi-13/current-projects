@@ -637,10 +637,6 @@ look at these for templates:
 - have a script to pick which of the 3 (or however many) VMs/containers is the "noisy one" and make it quiet down.
 - terminal-based micromaterial
 
-# 137) Kubernetes the hard way on Sigmacloud
-- this is going to be *very* bootstrapped, since they have no VPC, no load balancers, and no CLI...just a REST API.
-- probably gonna try and make a golang cli to actually complete this one
-
 # 139) Get a pitch together for a P1PP micromaterial course/material/something
 - "chaos engineering without the chaos" (get a way better slogan)
 - predictably break a system and get automated feedback about whether you fixed it
