@@ -6,7 +6,7 @@
 # don't have more than three things on the go at once
 ```
 
-## 74) Implement BookFace as a mobile app in React Native
+# 74) Implement BookFace as a mobile app in React Native
 - working title: Solodex
 - Facebook, but no data leaves
 - A place to write notes in a well-designed format about family/friends
@@ -398,8 +398,7 @@ Learning & Technology, 23(1), 114–126. https://doi.org/10125/44675
 - also investigate how to frame Form-Focused and Meaning-Focused in the context of software (syntax/linting vs asserts that a function does what it is supposed to)
 
 ## 85) Get a python REPL working in the browser
-- https://hacks.mozilla.org/2019/04/pyodide-bringing-the-scientific-python-stack-to-the-browser/
-- could be easier to just follow some of the online codesandbox tutorials
+- just follow the approach in future coder, but expand it to have people fill in the missing parts of functions
 - the idea is to also write some tests that verify when learns have "correctly" written the function or completed the function
 - similar to #63
 
@@ -549,95 +548,95 @@ look at these for templates:
 - https://opencontent.org/blog/archives/3854
 (posits that the way to escape this paradox is to make something open-source, and therefore inherently reusable/remixable)
 
-# 119) Functions but with cloze completions
+## 119) Functions but with cloze completions
 - if we can parse lots of languages with JS in the browser, we should be able to remove 1-2 lines from a function and ask the user to supply what they "should" be
 - we can then provide feedback on whether the function actually "runs"
 - we can also provide feedback on whether the re-written function "does the same thing" (this is related to the functionality of #63)
 
-# 120) Comprehension-based material to match problems and formal constructs
+## 120) Comprehension-based material to match problems and formal constructs
 - "The semantics of a for statement (a program component) are mixed up with what the for statement is used for in the particular context. Vainio and Sajaniemi [2007] describe such violations of robustness principles as common, attributing this in part to the tendency in CS1 courses to associate each type of problem with only a single kind of programming construct, and each programming construct with a single kind of problem."
 
-# 121) A VR (AR?) game to visualize and play with objects/classes/OO stuff
+## 121) A VR (AR?) game to visualize and play with objects/classes/OO stuff
 - classes would possibly be 2D squares that could be filled with data and other properties and converted to 3D cubes.
 - the user can move them around and see the connections between them.
 - the user can also run a particular program forward or backward and watch the system (in terms of physical "objects") interact
 - this system could be designed to take in any arbitrary program to be visualized
 
 
-# 122) Micromaterial to visualize placing ECS tasks into instances in a cluster
+## 122) Micromaterial to visualize placing ECS tasks into instances in a cluster
 - make sure the task reservations (CPU/RAM) are variable and also that the VM specs are variable
 - probably just drag and drop "taks" into VMs to watch how mismatches might throw specific errors: unable to place task because no container instances met all of its requirements
 - see if anyone on awsnewbies or cloudnewbies finds this useful
 
-# 123) Micromaterial to practice creating an allow list via regex for web form validation
+## 123) Micromaterial to practice creating an allow list via regex for web form validation
 - ideally with a bunch of inputs listed and asking for a regex that would allow through only the ones we know we want
 - possibly more rather than less hand-holding, though also make this configurable
 
-# 124) Micromaterials to practice using ssh command line utility and step through common use cases and troubleshooting
+## 124) Micromaterials to practice using ssh command line utility and step through common use cases and troubleshooting
 - maybe wrap it in a go binary to enable custom sending of feedback
 - ...also maybe look at creating a WASM binary from ssh and doing something in a web UI
 
-# 125) Create micromaterial for discovering and setting/updating permissions
+## 125) Create micromaterial for discovering and setting/updating permissions
 - windows & mac & linux
 
-# 126) Look at corpus of hackyourfuture.be written language
+## 126) Look at corpus of hackyourfuture.be written language
 - go to the site and apply (add note about just looking)
 
-# 127) Micromaterial where learners identify the line number where the mistake is
+## 127) Micromaterial where learners identify the line number where the mistake is
 - there's a bug
 - there's an error message
 - there's a function
 - users need to click/identify/choose which line has the error
 
-# 128) Micromaterial to show app/load balancer latencies and how it affects autoscaling groups
+## 128) Micromaterial to show app/load balancer latencies and how it affects autoscaling groups
 - When EC2 instances have processes that can't respond fast enough, requests start backing up.
 - When these requests stop being all responded to, some of them are probably helath checks
 - When enough health checks fail, the ELB will take the EC2 out of service
 - When one of the EC2 instances gets killed, the rest experience higher load, and then all fail.
 - show this is a web app where users can adjust latency of response, period for health check, and requests per second
 
-# 129) Create a corpus of content on the MDN docs
+## 129) Create a corpus of content on the MDN docs
 - also check the glossary to see if those terms could be better
 
-# 130) Use Ben's lidar thing to visualize tcp traffic going between containers
+## 130) Use Ben's lidar thing to visualize tcp traffic going between containers
 - containers since you can have fine-grained control over tcpstuff without needing anyone to install anything except docker
 - needs lots of exploratory data analysis, since I'm not even sure what things are going to be interesting
 - possibly look at the tcp traffic involved in a basic rails app (frontend/backend/database), and be able to filter for stuff(?) in the browser
 
-# 130) Use tensorflow JS to make a Simon Says for simple English practice
+## 130) Use tensorflow JS to make a Simon Says for simple English practice
 - calculate where people's hands are and give simple commands (either written or audio) like "move your left hand up", "move your right hand down", or "keep both hands up".
 - give automated feedback about whether they did it correctly.
 - we don't have any depth information, just 2D, so have to stay with up/down/left/right.
 - Possibly create a game interface, where two people "compete" for longest streak, and take turns holding the phone.
 
-# 131) Automate a "break a system and then fix it" activity
+## 131) Automate a "break a system and then fix it" activity
 
 - probably easiest to do with a homelab in a very predictable configuration (4-5 VMs with private IPs)
 - Get some ansible playbooks (or some other IAC tool) that can spin up a very simple service architecture: Database, backend server, cache, SIMPLE frontend web server
 - set up montoring dashboards and logging (grafana and ELK stuff)
 - plan out 3 "fail scenarios", and fire one randomly
 
-# 132) Figure out a way to add in authentic examples to https://codethesaur.us
+## 132) Figure out a way to add in authentic examples to https://codethesaur.us
 - probably needs to involve the datastore
 - maaaaaaybe could be grabbed in a github action and hardcoded?
 - a very far way off from this, but a similar-minded project that could benefit from authentic examples from real code
 
-# 133) Turn pulse game concept into an app (or something)
+## 133) Turn pulse game concept into an app (or something)
 - incorporate the 120 scenarios from Hooper's old Pulse concept
 - would probably have to be a mobile app
 - paired with a bluetooth device that can sense heartrate
 
-# 135) Visualize crashing a DB with connections
+## 135) Visualize crashing a DB with connections
 - when services scale up, if they're expecting to create a connection to a database, a massive scale up means a flood of new connections.
 - If too many processes try to open too many connections, it kills the DB...but it would be nice to see how (in dashboards/logs)
 - possibly use a docker MongoDB replicaset for this, though how to spin up 50+ containers locally might be trickier.
 
-# 136) Create micromaterial for tcpdump
-- possibly related to #130 above, but even just for locally running VMs in a well-defined subnet.
+## 136) Create micromaterial for tcpdump
+- possibly related to ##130 above, but even just for locally running VMs in a well-defined subnet.
 - have a script to pick which of the 3 (or however many) VMs/containers is the "noisy one" and make it quiet down.
 - terminal-based micromaterial
 
-# 139) Get a pitch together for a P1PP micromaterial course/material/something
+## 139) Get a pitch together for a P1PP micromaterial course/material/something
 - "chaos engineering without the chaos" (get a way better slogan)
 - predictably break a system and get automated feedback about whether you fixed it
 - needs alerts
@@ -649,31 +648,36 @@ look at these for templates:
 - https://education.ardanlabs.com/
 
 
-# 142) Find some gaps in scaleway cli and submit a PR
+## 142) Find some gaps in scaleway cli and submit a PR
 - Easiest way to do this would be to start working on the k8s-the-hard-way walkthrough with it and see where the gaps are
 
-# 143) K8s the hard way on scaleway
+## 143) K8s the hard way on scaleway
 - Possible that the CLI, which is very new, needs some functionality added to be able to complete the walkthrough
 
-# 145) Homelab network expansion
+## 145) Homelab network expansion
 - get one pi for just prometheus/grafana
 - fire up three VMs on the mini (also decide what to put in three VMs)
 - step though https://grafana.com/blog/2019/08/22/homelab-security-with-ossec-loki-prometheus-and-grafana-on-a-raspberry-pi/
 
-# 146) K8s the hard way on OVH
+## 146) K8s the hard way on OVH
 - they have a defunct CLI and not really great API docs, so this one might require a bit of upfront work to actually even get a command line client working
 
-# 147) Match up songs for lyrics plus karaoke tune
+## 147) Match up songs for lyrics plus karaoke tune
 - grab beats per minute (tempo) from spotify API for a number of different artists
 - https://www.uswitch.com/broadband/every-countrys-favourite-karaoke-song-mapped/
 - https://github.com/benjojo/bpm
 - also look at using metadata from the spotify audio features API
 - output pairs of songs from different genres that have similar factors (x, 2x, 1/2x, etc) and sing karaoke with the melody of one and the lyrics of another
 
-# 148) set up a simple AWS environment with a three-tiered architecture and then break it
-- related to #140
+## 148) set up a simple AWS environment with a three-tiered architecture and then break it
+- related to ##140
 - https://jaxenter.com/chaos-engineering-cpu-spike-174107.html
 - get a list of other things to cause problems
 - figure out a good base domain to have for my examples (do-some-chaotic-good.com)?
 - figure out a good base domain to have for my examples (do-some-chaotic-good.com...?)...AWS can register .com domains, so just pick one and use that as the base piped into the terraform code
 - use some ideas from https://www.thevoid.community/ open incident database
+
+## 149) Create a micromaterial to match function type signatures in typescript with plain JS objects
+- Utility types matched with what happens when you use them
+- return signatures matched with which Object is an example of that
+- other very basic, but easy to forget stuff
