@@ -681,3 +681,15 @@ look at these for templates:
 - Utility types matched with what happens when you use them
 - return signatures matched with which Object is an example of that
 - other very basic, but easy to forget stuff
+
+## 150) Create a learning space focused on InfoSec stuff
+- hackxper.com/JWT (and others)
+- tryhackme.com
+
+## 151) Create micromaterial based on CS Unplugged binary search activity
+- start at the root node and the graphic leads you down towards each branch
+- before you get to a branch, you have to swipe left or right to navigate to the correct place
+- a kinesthetic algorithm
+- similar to guitar hero, but way more basic (read: achievable)
+
+## 152) Put broke robots phrases on postcards
