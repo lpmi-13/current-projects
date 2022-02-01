@@ -92,8 +92,7 @@ https://medium.com/react-native-training/using-sensors-in-react-native-b194d0ad9
 https://talkpython.fm/episodes/show/1/eve-restful-apis-for-humans
 
 ## 8) Parson Problems
-- add javascript option
-- add ruby option
+- add golang option
 - add ability to filter by "complexity" if possible
 - get input from the #accessibility channel about how best to make this usable via screen readers
 - investigate using JS-based AST parsers in the browser to evaluate the "correctness" of the re-order instead of just the literal order
@@ -693,3 +692,13 @@ look at these for templates:
 - similar to guitar hero, but way more basic (read: achievable)
 
 ## 152) Put broke robots phrases on postcards
+
+## 153) Investigate using opentelemtry for micromaterials
+- See what can be sent from a webapp
+- See what the easiest method to collect this data might be (cost/effort/etc)
+- See if that data can be easily displayed somewhere
+
+## 154) Create a micromaterial to convert code to a notional machine
+- investigate more the ways that a notional machine might be visualized
+- Could be a VR/AR representation of a control structure (or something)
+- Highlight that the variable/function definitions can (sometimes) be moved around without changing the execution of the program
