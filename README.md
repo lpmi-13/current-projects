@@ -702,3 +702,6 @@ look at these for templates:
 - investigate more the ways that a notional machine might be visualized
 - Could be a VR/AR representation of a control structure (or something)
 - Highlight that the variable/function definitions can (sometimes) be moved around without changing the execution of the program
+
+## 155) Create micromaterial (maybe in gitpod) to use strace to confirm why a container can't startup
+- possibly trying to bind to a privileged port (eg, 80) without running as root
