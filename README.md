@@ -5,15 +5,6 @@
 #
 # don't have more than three things on the go at once
 ```
-
-# 74) Implement BookFace as a mobile app in React Native
-- working title: Solodex
-- Facebook, but no data leaves
-- A place to write notes in a well-designed format about family/friends
-- Set reminders for yourself to send Xmas cards, birthday cards, etc
-- Instead of people adding you, only you add people
-- Kind of like a digital rolodex
-
 # 140) Create a twitch stream for the "Chaotic Good" project
 - think of a better name
 - invite notable SRE personalities and have them fix a simulated outage
@@ -29,6 +20,15 @@
 - Show need for faster iterations of learning from production outages in "safe" environment
 - It's an activity to contextualize what Google already does with Wheel of Misfortune
 - Need good examples to make it relatable
+
+# 160) Code Corpus API
+- we've got data sorted with https://github.com/lpmi-13/code-corpus-collector
+- we need an ECS service to run on a schedule and use the above to pull in data to RDS
+- we need an RDS instance to store the data (probably postgres)
+- we need a custom domain (codecorpus.net)
+- we need an ALB to respond to requests to that domain
+- we need lambdas to handle the requests (at particular paths)
+- we need a list of things people would want to use this for
 
 ---
 
@@ -353,7 +353,13 @@ https://stackoverflow.com/questions/42857778/how-do-you-run-mocha-tests-in-the-b
 - generate a more robust data structure to ingest into a web app
 - create simple web interface to show one argument, and have users select the either a supporting statement or a counterstatement (possibly add adverbial conjunctions?)
 
-
+# 74) Implement BookFace as a mobile app in React Native
+- working title: Solodex
+- Facebook, but no data leaves
+- A place to write notes in a well-designed format about family/friends
+- Set reminders for yourself to send Xmas cards, birthday cards, etc
+- Instead of people adding you, only you add people
+- Kind of like a digital rolodex
 
 ## 75) Collaborate with Julia Evans (B@rk) on using the e-zines to fuel TechEd materials
 
@@ -705,3 +711,21 @@ look at these for templates:
 
 ## 155) Create micromaterial (maybe in gitpod) to use strace to confirm why a container can't startup
 - possibly trying to bind to a privileged port (eg, 80) without running as root
+
+## 156) See if any of the NACE workshop stuff can be turned into a micromaterial
+- https://www.cerias.purdue.edu/site/nace/
+
+## 157) Work through justjavascript.com and see the relevance for micromaterials
+- https://justjavascript.com/
+
+## 158) Create Cloud Compose DAG Dojo micromaterial
+- set up with terraform (this is going to take a long time to work out, since apparently it takes about an hour to provision, and config errors aren't detected until you actually try to run it)
+- Three failure modes: network, permissions, instance size/type issues
+- possibly add in alerts to a slack channel (script it)
+
+# 159) Create a mockup for CSS wordle (CSSdle?) micromaterial
+- see if CSS things can be put into categories (to enable automated feedback)
+- see about creating UI for just two states (before/after)
+- see about selecting 3 transformations to apply to create the "after"
+- see about grading the "CSS categories" by difficulty (eg, color is "easy", and transforms are "difficult).
+
