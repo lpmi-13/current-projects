@@ -5,16 +5,9 @@
 #
 # don't have more than three things on the go at once
 ```
-# 140) Create a twitch stream for the "Chaotic Good" project
-- think of a better name
-- invite notable SRE personalities and have them fix a simulated outage
-- Get some *basic* AWS environments built out in terraform, ready to deploy before the stream
-- Create 3-5 different scenarios for outages, and create the alerts for these (we can put it all in source transparently, but we need a _secret_ way to select which one gets triggered...probably via me kicking off _something_ on my side)
-- Figure out how to auth in the guests (plus also create SSH keys to be sent to them beforehand) via IAM roles
-- figure out the best platform to send alerts to (some people might prefer slack or discord or?)
-- Figure out how to reliably stream the action (it probably can't be their screen, since that doesn't scale if they don't stream).
-- Do we include a post-mortem (hopefully yes, but probably based on time constraints)
-- Do we include any "phone a friend" capability?
+
+# 155) Create micromaterial (maybe in gitpod) to use strace to confirm why a container can't startup
+- possibly trying to bind to a privileged port (eg, 80) without running as root
 
 # 141) Slide Deck for Chaotic Good project
 - Show need for faster iterations of learning from production outages in "safe" environment
@@ -66,9 +59,7 @@ for this particular app)
 - eventually would be nice to track logins and aggregate progress
 
 
-## 4) put up factor10 to a factor of 10 (potentially just make a
-factor10 generator that takes any site and increases everything by
-10 times)
+## 4) put up factor10 to a factor of 10 (potentially just make a factor10 generator that takes any site and increases everything by 10 times)
 
 ## 5) minimals
 - use youtube data api to get data for the whole channel
@@ -92,13 +83,11 @@ https://medium.com/react-native-training/using-sensors-in-react-native-b194d0ad9
 https://talkpython.fm/episodes/show/1/eve-restful-apis-for-humans
 
 ## 8) Parson Problems
-- add golang option
 - add ability to filter by "complexity" if possible
 - get input from the #accessibility channel about how best to make this usable via screen readers
-- investigate using JS-based AST parsers in the browser to evaluate the "correctness" of the re-order instead of just the literal order
+- investigate using JS-based AST parsers in the browser to evaluate the "correctness" of the re-order instead of just the literal order (maybe tree-sitter?)
 - investigate only storing the beginning/ending of the function lines from the github source code and using github as an open API to grab this stuff at runtime (disadvantage would be that code changes, though this is also technically an issue if we are storing pointers to line numbers anyway)
 - see if there's a way to turn loops (maybe this should be in a different micromaterial) into blocks, as evan suggested.
-- bunch of different parsers here: https://github.com/fkling/astexplorer
 
 ## 9) Stress Maze
 - need a list of words (both general and academic lists) of 2/3/4
@@ -143,9 +132,7 @@ levels
 - have a docker container that can mount the files in a volume
 - need ngrok to tunnel out from the dev server in the docker container to the public internet
 - need a good readme for it
-
-## 15) Update Rebasic
-- check expected file sha1 hashes as well as commit presence
+- maybe gitpod is a better platform for this?
 
 ## 16) Write tests for all React projects
 - especially a11y tests with cypress
@@ -293,18 +280,10 @@ questions students got correct/incorrect?
 - similar to netmask-slider, but with only the above question instead of sliding
 
 ## 63) Browser based interface to give practice solving recursion problems and/or HOFs
-- code sandbox with partially completed recursive functions
 - good programmers aren't better at this because they're smarter, just because they've had more practice doing it.
 - generate 100 or so similar recursion problems (or possibly a new one every hour?) and have users solve it via coding in the UI
-- user sees one incomplete higher order function
-- user needs to complete the function
-- user presses button
-- system runs a test against the output of the function for a given input
-- if the output is correct for the test input, then user got it right
-- for implementation, see about running JS testing libraries in the browser:
-https://medium.com/dailyjs/running-mocha-tests-as-native-es6-modules-in-a-browser-882373f2ecb0
-https://stackoverflow.com/questions/33080182/how-do-i-get-node-js-mocha-to-run-test-in-browser
-https://stackoverflow.com/questions/42857778/how-do-you-run-mocha-tests-in-the-browser
+- the original idea is done with the https://github.com/lpmi-13/higher-order-functions
+- now the difficult part is actually generating recursive functions
 
 ## 64) Put the n-gram tracing approach to authorship attribution in a docker container
 - possibly put it somewhere behind a web interface where we can fire texts at it?
@@ -353,15 +332,13 @@ https://stackoverflow.com/questions/42857778/how-do-you-run-mocha-tests-in-the-b
 - generate a more robust data structure to ingest into a web app
 - create simple web interface to show one argument, and have users select the either a supporting statement or a counterstatement (possibly add adverbial conjunctions?)
 
-# 74) Implement BookFace as a mobile app in React Native
+## 74) Implement BookFace as a mobile app in React Native
 - working title: Solodex
 - Facebook, but no data leaves
 - A place to write notes in a well-designed format about family/friends
 - Set reminders for yourself to send Xmas cards, birthday cards, etc
 - Instead of people adding you, only you add people
 - Kind of like a digital rolodex
-
-## 75) Collaborate with Julia Evans (B@rk) on using the e-zines to fuel TechEd materials
 
 ## 76) Set up static site to track micromaterials on github
 - possibly gatsby (needs a search though...)
@@ -385,6 +362,7 @@ https://www.gatsbyjs.org/docs/adding-search-with-js-search/
 ## 78) Investigate ways to automate testing with a screenreader
 - could we use Speech to Text models to analyze...something...?
 - make sure it doesn't read the whole thing at once
+- https://dev.to/craigmorten/a11y-testing-automating-screenreaders-1a3n
 
 ## 80) Micromaterial for linux CLI commands
 - grep, sed, cat, | , tee, split, ls, wc, rm, mv, cp, pwd, mkdir, tar, find, awk,
@@ -401,11 +379,6 @@ dig, head, shuf, tree, cut, lsof
 Learning & Technology, 23(1), 114–126. https://doi.org/10125/44675
 - ...basically, find out if quantity affects enjoyment/engagement in the same way, and whether diversity of materials affects quantitative outcomes (performance)
 - also investigate how to frame Form-Focused and Meaning-Focused in the context of software (syntax/linting vs asserts that a function does what it is supposed to)
-
-## 85) Get a python REPL working in the browser
-- just follow the approach in future coder, but expand it to have people fill in the missing parts of functions
-- the idea is to also write some tests that verify when learns have "correctly" written the function or completed the function
-- similar to #63
 
 ## 86) Simple web UI to drag a value and perform integer overflows
 - signed 32-bit integers can only go so high until they become negative
@@ -447,11 +420,6 @@ where:
 - the UI shows the result of the CI build
 - one repo has things broken...each branch (possibly by number) has a more complex problem to find and fix
 - first three problems (failing test, wrong action name, secret not available in ENV, artifact not available for subsequent step)
-
-## 95) Create corpus of aws docs
-- scrape all https://docs.aws.amazon.com
-- get list of all links
-- get text from all links (can scrapy do this? probably...but bs4 can for sure)
 
 ## 96) create simple UI visualization for creating subnets in a network
 - how big is the network
@@ -592,6 +560,8 @@ look at these for templates:
 - there's an error message
 - there's a function
 - users need to click/identify/choose which line has the error
+- use dumb init for this https://github.com/Yelp/dumb-init
+- copy an application into a container and delete random parts of it, then pipe the stdout/stderr to a file...do this 100,000 times (more maybe?)
 
 ## 128) Micromaterial to show app/load balancer latencies and how it affects autoscaling groups
 - When EC2 instances have processes that can't respond fast enough, requests start backing up.
@@ -600,8 +570,10 @@ look at these for templates:
 - When one of the EC2 instances gets killed, the rest experience higher load, and then all fail.
 - show this is a web app where users can adjust latency of response, period for health check, and requests per second
 
-## 129) Create a corpus of content on the MDN docs
-- also check the glossary to see if those terms could be better
+## 129) Create a corpus of content on various docs sites
+- MDN docs
+- AWS docs
+- GCP docs
 
 ## 130) Use Ben's lidar thing to visualize tcp traffic going between containers
 - containers since you can have fine-grained control over tcpstuff without needing anyone to install anything except docker
@@ -636,11 +608,6 @@ look at these for templates:
 - If too many processes try to open too many connections, it kills the DB...but it would be nice to see how (in dashboards/logs)
 - possibly use a docker MongoDB replicaset for this, though how to spin up 50+ containers locally might be trickier.
 
-## 136) Create micromaterial for tcpdump
-- possibly related to ##130 above, but even just for locally running VMs in a well-defined subnet.
-- have a script to pick which of the 3 (or however many) VMs/containers is the "noisy one" and make it quiet down.
-- terminal-based micromaterial
-
 ## 139) Get a pitch together for a P1PP micromaterial course/material/something
 - "chaos engineering without the chaos" (get a way better slogan)
 - predictably break a system and get automated feedback about whether you fixed it
@@ -652,12 +619,23 @@ look at these for templates:
 - "controlled chaos"
 - https://education.ardanlabs.com/
 
+## 140) Create a twitch stream for the "Chaotic Good" project
+- think of a better name
+- invite notable SRE personalities and have them fix a simulated outage
+- Get some *basic* AWS environments built out in terraform, ready to deploy before the stream
+- Create 3-5 different scenarios for outages, and create the alerts for these (we can put it all in source transparently, but we need a _secret_ way to select which one gets triggered...probably via me kicking off _something_ on my side)
+- Figure out how to auth in the guests (plus also create SSH keys to be sent to them beforehand) via IAM roles
+- figure out the best platform to send alerts to (some people might prefer slack or discord or?)
+- Figure out how to reliably stream the action (it probably can't be their screen, since that doesn't scale if they don't stream).
+- Do we include a post-mortem (hopefully yes, but probably based on time constraints)
+- Do we include any "phone a friend" capability?
 
 ## 142) Find some gaps in scaleway cli and submit a PR
 - Easiest way to do this would be to start working on the k8s-the-hard-way walkthrough with it and see where the gaps are
 
 ## 143) K8s the hard way on scaleway
 - Possible that the CLI, which is very new, needs some functionality added to be able to complete the walkthrough
+
 
 ## 145) Homelab network expansion
 - get one pi for just prometheus/grafana
@@ -709,8 +687,6 @@ look at these for templates:
 - Could be a VR/AR representation of a control structure (or something)
 - Highlight that the variable/function definitions can (sometimes) be moved around without changing the execution of the program
 
-## 155) Create micromaterial (maybe in gitpod) to use strace to confirm why a container can't startup
-- possibly trying to bind to a privileged port (eg, 80) without running as root
 
 ## 156) See if any of the NACE workshop stuff can be turned into a micromaterial
 - https://www.cerias.purdue.edu/site/nace/
