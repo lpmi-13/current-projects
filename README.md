@@ -743,3 +743,10 @@ look at these for templates:
 
 ## 169) Micromaterial using tcpdump101.com
 - also V2 at dev.tcpdump101.com
+
+## 170) Micromaterial to practice parsing logs via the commandline
+- Mix terminal and web UI via gitpod
+- Take initial dataset and ask things like "how many times does X" occur, then have them press a button in the Web UI
+- Ideally, the question/answer pairs can be at least a bit random, so that it's not the same activity every time, but probably MVP will be just using a subset of hardcoded Q/A pairs for each "run" of the activity
+- eg, "how many times does this npm command use the bind() syscall?"
+- eg, with large dataset, "how many unique users are in these logs?"
