@@ -723,9 +723,47 @@ look at these for templates:
 - Three failure modes: network, permissions, instance size/type issues
 - possibly add in alerts to a slack channel (script it)
 
-# 159) Create a mockup for CSS wordle (CSSdle?) micromaterial
+## 159) Create a mockup for CSS wordle (CSSdle?) micromaterial
 - see if CSS things can be put into categories (to enable automated feedback)
 - see about creating UI for just two states (before/after)
 - see about selecting 3 transformations to apply to create the "after"
 - see about grading the "CSS categories" by difficulty (eg, color is "easy", and transforms are "difficult).
 
+## 160) Use the shift-fuzzer-js for creating random function declarations
+- figure out something to do with this
+- https://shift-ast.org/fuzzer.html
+
+## 161) See how much this (or things like this) could be made into a gitpod-based workshop
+- https://gist.github.com/jedrichards/9942165
+
+## 162) Create learning space for Rana Khalil's security stuff
+- https://ranakhalil.teachable.com/p/web-security-academy-video-series
+- other stuff she does
+
+## 163) Create learning space for the 90 days of devops github repo
+- https://github.com/MichaelCade/90DaysOfDevOps
+
+## 164) Create corpus of transcript/audio for Darknet Diaries
+- How to talk like an infosec person
+- Will need lots of exploratory data analysis to see what falls out
+- https://www.youtube.com/watch?v=RrH4qOYt6P0&list=PLtN43kak3fFEEDNo0ks9QVKYfQpT2yUEo
+
+## 165) Create a single serving webpage that provides "people shout at you during your live coding tech test" as a service
+- two people on the call
+- maybe a third one joins midway?
+- recorded separately with colorful costumes
+- spliced together and served via a single webpage
+
+## 166) Use gitpod to create cloze tests for...things
+- don't recall what this idea was about, but an interesting concept
+
+## 167) Micromaterial for & and * in Golang
+- I keep forgetting which means which, and for people coming from languages without much use of explicit pointers (JS/python/ruby), this is going to be totally new, so just something to practice reading/writing them
+- which things means a memory address, and which things means the value at that address
+- you have a memory address...which thing is going to refer to that (and same for the value of a pointer)
+
+## 168) Micromaterial to practice using tc
+- traffic control...simulate dropped packets and corrupted packets and all kinds of network issues.
+
+## 169) Micromaterial using tcpdump101.com
+- also V2 at dev.tcpdump101.com
