@@ -750,3 +750,27 @@ look at these for templates:
 - Ideally, the question/answer pairs can be at least a bit random, so that it's not the same activity every time, but probably MVP will be just using a subset of hardcoded Q/A pairs for each "run" of the activity
 - eg, "how many times does this npm command use the bind() syscall?"
 - eg, with large dataset, "how many unique users are in these logs?"
+
+## 171) Make a codewords implemenation
+- based on https://github.com/jaredreisinger/react-crossword
+- then take away clues
+- then get a dataset for the words
+- then decide on how to organize the dataset for each letter occurring how many times (or whatever codewords uses)
+
+## 172) List of all public GitHub repositories
+- availabel at https://docs.github.com/en/rest/repos/repos#list-public-repositories
+- with an auth'ed user, we can get 5,000 requests per hour (with 100 results per request), which means it'll be about 41 days to grab everything.
+- store the repo ID, since that's what we paginate by, and it also means we can just query the diff later.
+- put this in a container and probably run it on the mac mini (since I'm doing literally nothing with it).
+- storing just the URL and the ID should be around 300MB for all 492 Million repos (based on testing in the browser).
+
+## 173) Create a docker container for computing item analysis
+- start with https://github.com/patriciamar/ShinyItemAnalysis
+- possibly port to python...?
+
+## 174) Use gdb (probably in a gitpod) to analyze core dumps
+- start with https://www.brendangregg.com/blog/2016-08-09/gdb-example-ncurses.html
+- see if you can find a corpus of core dump data
+
+## 175) Add recursion detection to corpus collection
+- https://docs.python.org/3/library/inspect.html#inspect.getclosurevars to find all the recursive functions (maybe there's also a simpler way)
