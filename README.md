@@ -58,9 +58,6 @@ differences...possibly yield a higher dataset (since we're not concerned with th
 for this particular app)
 - eventually would be nice to track logins and aggregate progress
 
-
-## 4) put up factor10 to a factor of 10 (potentially just make a factor10 generator that takes any site and increases everything by 10 times)
-
 ## 5) minimals
 - use youtube data api to get data for the whole channel
 -need to revamp the processing pipeline to garbage collect after the conversion is done, also to stop and clean up after 100(?) videos have been processed.
@@ -193,13 +190,6 @@ user's method "functions the same"
 
 ## 35) test out AR with react web app
 - https://github.com/nitin42/React-Web-AR
-
-## 36) mock out turning a github user's contribution data into a sim-city web UI
-- each programming language is a type of zone (commercial, industrial, residential...possibly map to compiled vs scripting vs ??? languages)
-- height is based on number of merged PRs
-- density is based on chronology?
-- area is based on number of repos contributed to
-- make this into a VR area? like a landscape...commits as height, contributors as area, forks as roads...
 
 ## 37) Attempt to redo text highlighting in textarea
 - https://github.com/keustma/react-highlighted-textarea
@@ -448,8 +438,6 @@ wget -mk --convert-links --adjust-extension --page-requisites --no-parent -r --f
 - possibly model after https://github.com/evykassirer/pink-trombone-bangbangcon
 - also check out https://github.com/zakaton/Pink-Trombone
 
-## 100) create react-native app mockups for both Kitchen Rescue and Dog Whistler
-- get a version building and deployed to app store
 
 ## 101) create micromaterial to practice DNS record stuff
 - understanding (select a particular record type from context)
@@ -774,3 +762,33 @@ look at these for templates:
 
 ## 175) Add recursion detection to corpus collection
 - https://docs.python.org/3/library/inspect.html#inspect.getclosurevars to find all the recursive functions (maybe there's also a simpler way)
+
+## 176) Figure out a micromaterial for the We Hack Purple stuff
+- https://wehackpurple.com/pushing-left-like-a-boss%E2%80%8A-%E2%80%8Apart-5-10%E2%80%8A-%E2%80%8Auntrusted-data/
+
+## 177) Micromaterial for just checking whether a site is vulnerable to CSRF
+- JWT in auth header, not vulnerable
+- passed in cookie, could be vulnerable
+- a relevant action (maybe ask for clarification on this)
+- no unpredictable request parameters (maybe this just means not ignoring unexpected params)
+
+# 178) Micromaterial for fixing relative imports in python
+- just set up a simple app in gitpod that doesn't work because the imports are bad
+- then fix them
+- also do this for golang (separate repo)
+
+# 179) Micromaterial to set and grep for correlation ID
+- set random UUID's in the HTTP request headers, and track a transaction across different services
+- set something like X-Correlation-Id
+- possibly start out with a problem in some 3-service (or whatever number) architecture, and then add in the correlation ID and check logging in Kibana to see where the problem is
+
+# 180) See about converting common leetcode questions to things that are more "social" (ie, involving people)
+- https://en.wikipedia.org/wiki/Wason_selection_task#Explanations_of_performance_on_the_task
+- Cosmides and Tooby (1992) and found instead that "performance on non-arbitrary, evolutionarily familiar problems is more strongly related to general intelligence than performance on arbitrary, evolutionarily novel problems"
+
+# 181) Micromaterial to supply the missing part of recursive functions
+- this is going to be HEAVILY focused on the tests
+- basically have the tests completely specify the scenario (how many "things" are adjacent)
+- the recursive functions could be partially complete, or even just have the function name defined, with nothing else
+- put it in gitpod, naturally
+- do it in typescript and/or python
