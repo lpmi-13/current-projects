@@ -647,6 +647,7 @@ look at these for templates:
 - figure out a good base domain to have for my examples (do-some-chaotic-good.com)?
 - figure out a good base domain to have for my examples (do-some-chaotic-good.com...?)...AWS can register .com domains, so just pick one and use that as the base piped into the terraform code
 - use some ideas from https://www.thevoid.community/ open incident database
+- for the failure scenarios include: 1 - A can't talk to B (networking issue, DNS, firewall, service not up etc etc)...2 - server degraded (high CPU, high IO, OOMs etc), this may come from runaway process or faulty code (say N+1 ORM issue)...3 - configuration issues (nginx or whatever with bad config, bad SSL cert etc) ...1 and 2 can be approached systematically and 3 depends on extra knowledge of particular tooling etc
 
 ## 149) Create a micromaterial to match function type signatures in typescript with plain JS objects
 - Utility types matched with what happens when you use them
@@ -792,3 +793,10 @@ look at these for templates:
 - the recursive functions could be partially complete, or even just have the function name defined, with nothing else
 - put it in gitpod, naturally
 - do it in typescript and/or python
+
+# 182) Web app to let groups of learners submit summaries for a method/function in an open source repo
+- needs a login, so we can group people by class/cohort/etc.
+- this way, we probably don't need to worry about content moderation
+- group owner (the person who sets up the group) can send invites and allow people to join, or also make other members owners
+- users submit summaries (short) of functions, and they can also read the summaries that other users in the same group have written.
+- natural activity to complement a learning space for a small cohort of learners
