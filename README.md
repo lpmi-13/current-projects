@@ -5,7 +5,7 @@
 #
 # don't have more than three things on the go at once
 ```
-# 160) Code Corpus API
+## 160) Code Corpus API
 - we've got data sorted with https://github.com/lpmi-13/code-corpus-collector
 - we need a lambda to run on a schedule and use the above to pull in data to RDS
 - we need an RDS instance to store the data (probably postgres)
@@ -14,7 +14,7 @@
 - we need an ECS service to handle the requests (at particular paths)
 - we need a list of things people would want to use this for
 
-# 185) Create a CLI client for cloudsigma
+## 185) Create a CLI client for cloudsigma
 - has a REST API, so we need one go library to manage interaction (gocs), and one CLI to use that library (sigmactl). Since I'm still learning go, these are going to be heavily influenced by the digital ocean golang CLI.
 ---
 
@@ -611,7 +611,7 @@ look at these for templates:
 - Do we include a post-mortem (hopefully yes, but probably based on time constraints)
 - Do we include any "phone a friend" capability?
 
-# 141) Slide Deck for Chaotic Good project
+## 141) Slide Deck for Chaotic Good project
 - Show need for faster iterations of learning from production outages in "safe" environment
 - It's an activity to contextualize what Google already does with Wheel of Misfortune
 - Need good examples to make it relatable
@@ -674,7 +674,7 @@ look at these for templates:
 - Could be a VR/AR representation of a control structure (or something)
 - Highlight that the variable/function definitions can (sometimes) be moved around without changing the execution of the program
 
-# 155) Create micromaterial (maybe in gitpod) to use strace to confirm why a container can't startup
+## 155) Create micromaterial (maybe in gitpod) to use strace to confirm why a container can't startup
 - possibly trying to bind to a privileged port (eg, 80) without running as root...but that would probably be very obvious from the error message
 
 ## 156) See if any of the NACE workshop stuff can be turned into a micromaterial
@@ -773,40 +773,40 @@ look at these for templates:
 - a relevant action (maybe ask for clarification on this)
 - no unpredictable request parameters (maybe this just means not ignoring unexpected params)
 
-# 178) Micromaterial for fixing relative imports in python
+## 178) Micromaterial for fixing relative imports in python
 - just set up a simple app in gitpod that doesn't work because the imports are bad
 - then fix them
 - also do this for golang (separate repo)
 
-# 179) Micromaterial to set and grep for correlation ID
+## 179) Micromaterial to set and grep for correlation ID
 - set random UUID's in the HTTP request headers, and track a transaction across different services
 - set something like X-Correlation-Id
 - possibly start out with a problem in some 3-service (or whatever number) architecture, and then add in the correlation ID and check logging in Kibana to see where the problem is
 
-# 180) See about converting common leetcode questions to things that are more "social" (ie, involving people)
+## 180) See about converting common leetcode questions to things that are more "social" (ie, involving people)
 - https://en.wikipedia.org/wiki/Wason_selection_task#Explanations_of_performance_on_the_task
 - Cosmides and Tooby (1992) and found instead that "performance on non-arbitrary, evolutionarily familiar problems is more strongly related to general intelligence than performance on arbitrary, evolutionarily novel problems"
 
-# 181) Micromaterial to supply the missing part of recursive functions
+## 181) Micromaterial to supply the missing part of recursive functions
 - this is going to be HEAVILY focused on the tests
 - basically have the tests completely specify the scenario (how many "things" are adjacent)
 - the recursive functions could be partially complete, or even just have the function name defined, with nothing else
 - put it in gitpod, naturally
 - do it in typescript and/or python
 
-# 182) Web app to let groups of learners submit summaries for a method/function in an open source repo
+## 182) Web app to let groups of learners submit summaries for a method/function in an open source repo
 - needs a login, so we can group people by class/cohort/etc.
 - this way, we probably don't need to worry about content moderation
 - group owner (the person who sets up the group) can send invites and allow people to join, or also make other members owners
 - users submit summaries (short) of functions, and they can also read the summaries that other users in the same group have written.
 - natural activity to complement a learning space for a small cohort of learners
 
-# 183) Micromaterial to present faded code blocks
+## 183) Micromaterial to present faded code blocks
 - possibly fade out the keywords, or some other aspect of a working program.
 - the benefit of putting this in a runtime environment is you can probably even add tests, and when you've "unfaded" the code, the tests pass
 - we also get feedback from whether it runs/errors.
 
-# 184) Trainline PR choose your own adventure
+## 184) Trainline PR choose your own adventure
 - Get an org with a starter template that can be used to create a new repo and assigned to a particular github user (both Wilco and CYF do this).
 - One backend (stateless and in typescript), behind nginx, one data store (probably postgres run locally in a container), one frontend (react w/ typescript), and one lambda (python?) to put the data in the database periodically
 - In that repo, assign a first PR that just adds a single method to respond to a particular path in the backend. Solicit all feedback, comments, etc
