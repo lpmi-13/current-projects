@@ -5,24 +5,17 @@
 #
 # don't have more than three things on the go at once
 ```
-
-# 155) Create micromaterial (maybe in gitpod) to use strace to confirm why a container can't startup
-- possibly trying to bind to a privileged port (eg, 80) without running as root
-
-# 141) Slide Deck for Chaotic Good project
-- Show need for faster iterations of learning from production outages in "safe" environment
-- It's an activity to contextualize what Google already does with Wheel of Misfortune
-- Need good examples to make it relatable
-
 # 160) Code Corpus API
 - we've got data sorted with https://github.com/lpmi-13/code-corpus-collector
-- we need an ECS service to run on a schedule and use the above to pull in data to RDS
+- we need a lambda to run on a schedule and use the above to pull in data to RDS
 - we need an RDS instance to store the data (probably postgres)
 - we need a custom domain (codecorpus.net)
 - we need an ALB to respond to requests to that domain
-- we need lambdas to handle the requests (at particular paths)
+- we need an ECS service to handle the requests (at particular paths)
 - we need a list of things people would want to use this for
 
+# 185) Create a CLI client for cloudsigma
+- has a REST API, so we need one go library to manage interaction (gocs), and one CLI to use that library (sigmactl). Since I'm still learning go, these are going to be heavily influenced by the digital ocean golang CLI.
 ---
 
 ## 2) Github User Stats
@@ -618,6 +611,11 @@ look at these for templates:
 - Do we include a post-mortem (hopefully yes, but probably based on time constraints)
 - Do we include any "phone a friend" capability?
 
+# 141) Slide Deck for Chaotic Good project
+- Show need for faster iterations of learning from production outages in "safe" environment
+- It's an activity to contextualize what Google already does with Wheel of Misfortune
+- Need good examples to make it relatable
+
 ## 142) Find some gaps in scaleway cli and submit a PR
 - Easiest way to do this would be to start working on the k8s-the-hard-way walkthrough with it and see where the gaps are
 
@@ -676,6 +674,8 @@ look at these for templates:
 - Could be a VR/AR representation of a control structure (or something)
 - Highlight that the variable/function definitions can (sometimes) be moved around without changing the execution of the program
 
+# 155) Create micromaterial (maybe in gitpod) to use strace to confirm why a container can't startup
+- possibly trying to bind to a privileged port (eg, 80) without running as root...but that would probably be very obvious from the error message
 
 ## 156) See if any of the NACE workshop stuff can be turned into a micromaterial
 - https://www.cerias.purdue.edu/site/nace/
@@ -755,7 +755,7 @@ look at these for templates:
 
 ## 173) Create a docker container for computing item analysis
 - start with https://github.com/patriciamar/ShinyItemAnalysis
-- possibly port to python...?
+- semi-working prototype at https://github.com/lpmi-13/item-analysis
 
 ## 174) Use gdb (probably in a gitpod) to analyze core dumps
 - start with https://www.brendangregg.com/blog/2016-08-09/gdb-example-ncurses.html
@@ -800,3 +800,21 @@ look at these for templates:
 - group owner (the person who sets up the group) can send invites and allow people to join, or also make other members owners
 - users submit summaries (short) of functions, and they can also read the summaries that other users in the same group have written.
 - natural activity to complement a learning space for a small cohort of learners
+
+# 183) Micromaterial to present faded code blocks
+- possibly fade out the keywords, or some other aspect of a working program.
+- the benefit of putting this in a runtime environment is you can probably even add tests, and when you've "unfaded" the code, the tests pass
+- we also get feedback from whether it runs/errors.
+
+# 184) Trainline PR choose your own adventure
+- Get an org with a starter template that can be used to create a new repo and assigned to a particular github user (both Wilco and CYF do this).
+- One backend (stateless and in typescript), behind nginx, one data store (probably postgres run locally in a container), one frontend (react w/ typescript), and one lambda (python?) to put the data in the database periodically
+- In that repo, assign a first PR that just adds a single method to respond to a particular path in the backend. Solicit all feedback, comments, etc
+- after initial PR merge (this is probably the only step without branching), trigger an automated issue from the tech lead to increase code coverage above 75% (or whatever).
+- slightly after (maybe 5 min or so), raise another PR to add some different handling, maybe update the model in the backend. This could have bugs in it.
+- if the above code gets merged (with or without the bugs), have the tech lead raise an issue that the frontend is now broken and needs to be updated to handle the new data model and response from the backend.
+- for whatever code the user merges in (could be in a PR, but maybe simple to push a hotfix to main), run the CI and see if the tests pass.
+- the CI needs to be in GitHub actions, and will run unit tests on PRs, but also ideally run integration tests using cypress at a particular branch (either on gitpod or netlify).
+- we also need to update the python script that feeds the database, but maybe that's out of scope for the initial MVP of this. Ideally it would need to be updated to feed in (or just not filter out) the data that matches the data model of the backend when it changes.
+- The automated CI of this is key...depends how easy it is to deterministically run an integration test in either gitpod or netlify. For gitpod, we can probably just have the user do something manual, and actually, maybe netlify isn't really an option, since we need a backend for anything integration-esqu
+
