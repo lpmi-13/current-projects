@@ -818,3 +818,11 @@ look at these for templates:
 - we also need to update the python script that feeds the database, but maybe that's out of scope for the initial MVP of this. Ideally it would need to be updated to feed in (or just not filter out) the data that matches the data model of the backend when it changes.
 - The automated CI of this is key...depends how easy it is to deterministically run an integration test in either gitpod or netlify. For gitpod, we can probably just have the user do something manual, and actually, maybe netlify isn't really an option, since we need a backend for anything integration-esqu
 
+## 186) Micromaterial to practice back-of-the-envelope calculations
+- Capacity estimates and constraints
+- traffic estimates (breakdown between read/write in difficult mode, just total traffic/requests in easy mode)
+- queries per second (per minute?)
+- storage estimates (number of "things" to storage, and total storage space needed)...maybe also consider if we want to keep data for X years
+- bandwidth estimates (how many requests per second * size of request)
+- memory estimates (in case of caching)
+- how much percentage of the requests should we cache (figure out number of requests and then how many of those requests we expect to hit the cache)
