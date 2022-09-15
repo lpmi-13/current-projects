@@ -7,15 +7,19 @@
 ```
 ## 160) Code Corpus API
 - we've got data sorted with https://github.com/lpmi-13/code-corpus-collector
-- we need a lambda to run on a schedule and use the above to pull in data to RDS
-- we need an RDS instance to store the data (probably postgres)
-- we need a custom domain (codecorpus.net)
-- we need an ALB to respond to requests to that domain
-- we need an ECS service to handle the requests (at particular paths)
 - we need a list of things people would want to use this for
+- for now, we can do without update of the data...just cause there's already enough to keep us going for a while
+- we probably need a landing page at the main domain (codecorpus.net), and then have the api respond at the subdomain `api.codecorpus.net`.
 
 ## 185) Create a CLI client for cloudsigma
 - has a REST API, so we need one go library to manage interaction (gocs), and one CLI to use that library (sigmactl). Since I'm still learning go, these are going to be heavily influenced by the digital ocean golang CLI.
+
+## 187) Chaos-pod
+- controlled chaos in a gitpod
+- we need the smallest possible bunch of stuff that we can deterministically break (network partition, load, and maybe bad config updates)
+- use github.com/wg/wrk to generate load
+- use tc to simulate network partitions
+- simulate new deployments of config maybe
 ---
 
 ## 2) Github User Stats
@@ -826,3 +830,4 @@ look at these for templates:
 - bandwidth estimates (how many requests per second * size of request)
 - memory estimates (in case of caching)
 - how much percentage of the requests should we cache (figure out number of requests and then how many of those requests we expect to hit the cache)
+
