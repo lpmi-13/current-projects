@@ -11,15 +11,18 @@
 - for now, we can do without update of the data...just cause there's already enough to keep us going for a while
 - we probably need a landing page at the main domain (codecorpus.net), and then have the api respond at the subdomain `api.codecorpus.net`.
 
+## 148) set up a simple AWS environment with a three-tiered architecture and then break it
+- related to #140
+- https://jaxenter.com/chaos-engineering-cpu-spike-174107.html
+- get a list of other things to cause problems
+- figure out a good base domain to have for my examples (do-some-chaotic-good.com)?
+- figure out a good base domain to have for my examples (do-some-chaotic-good.com...?)...AWS can register .com domains, so just pick one and use that as the base piped into the terraform code
+- use some ideas from https://www.thevoid.community/ open incident database
+- for the failure scenarios include: 1 - A can't talk to B (networking issue, DNS, firewall, service not up etc etc)...2 - server degraded (high CPU, high IO, OOMs etc), this may come from runaway process or faulty code (say N+1 ORM issue)...3 - configuration issues (nginx or whatever with bad config, bad SSL cert etc) ...1 and 2 can be approached systematically and 3 depends on extra knowledge of particular tooling etc
+
 ## 185) Create a CLI client for cloudsigma
 - has a REST API, so we need one go library to manage interaction (gocs), and one CLI to use that library (sigmactl). Since I'm still learning go, these are going to be heavily influenced by the digital ocean golang CLI.
 
-## 187) Chaos-pod
-- controlled chaos in a gitpod
-- we need the smallest possible bunch of stuff that we can deterministically break (network partition, load, and maybe bad config updates)
-- use github.com/wg/wrk to generate load
-- use tc to simulate network partitions
-- simulate new deployments of config maybe
 ---
 
 ## 2) Github User Stats
@@ -642,14 +645,6 @@ look at these for templates:
 - also look at using metadata from the spotify audio features API
 - output pairs of songs from different genres that have similar factors (x, 2x, 1/2x, etc) and sing karaoke with the melody of one and the lyrics of another
 
-## 148) set up a simple AWS environment with a three-tiered architecture and then break it
-- related to ##140
-- https://jaxenter.com/chaos-engineering-cpu-spike-174107.html
-- get a list of other things to cause problems
-- figure out a good base domain to have for my examples (do-some-chaotic-good.com)?
-- figure out a good base domain to have for my examples (do-some-chaotic-good.com...?)...AWS can register .com domains, so just pick one and use that as the base piped into the terraform code
-- use some ideas from https://www.thevoid.community/ open incident database
-- for the failure scenarios include: 1 - A can't talk to B (networking issue, DNS, firewall, service not up etc etc)...2 - server degraded (high CPU, high IO, OOMs etc), this may come from runaway process or faulty code (say N+1 ORM issue)...3 - configuration issues (nginx or whatever with bad config, bad SSL cert etc) ...1 and 2 can be approached systematically and 3 depends on extra knowledge of particular tooling etc
 
 ## 149) Create a micromaterial to match function type signatures in typescript with plain JS objects
 - Utility types matched with what happens when you use them
@@ -751,7 +746,7 @@ look at these for templates:
 - then decide on how to organize the dataset for each letter occurring how many times (or whatever codewords uses)
 
 ## 172) List of all public GitHub repositories
-- availabel at https://docs.github.com/en/rest/repos/repos#list-public-repositories
+- available at https://docs.github.com/en/rest/repos/repos#list-public-repositories
 - with an auth'ed user, we can get 5,000 requests per hour (with 100 results per request), which means it'll be about 41 days to grab everything.
 - store the repo ID, since that's what we paginate by, and it also means we can just query the diff later.
 - put this in a container and probably run it on the mac mini (since I'm doing literally nothing with it).
@@ -831,3 +826,10 @@ look at these for templates:
 - memory estimates (in case of caching)
 - how much percentage of the requests should we cache (figure out number of requests and then how many of those requests we expect to hit the cache)
 
+## 187) Chaos-pod
+- controlled chaos in a gitpod
+- we need the smallest possible bunch of stuff that we can deterministically break (network partition, load, and maybe bad config updates)
+- use github.com/wg/wrk to generate load
+- use tc to simulate network partitions
+- simulate new deployments of config maybe
+- possible issue that we can abstract away the actual configuration of the issues via a web UI (so that "setting" security group rules "looks" the same in our pod as it does in an authentic situation), but then the interrogation of what the actual issue is could get a bit muddled, and the implemenation will be WAY heavier...
