@@ -20,8 +20,15 @@
 - use some ideas from https://www.thevoid.community/ open incident database
 - for the failure scenarios include: 1 - A can't talk to B (networking issue, DNS, firewall, service not up etc etc)...2 - server degraded (high CPU, high IO, OOMs etc), this may come from runaway process or faulty code (say N+1 ORM issue)...3 - configuration issues (nginx or whatever with bad config, bad SSL cert etc) ...1 and 2 can be approached systematically and 3 depends on extra knowledge of particular tooling etc
 
-## 185) Create a CLI client for cloudsigma
-- has a REST API, so we need one go library to manage interaction (gocs), and one CLI to use that library (sigmactl). Since I'm still learning go, these are going to be heavily influenced by the digital ocean golang CLI.
+## 186) Micromaterial to practice back-of-the-envelope calculations
+- How many characters does your GUID need? Eg, for a given number of users, a given number of items in a database, a given number of X to keep track of...
+- Capacity estimates and constraints
+- traffic estimates (breakdown between read/write in difficult mode, just total traffic/requests in easy mode)
+- queries per second (per minute?)
+- storage estimates (number of "things" to storage, and total storage space needed)...maybe also consider if we want to keep data for X years
+- bandwidth estimates (how many requests per second * size of request)
+- memory estimates (in case of caching)
+- how much percentage of the requests should we cache (figure out number of requests and then how many of those requests we expect to hit the cache)
 
 ---
 
@@ -817,14 +824,10 @@ look at these for templates:
 - we also need to update the python script that feeds the database, but maybe that's out of scope for the initial MVP of this. Ideally it would need to be updated to feed in (or just not filter out) the data that matches the data model of the backend when it changes.
 - The automated CI of this is key...depends how easy it is to deterministically run an integration test in either gitpod or netlify. For gitpod, we can probably just have the user do something manual, and actually, maybe netlify isn't really an option, since we need a backend for anything integration-esqu
 
-## 186) Micromaterial to practice back-of-the-envelope calculations
-- Capacity estimates and constraints
-- traffic estimates (breakdown between read/write in difficult mode, just total traffic/requests in easy mode)
-- queries per second (per minute?)
-- storage estimates (number of "things" to storage, and total storage space needed)...maybe also consider if we want to keep data for X years
-- bandwidth estimates (how many requests per second * size of request)
-- memory estimates (in case of caching)
-- how much percentage of the requests should we cache (figure out number of requests and then how many of those requests we expect to hit the cache)
+
+## 185) Create a CLI client for cloudsigma
+- has a REST API, so we need one go library to manage interaction (gocs), and one CLI to use that library (sigmactl). Since I'm still learning go, these are going to be heavily influenced by the digital ocean golang CLI.
+
 
 ## 187) Chaos-pod
 - controlled chaos in a gitpod
