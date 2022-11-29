@@ -845,3 +845,25 @@ look at these for templates:
 - a webapp (map, not territory) to examine what happens if you have a given data schema and decide to partition on different parts of it
 - intent is to _show_ how parititioning on things with higer variation (eg, users' location) is "better" than paritioning on things with lower variation (eg, users' gender).
 - could we include the idea/visualization of a "hot" partition?
+
+## 190) MySQL Dojo
+- a simple micromaterial (similar to the mongo dojo) to practice common tasks in a MySQL database.
+- could be that we really just care about is just seeing different failure modes for this database, so maybe we just set up a containerized database with prometheus and grafana to monitor, then create different ways to load it to failure
+- one fun way to do this would be the web UI + k3s cluster + BOOM
+
+## 191) Elastic Dojo
+- simple micromaterial to see how/when Elastic search fails
+- could be that without sufficient scale, it's not possible to learn anything meaningful, but I also have never done anything with ES management, so anything here would result in learning stuff I don't know now.
+
+## 192) Overload Scenario
+- originally conceived of as just mimicking Black Friday, but it could be that this is very similar to the dojos anyway.
+- maybe the best learning would just be researching and documenting the different ways to create load, and also looking at the tradeoffs of low per transaction data througput but high transaction volume VS high data payloads per transaction with slightly lower transaction volumes.
+- the whole point would be to tease out what a bunch of terms (eg, "iops", "throughput", "saturation") mean in practice, and experiment with how we would create different conditions affecting those things.
+
+## 193) Debugging Checklist
+- basically, I keep forgetting simple things while debugging (like checking thequotes), so I need a checklist to remind me of the super simple stuff to check
+- quotes
+- spelling
+- white space
+- is it on?
+- etc
