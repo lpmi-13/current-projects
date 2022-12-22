@@ -867,3 +867,16 @@ look at these for templates:
 - white space
 - is it on?
 - etc
+
+## 194) JQ practice engine
+- a web-based (and terminal-paired) way to practice using `jq` to manipulate data
+- a server with 3 pairs of endpoints (to start), eg, `question1` and `answer1`, and a web-ui that tells you how to manipulate it and whether you did it right.
+- GET request from the first endpoint, and a post with the json data to the second endpoint in the pair.
+- when you submit the correct data, the UI changes to show a green tick next to that problem.
+- take a json array and return the first element
+- take a json map and return the values for a specific key
+- take a json array of object and return the total value for all keys of a certain type
+- do lots of mapping, reducing, and filtering.
+- eventually, would be nice if the problems autogenerate, though I have no idea how that would be accomplished.
+- could a compose stack start a container with a certain "seed" in its config for the type of problem? Then, when the post succeeds, it send a SIGTERM and the compose stack knows to spin up a new container?
+- if only process-based, the process would have to store the state of the call to the GET endpoint so it knows that subsequent requests don't update anything until the POST succeeds, then the GET endpoint response payload updates along with the POST endpoint.
