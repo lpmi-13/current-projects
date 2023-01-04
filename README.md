@@ -880,3 +880,10 @@ look at these for templates:
 - eventually, would be nice if the problems autogenerate, though I have no idea how that would be accomplished.
 - could a compose stack start a container with a certain "seed" in its config for the type of problem? Then, when the post succeeds, it send a SIGTERM and the compose stack knows to spin up a new container?
 - if only process-based, the process would have to store the state of the call to the GET endpoint so it knows that subsequent requests don't update anything until the POST succeeds, then the GET endpoint response payload updates along with the POST endpoint.
+
+## 195) How big is that json?
+- a web-based micromaterial to help people estimate the size of a json payload by sight
+- have one randomly generated json payload (maybe use faker or something simple)
+- have three buttons to click to show your guess
+- give immediately feedback about whether it was the correct guess
+- try to have all three options fairly close together...maybe like half a standard deviation distance from middle to the other ones...
