@@ -887,3 +887,18 @@ look at these for templates:
 - have three buttons to click to show your guess
 - give immediately feedback about whether it was the correct guess
 - try to have all three options fairly close together...maybe like half a standard deviation distance from middle to the other ones...
+
+## 196) SLOConf submission
+- Make a simple webapp that "does stuff"
+- Show the compose stack dashboards in grafana
+- Make the Login buggy (maybe every 10th login fails)
+- Make the sessions slow (store them in the DB)
+- Make the DB requests generally slow (don't use connection pooling)
+- Have the query not use an index
+- Constrain the memory (for containers with Elasticsearch)
+- Show the SLOs in the grafana instance and walk people through fixing the three issues so that the SLO's are no longer breaching
+- Fix buggy code
+- Move sessions to a caching layer
+- Implement connection pooling
+- Add an index
+- Bump the memory for the ES container
