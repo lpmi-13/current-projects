@@ -902,3 +902,12 @@ look at these for templates:
 - Implement connection pooling
 - Add an index
 - Bump the memory for the ES container
+
+## 197) Get some simple micromaterials (maybe one that branches off?) for Julia Evans Linux Debugging Zine
+- awesome tools in here and great examples, so put some of them into exercises
+
+## 198) How to talk like an SRE
+- grab audio/transcripts from https://www.oncallmemaybe.com/
+- grab audio/transcripts from https://sre.google/prodcast/
+- grab audio/transcripts from https://smallbatches.fm/episodes (this one might not be as relevant)
+- this one only has transcripts in youtube, but we can grab that and the audio in one place (plus the API might be nicer than webpage scraping) https://www.youtube.com/@SlightReliability
