@@ -911,3 +911,9 @@ look at these for templates:
 - grab audio/transcripts from https://sre.google/prodcast/
 - grab audio/transcripts from https://smallbatches.fm/episodes (this one might not be as relevant)
 - this one only has transcripts in youtube, but we can grab that and the audio in one place (plus the API might be nicer than webpage scraping) https://www.youtube.com/@SlightReliability
+
+## 199) Feeling what different SLOs are like
+- this isn't necessarily about feeling things, but more about conveying the difference between a page load latency of 200ms, 500ms, and 1000ms.
+- there are probably other things that we could simulate different tiers of SLI for, like time to interactive and other web vitals stuff
+- possible issue is that these client-side metrics are highly dependent on things like device type and network conditions, but at least we can "preview" the actual client experience
+- put a random generator on the server side to simulate latency levels, and then you can just swipe left or right based on whether you think the latency was "acceptable"...then click "generate SLO" whenever you're ready to see what it would have been
