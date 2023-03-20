@@ -854,6 +854,7 @@ look at these for templates:
 ## 191) Elastic Dojo
 - simple micromaterial to see how/when Elastic search fails
 - could be that without sufficient scale, it's not possible to learn anything meaningful, but I also have never done anything with ES management, so anything here would result in learning stuff I don't know now.
+- We should see if we can add some filter tuning in here... https://www.elastic.co/blog/found-optimizing-elasticsearch-searches
 
 ## 192) Overload Scenario
 - originally conceived of as just mimicking Black Friday, but it could be that this is very similar to the dojos anyway.
@@ -917,3 +918,5 @@ look at these for templates:
 - there are probably other things that we could simulate different tiers of SLI for, like time to interactive and other web vitals stuff
 - possible issue is that these client-side metrics are highly dependent on things like device type and network conditions, but at least we can "preview" the actual client experience
 - put a random generator on the server side to simulate latency levels, and then you can just swipe left or right based on whether you think the latency was "acceptable"...then click "generate SLO" whenever you're ready to see what it would have been
+
+
