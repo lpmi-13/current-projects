@@ -855,6 +855,7 @@ look at these for templates:
 - simple micromaterial to see how/when Elastic search fails
 - could be that without sufficient scale, it's not possible to learn anything meaningful, but I also have never done anything with ES management, so anything here would result in learning stuff I don't know now.
 - We should see if we can add some filter tuning in here... https://www.elastic.co/blog/found-optimizing-elasticsearch-searches
+- Also would be cool to practic performing a re-index in different scenarios without downtime: mapping change, cluster upgrade between major versions, etc
 
 ## 192) Overload Scenario
 - originally conceived of as just mimicking Black Friday, but it could be that this is very similar to the dojos anyway.
