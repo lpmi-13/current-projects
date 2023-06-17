@@ -745,6 +745,7 @@ look at these for templates:
 - Ideally, the question/answer pairs can be at least a bit random, so that it's not the same activity every time, but probably MVP will be just using a subset of hardcoded Q/A pairs for each "run" of the activity
 - eg, "how many times does this npm command use the bind() syscall?"
 - eg, with large dataset, "how many unique users are in these logs?"
+- possibly combine with awksedfred
 
 ## 171) Make a codewords implemenation
 - based on https://github.com/jaredreisinger/react-crossword
@@ -883,13 +884,6 @@ look at these for templates:
 - could a compose stack start a container with a certain "seed" in its config for the type of problem? Then, when the post succeeds, it send a SIGTERM and the compose stack knows to spin up a new container?
 - if only process-based, the process would have to store the state of the call to the GET endpoint so it knows that subsequent requests don't update anything until the POST succeeds, then the GET endpoint response payload updates along with the POST endpoint.
 
-## 195) How big is that json?
-- a web-based micromaterial to help people estimate the size of a json payload by sight
-- have one randomly generated json payload (maybe use faker or something simple)
-- have three buttons to click to show your guess
-- give immediately feedback about whether it was the correct guess
-- try to have all three options fairly close together...maybe like half a standard deviation distance from middle to the other ones...
-
 ## 196) SLOConf submission
 - Make a simple webapp that "does stuff"
 - Show the compose stack dashboards in grafana
@@ -920,4 +914,18 @@ look at these for templates:
 - possible issue is that these client-side metrics are highly dependent on things like device type and network conditions, but at least we can "preview" the actual client experience
 - put a random generator on the server side to simulate latency levels, and then you can just swipe left or right based on whether you think the latency was "acceptable"...then click "generate SLO" whenever you're ready to see what it would have been
 
+## 200) Will it fire?
+- Micromaterial to practice going from a graph with alerting settings to deciding if it would fire or not
+- include evaluation period, evaluation frequency, cooling off period, and stuff like that
+- have a simple auto-generated graph and the settings below it and answer the question "would this fire?"
 
+## 201) AwkSedFred
+- basically the same as JQ-pilot, but do it for parsing and processing with both awk and sed
+- could be log lines, could be other types of text
+- exercises with just awk, just sed, and combining both
+- could we do something with streaming?
+- main issue is going to be how to visually present the exercise, since we don't have enough screen real estate (especially on mobile) to really show a lot of line)
+- could we do something with putting data into kibana? Do people parse kibana stuff with CLI tools? I don't assume so, since it's a GUI, but who knows.
+
+## 202) Generate transcripts with Whispernet (or is it just Whisper)
+- whatever that sweet tool is to generate transcripts from audio would be very cool to play with. See about leveraging it to create a corpus of certain genres in tech talk.
