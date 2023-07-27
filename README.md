@@ -138,13 +138,7 @@ levels
 - need a good readme for it
 - maybe gitpod is a better platform for this?
 
-## 16) Write tests for all React projects
-- especially a11y tests with cypress
 
-## 17) Rewrite previous projects in React
-- AnTweet
-- AnRedd
-- AnWriting?
 
 ## 18) Deploy static apps just from Netlify
 - SentenceFactory
@@ -169,10 +163,7 @@ Micromaterials-API, derivations-API, avl-API)
 - Add labels for all inputs
 - make sure all frontends have cypress a11y tests
 
-## 21) Dockerize backends of existing apps
-- AnRedd
-- AnWriting
-- SentenceFactory
+
 
 ## 22) What to Expect when you're Expect-ing
 - simple static page that shows which APIs go with which
@@ -184,9 +175,6 @@ JS assertions library (chai/expect/enzyme/etc)
 to write a method to replace it...give feedback on whether the
 user's method "functions the same"
 
-## 28) Ensure names and styles in python projects adhere to PEP8
-
-## 29) Set `NODE_ENV=production` in all node-backed apps
 
 ## 30) Turn Stress in the Speech Stream into a Python module to take in a word and output the reasons why it has a given pronunciation
 - key syllable
@@ -195,8 +183,6 @@ user's method "functions the same"
 - origin of the root
 
 
-## 35) test out AR with react web app
-- https://github.com/nitin42/React-Web-AR
 
 ## 37) Attempt to redo text highlighting in textarea
 - https://github.com/keustma/react-highlighted-textarea
@@ -533,7 +519,7 @@ look at these for templates:
 
 ## 122) Micromaterial to visualize placing ECS tasks into instances in a cluster
 - make sure the task reservations (CPU/RAM) are variable and also that the VM specs are variable
-- probably just drag and drop "taks" into VMs to watch how mismatches might throw specific errors: unable to place task because no container instances met all of its requirements
+- probably just drag and drop "tasks" into VMs to watch how mismatches might throw specific errors: unable to place task because no container instances met all of its requirements
 - see if anyone on awsnewbies or cloudnewbies finds this useful
 
 ## 123) Micromaterial to practice creating an allow list via regex for web form validation
@@ -560,10 +546,10 @@ look at these for templates:
 
 ## 128) Micromaterial to show app/load balancer latencies and how it affects autoscaling groups
 - When EC2 instances have processes that can't respond fast enough, requests start backing up.
-- When these requests stop being all responded to, some of them are probably helath checks
+- When these requests stop being all responded to, some of them are probably health checks
 - When enough health checks fail, the ELB will take the EC2 out of service
 - When one of the EC2 instances gets killed, the rest experience higher load, and then all fail.
-- show this is a web app where users can adjust latency of response, period for health check, and requests per second
+- show this in a web app where users can adjust latency of response, period for health check, and requests per second
 
 ## 129) Create a corpus of content on various docs sites
 - MDN docs
@@ -670,7 +656,7 @@ look at these for templates:
 
 ## 152) Put broke robots phrases on postcards
 
-## 153) Investigate using opentelemtry for micromaterials
+## 153) Investigate using opentelemetry for micromaterials
 - See what can be sent from a webapp
 - See what the easiest method to collect this data might be (cost/effort/etc)
 - See if that data can be easily displayed somewhere
@@ -871,18 +857,6 @@ look at these for templates:
 - is it on?
 - etc
 
-## 194) JQ practice engine
-- a web-based (and terminal-paired) way to practice using `jq` to manipulate data
-- a server with 3 pairs of endpoints (to start), eg, `question1` and `answer1`, and a web-ui that tells you how to manipulate it and whether you did it right.
-- GET request from the first endpoint, and a post with the json data to the second endpoint in the pair.
-- when you submit the correct data, the UI changes to show a green tick next to that problem.
-- take a json array and return the first element
-- take a json map and return the values for a specific key
-- take a json array of object and return the total value for all keys of a certain type
-- do lots of mapping, reducing, and filtering.
-- eventually, would be nice if the problems autogenerate, though I have no idea how that would be accomplished.
-- could a compose stack start a container with a certain "seed" in its config for the type of problem? Then, when the post succeeds, it send a SIGTERM and the compose stack knows to spin up a new container?
-- if only process-based, the process would have to store the state of the call to the GET endpoint so it knows that subsequent requests don't update anything until the POST succeeds, then the GET endpoint response payload updates along with the POST endpoint.
 
 ## 196) SLOConf submission
 - Make a simple webapp that "does stuff"
