@@ -823,6 +823,7 @@ look at these for templates:
 - use tc to simulate network partitions
 - simulate new deployments of config maybe
 - possible issue that we can abstract away the actual configuration of the issues via a web UI (so that "setting" security group rules "looks" the same in our pod as it does in an authentic situation), but then the interrogation of what the actual issue is could get a bit muddled, and the implemenation will be WAY heavier...
+- use the `stress` command to simulte CPU/IO/Memory stress https://lindevs.com/install-stress-command-on-ubuntu
 
 ## 188) AR for cubetto thing
 - just make something with AR Kit for react native
