@@ -5,11 +5,6 @@
 #
 # don't have more than three things on the go at once
 ```
-## 160) Code Corpus API
-- we've got data sorted with https://github.com/lpmi-13/code-corpus-collector
-- we need a list of things people would want to use this for
-- for now, we can do without update of the data...just cause there's already enough to keep us going for a while
-- we probably need a landing page at the main domain (codecorpus.net), and then have the api respond at the subdomain `api.codecorpus.net`.
 
 ## 148) set up a simple AWS environment with a three-tiered architecture and then break it
 - related to #140
@@ -20,15 +15,15 @@
 - use some ideas from https://www.thevoid.community/ open incident database
 - for the failure scenarios include: 1 - A can't talk to B (networking issue, DNS, firewall, service not up etc etc)...2 - server degraded (high CPU, high IO, OOMs etc), this may come from runaway process or faulty code (say N+1 ORM issue)...3 - configuration issues (nginx or whatever with bad config, bad SSL cert etc) ...1 and 2 can be approached systematically and 3 depends on extra knowledge of particular tooling etc
 
-## 186) Micromaterial to practice back-of-the-envelope calculations
-- How many characters does your GUID need? Eg, for a given number of users, a given number of items in a database, a given number of X to keep track of...
-- Capacity estimates and constraints
-- traffic estimates (breakdown between read/write in difficult mode, just total traffic/requests in easy mode)
-- queries per second (per minute?)
-- storage estimates (number of "things" to storage, and total storage space needed)...maybe also consider if we want to keep data for X years
-- bandwidth estimates (how many requests per second * size of request)
-- memory estimates (in case of caching)
-- how much percentage of the requests should we cache (figure out number of requests and then how many of those requests we expect to hit the cache)
+## 199) Feeling what different SLOs are like
+- this isn't necessarily about feeling things, but more about conveying the difference between a page load latency of 200ms, 500ms, and 1000ms.
+- there are probably other things that we could simulate different tiers of SLI for, like time to interactive and other web vitals stuff
+- possible issue is that these client-side metrics are highly dependent on things like device type and network conditions, but at least we can "preview" the actual client experience
+- put a random generator on the server side to simulate latency levels, and then you can just swipe left or right based on whether you think the latency was "acceptable"...then click "generate SLO" whenever you're ready to see what it would have been
+- have swiping left and right to indicate whether the perceived latency is acceptable. Use this data to generate what the user's projected SLO should be.
+- Measure two things: load of main page, load of search results
+- very simple web UI with just two tabs and a landing page explaining the exercise
+- maybe with Next.JS, cause that's the hotness
 
 ---
 
@@ -600,6 +595,7 @@ look at these for templates:
 - "controlled chaos"
 - https://education.ardanlabs.com/
 
+
 ## 140) Create a twitch stream for the "Chaotic Good" project
 - think of a better name
 - invite notable SRE personalities and have them fix a simulated outage
@@ -686,46 +682,52 @@ look at these for templates:
 - see about selecting 3 transformations to apply to create the "after"
 - see about grading the "CSS categories" by difficulty (eg, color is "easy", and transforms are "difficult).
 
-## 160) Use the shift-fuzzer-js for creating random function declarations
+## 160) Code Corpus API
+- we've got data sorted with https://github.com/lpmi-13/code-corpus-collector
+- we need a list of things people would want to use this for
+- for now, we can do without update of the data...just cause there's already enough to keep us going for a while
+- we probably need a landing page at the main domain (codecorpus.net), and then have the api respond at the subdomain `api.codecorpus.net`.
+
+## 161) Use the shift-fuzzer-js for creating random function declarations
 - figure out something to do with this
 - https://shift-ast.org/fuzzer.html
 
-## 161) See how much this (or things like this) could be made into a gitpod-based workshop
+## 162) See how much this (or things like this) could be made into a gitpod-based workshop
 - https://gist.github.com/jedrichards/9942165
 
-## 162) Create learning space for Rana Khalil's security stuff
+## 163) Create learning space for Rana Khalil's security stuff
 - https://ranakhalil.teachable.com/p/web-security-academy-video-series
 - other stuff she does
 
-## 163) Create learning space for the 90 days of devops github repo
+## 164) Create learning space for the 90 days of devops github repo
 - https://github.com/MichaelCade/90DaysOfDevOps
 
-## 164) Create corpus of transcript/audio for Darknet Diaries
+## 165) Create corpus of transcript/audio for Darknet Diaries
 - How to talk like an infosec person
 - Will need lots of exploratory data analysis to see what falls out
 - https://www.youtube.com/watch?v=RrH4qOYt6P0&list=PLtN43kak3fFEEDNo0ks9QVKYfQpT2yUEo
 
-## 165) Create a single serving webpage that provides "people shout at you during your live coding tech test" as a service
+## 166) Create a single serving webpage that provides "people shout at you during your live coding tech test" as a service
 - two people on the call
 - maybe a third one joins midway?
 - recorded separately with colorful costumes
 - spliced together and served via a single webpage
 
-## 166) Use gitpod to create cloze tests for...things
+## 167) Use gitpod to create cloze tests for...things
 - don't recall what this idea was about, but an interesting concept
 
-## 167) Micromaterial for & and * in Golang
+## 168) Micromaterial for & and * in Golang
 - I keep forgetting which means which, and for people coming from languages without much use of explicit pointers (JS/python/ruby), this is going to be totally new, so just something to practice reading/writing them
 - which things means a memory address, and which things means the value at that address
 - you have a memory address...which thing is going to refer to that (and same for the value of a pointer)
 
-## 168) Micromaterial to practice using tc
+## 169) Micromaterial to practice using tc
 - traffic control...simulate dropped packets and corrupted packets and all kinds of network issues.
 
-## 169) Micromaterial using tcpdump101.com
+## 170) Micromaterial using tcpdump101.com
 - also V2 at dev.tcpdump101.com
 
-## 170) Micromaterial to practice parsing logs via the commandline
+## 171) Micromaterial to practice parsing logs via the commandline
 - Mix terminal and web UI via gitpod
 - Take initial dataset and ask things like "how many times does X" occur, then have them press a button in the Web UI
 - Ideally, the question/answer pairs can be at least a bit random, so that it's not the same activity every time, but probably MVP will be just using a subset of hardcoded Q/A pairs for each "run" of the activity
@@ -733,73 +735,73 @@ look at these for templates:
 - eg, with large dataset, "how many unique users are in these logs?"
 - possibly combine with awksedfred
 
-## 171) Make a codewords implemenation
+## 172) Make a codewords implemenation
 - based on https://github.com/jaredreisinger/react-crossword
 - then take away clues
 - then get a dataset for the words
 - then decide on how to organize the dataset for each letter occurring how many times (or whatever codewords uses)
 
-## 172) List of all public GitHub repositories
+## 173) List of all public GitHub repositories
 - available at https://docs.github.com/en/rest/repos/repos#list-public-repositories
 - with an auth'ed user, we can get 5,000 requests per hour (with 100 results per request), which means it'll be about 41 days to grab everything.
 - store the repo ID, since that's what we paginate by, and it also means we can just query the diff later.
 - put this in a container and probably run it on the mac mini (since I'm doing literally nothing with it).
 - storing just the URL and the ID should be around 300MB for all 492 Million repos (based on testing in the browser).
 
-## 173) Create a docker container for computing item analysis
+## 174) Create a docker container for computing item analysis
 - start with https://github.com/patriciamar/ShinyItemAnalysis
 - semi-working prototype at https://github.com/lpmi-13/item-analysis
 
-## 174) Use gdb (probably in a gitpod) to analyze core dumps
+## 175) Use gdb (probably in a gitpod) to analyze core dumps
 - start with https://www.brendangregg.com/blog/2016-08-09/gdb-example-ncurses.html
 - see if you can find a corpus of core dump data
 
-## 175) Add recursion detection to corpus collection
+## 176) Add recursion detection to corpus collection
 - https://docs.python.org/3/library/inspect.html#inspect.getclosurevars to find all the recursive functions (maybe there's also a simpler way)
 
-## 176) Figure out a micromaterial for the We Hack Purple stuff
+## 177) Figure out a micromaterial for the We Hack Purple stuff
 - https://wehackpurple.com/pushing-left-like-a-boss%E2%80%8A-%E2%80%8Apart-5-10%E2%80%8A-%E2%80%8Auntrusted-data/
 
-## 177) Micromaterial for just checking whether a site is vulnerable to CSRF
+## 178) Micromaterial for just checking whether a site is vulnerable to CSRF
 - JWT in auth header, not vulnerable
 - passed in cookie, could be vulnerable
 - a relevant action (maybe ask for clarification on this)
 - no unpredictable request parameters (maybe this just means not ignoring unexpected params)
 
-## 178) Micromaterial for fixing relative imports in python
+## 179) Micromaterial for fixing relative imports in python
 - just set up a simple app in gitpod that doesn't work because the imports are bad
 - then fix them
 - also do this for golang (separate repo)
 
-## 179) Micromaterial to set and grep for correlation ID
+## 180) Micromaterial to set and grep for correlation ID
 - set random UUID's in the HTTP request headers, and track a transaction across different services
 - set something like X-Correlation-Id
 - possibly start out with a problem in some 3-service (or whatever number) architecture, and then add in the correlation ID and check logging in Kibana to see where the problem is
 
-## 180) See about converting common leetcode questions to things that are more "social" (ie, involving people)
+## 181) See about converting common leetcode questions to things that are more "social" (ie, involving people)
 - https://en.wikipedia.org/wiki/Wason_selection_task#Explanations_of_performance_on_the_task
 - Cosmides and Tooby (1992) and found instead that "performance on non-arbitrary, evolutionarily familiar problems is more strongly related to general intelligence than performance on arbitrary, evolutionarily novel problems"
 
-## 181) Micromaterial to supply the missing part of recursive functions
+## 182) Micromaterial to supply the missing part of recursive functions
 - this is going to be HEAVILY focused on the tests
 - basically have the tests completely specify the scenario (how many "things" are adjacent)
 - the recursive functions could be partially complete, or even just have the function name defined, with nothing else
 - put it in gitpod, naturally
 - do it in typescript and/or python
 
-## 182) Web app to let groups of learners submit summaries for a method/function in an open source repo
+## 183) Web app to let groups of learners submit summaries for a method/function in an open source repo
 - needs a login, so we can group people by class/cohort/etc.
 - this way, we probably don't need to worry about content moderation
 - group owner (the person who sets up the group) can send invites and allow people to join, or also make other members owners
 - users submit summaries (short) of functions, and they can also read the summaries that other users in the same group have written.
 - natural activity to complement a learning space for a small cohort of learners
 
-## 183) Micromaterial to present faded code blocks
+## 184) Micromaterial to present faded code blocks
 - possibly fade out the keywords, or some other aspect of a working program.
 - the benefit of putting this in a runtime environment is you can probably even add tests, and when you've "unfaded" the code, the tests pass
 - we also get feedback from whether it runs/errors.
 
-## 184) Trainline PR choose your own adventure
+## 185) Trainline PR choose your own adventure
 - Get an org with a starter template that can be used to create a new repo and assigned to a particular github user (both Wilco and CYF do this).
 - One backend (stateless and in typescript), behind nginx, one data store (probably postgres run locally in a container), one frontend (react w/ typescript), and one lambda (python?) to put the data in the database periodically
 - In that repo, assign a first PR that just adds a single method to respond to a particular path in the backend. Solicit all feedback, comments, etc
@@ -811,12 +813,21 @@ look at these for templates:
 - we also need to update the python script that feeds the database, but maybe that's out of scope for the initial MVP of this. Ideally it would need to be updated to feed in (or just not filter out) the data that matches the data model of the backend when it changes.
 - The automated CI of this is key...depends how easy it is to deterministically run an integration test in either gitpod or netlify. For gitpod, we can probably just have the user do something manual, and actually, maybe netlify isn't really an option, since we need a backend for anything integration-esqu
 
-
-## 185) Create a CLI client for cloudsigma
+## 186) Create a CLI client for cloudsigma
 - has a REST API, so we need one go library to manage interaction (gocs), and one CLI to use that library (sigmactl). Since I'm still learning go, these are going to be heavily influenced by the digital ocean golang CLI.
 
+## 187) Micromaterial to practice back-of-the-envelope calculations
+- How many characters does your GUID need? Eg, for a given number of users, a given number of items in a database, a given number of X to keep track of...
+- Capacity estimates and constraints
+- traffic estimates (breakdown between read/write in difficult mode, just total traffic/requests in easy mode)
+- queries per second (per minute?)
+- storage estimates (number of "things" to storage, and total storage space needed)...maybe also consider if we want to keep data for X years
+- bandwidth estimates (how many requests per second * size of request)
+- memory estimates (in case of caching)
+- how much percentage of the requests should we cache (figure out number of requests and then how many of those requests we expect to hit the cache)
 
-## 187) Chaos-pod
+
+## 188) Chaos-pod
 - controlled chaos in a gitpod
 - we need the smallest possible bunch of stuff that we can deterministically break (network partition, load, and maybe bad config updates)
 - use github.com/wg/wrk to generate load
@@ -825,39 +836,38 @@ look at these for templates:
 - possible issue that we can abstract away the actual configuration of the issues via a web UI (so that "setting" security group rules "looks" the same in our pod as it does in an authentic situation), but then the interrogation of what the actual issue is could get a bit muddled, and the implemenation will be WAY heavier...
 - use the `stress` command to simulte CPU/IO/Memory stress https://lindevs.com/install-stress-command-on-ubuntu
 
-## 188) AR for cubetto thing
+## 189) AR for cubetto thing
 - just make something with AR Kit for react native
 - if possible (and it actually works and stuff), see about joining the iOS dev program, just to get experience with that whole fiasco
 
-## 189) ShouldIPartitionIt (maybe .com)
+## 190) ShouldIPartitionIt (maybe .com)
 - a webapp (map, not territory) to examine what happens if you have a given data schema and decide to partition on different parts of it
 - intent is to _show_ how parititioning on things with higer variation (eg, users' location) is "better" than paritioning on things with lower variation (eg, users' gender).
 - could we include the idea/visualization of a "hot" partition?
 
-## 190) MySQL Dojo
+## 191) MySQL Dojo
 - a simple micromaterial (similar to the mongo dojo) to practice common tasks in a MySQL database.
 - could be that we really just care about is just seeing different failure modes for this database, so maybe we just set up a containerized database with prometheus and grafana to monitor, then create different ways to load it to failure
 - one fun way to do this would be the web UI + k3s cluster + BOOM
 
-## 191) Elastic Dojo
+## 192) Elastic Dojo
 - simple micromaterial to see how/when Elastic search fails
 - could be that without sufficient scale, it's not possible to learn anything meaningful, but I also have never done anything with ES management, so anything here would result in learning stuff I don't know now.
 - We should see if we can add some filter tuning in here... https://www.elastic.co/blog/found-optimizing-elasticsearch-searches
 - Also would be cool to practic performing a re-index in different scenarios without downtime: mapping change, cluster upgrade between major versions, etc
 
-## 192) Overload Scenario
+## 193) Overload Scenario
 - originally conceived of as just mimicking Black Friday, but it could be that this is very similar to the dojos anyway.
 - maybe the best learning would just be researching and documenting the different ways to create load, and also looking at the tradeoffs of low per transaction data througput but high transaction volume VS high data payloads per transaction with slightly lower transaction volumes.
 - the whole point would be to tease out what a bunch of terms (eg, "iops", "throughput", "saturation") mean in practice, and experiment with how we would create different conditions affecting those things.
 
-## 193) Debugging Checklist
+## 194) Debugging Checklist
 - basically, I keep forgetting simple things while debugging (like checking thequotes), so I need a checklist to remind me of the super simple stuff to check
 - quotes
 - spelling
 - white space
 - is it on?
 - etc
-
 
 ## 196) SLOConf submission
 - Make a simple webapp that "does stuff"
@@ -883,11 +893,6 @@ look at these for templates:
 - grab audio/transcripts from https://smallbatches.fm/episodes (this one might not be as relevant)
 - this one only has transcripts in youtube, but we can grab that and the audio in one place (plus the API might be nicer than webpage scraping) https://www.youtube.com/@SlightReliability
 
-## 199) Feeling what different SLOs are like
-- this isn't necessarily about feeling things, but more about conveying the difference between a page load latency of 200ms, 500ms, and 1000ms.
-- there are probably other things that we could simulate different tiers of SLI for, like time to interactive and other web vitals stuff
-- possible issue is that these client-side metrics are highly dependent on things like device type and network conditions, but at least we can "preview" the actual client experience
-- put a random generator on the server side to simulate latency levels, and then you can just swipe left or right based on whether you think the latency was "acceptable"...then click "generate SLO" whenever you're ready to see what it would have been
 
 ## 200) Will it fire?
 - Micromaterial to practice going from a graph with alerting settings to deciding if it would fire or not
