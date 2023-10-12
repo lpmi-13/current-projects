@@ -909,3 +909,7 @@ look at these for templates:
 
 ## 202) Generate transcripts with Whispernet (or is it just Whisper)
 - whatever that sweet tool is to generate transcripts from audio would be very cool to play with. See about leveraging it to create a corpus of certain genres in tech talk.
+
+## 203) specifically network-based micromaterial
+- using one or more of https://www.brianlinkletter.com/2023/02/network-emulators-and-network-simulators-2023/
+- cloud agnostic, more about routing, packet inspection, protocols and subnets
