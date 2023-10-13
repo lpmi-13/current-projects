@@ -913,3 +913,5 @@ look at these for templates:
 ## 203) specifically network-based micromaterial
 - using one or more of https://www.brianlinkletter.com/2023/02/network-emulators-and-network-simulators-2023/
 - cloud agnostic, more about routing, packet inspection, protocols and subnets
+- https://www.reddit.com/r/devops/comments/15w9a1d/comment/jxaod5y/
+- https://www.reddit.com/r/devops/comments/113qdft/comment/j8rwlwa/ (specifically the error messages distinction bit)
