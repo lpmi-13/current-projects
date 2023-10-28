@@ -17,13 +17,8 @@
 
 ## 199) Feeling what different SLOs are like
 - this isn't necessarily about feeling things, but more about conveying the difference between a page load latency of 200ms, 500ms, and 1000ms.
-- there are probably other things that we could simulate different tiers of SLI for, like time to interactive and other web vitals stuff
-- possible issue is that these client-side metrics are highly dependent on things like device type and network conditions, but at least we can "preview" the actual client experience
-- put a random generator on the server side to simulate latency levels, and then you can just swipe left or right based on whether you think the latency was "acceptable"...then click "generate SLO" whenever you're ready to see what it would have been
-- have swiping left and right to indicate whether the perceived latency is acceptable. Use this data to generate what the user's projected SLO should be.
-- Measure two things: load of main page, load of search results
-- very simple web UI with just two tabs and a landing page explaining the exercise
-- maybe with Next.JS, cause that's the hotness
+- generate fake data with a very long tail towards high latency. So about 5% of load times are above 2000ms, 10% are between 1500-2000ms, 15% are between 1200-1500ms, 25% are between 1000-1200ms, 25% are between 800-1000ms, 15% are between 500-800ms and 5% are between 200-500ms.
+- generate 3 potential SLOs: "p90 if you set acceptable load at fastest 'too slow' loading time", "p90 if you set it at average 'too slow' loading time", and "p90 if you want burn rate to be 100% of error budget over the next 4 weeks".
 
 ---
 
@@ -915,3 +910,11 @@ look at these for templates:
 - cloud agnostic, more about routing, packet inspection, protocols and subnets
 - https://www.reddit.com/r/devops/comments/15w9a1d/comment/jxaod5y/
 - https://www.reddit.com/r/devops/comments/113qdft/comment/j8rwlwa/ (specifically the error messages distinction bit)
+
+## 204) Auth0 Dojo
+- I need to build more flows where things authenticate with other things, and ideally I can have one single micromaterial that does at least one or more of the following:
+- allow a frontend to log somebody in via SSO (google/GitHub/etc)
+- integrate with Auth0 to grant an API token, and then validate that token (somehow) before granting access to resources
+- something with JWTs (which might be connected to the stuff above, but again, this is why I need the Auth0 dojo)
+- this could be done _without_ Auth0 necessarily, but their docs are super nice, so would be easy to get to grips with, and hopefully help cement some concepts.
+- a backend integration that deals with Auth0 something something...
