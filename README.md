@@ -15,11 +15,6 @@
 - use some ideas from https://www.thevoid.community/ open incident database
 - for the failure scenarios include: 1 - A can't talk to B (networking issue, DNS, firewall, service not up etc etc)...2 - server degraded (high CPU, high IO, OOMs etc), this may come from runaway process or faulty code (say N+1 ORM issue)...3 - configuration issues (nginx or whatever with bad config, bad SSL cert etc) ...1 and 2 can be approached systematically and 3 depends on extra knowledge of particular tooling etc
 
-## 199) Feeling what different SLOs are like
-- this isn't necessarily about feeling things, but more about conveying the difference between a page load latency of 200ms, 500ms, and 1000ms.
-- generate fake data with a very long tail towards high latency. So about 5% of load times are above 2000ms, 10% are between 1500-2000ms, 15% are between 1200-1500ms, 25% are between 1000-1200ms, 25% are between 800-1000ms, 15% are between 500-800ms and 5% are between 200-500ms.
-- generate 3 potential SLOs: "p90 if you set acceptable load at fastest 'too slow' loading time", "p90 if you set it at average 'too slow' loading time", and "p90 if you want burn rate to be 100% of error budget over the next 4 weeks".
-
 ---
 
 ## 2) Github User Stats
