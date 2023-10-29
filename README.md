@@ -913,3 +913,8 @@ look at these for templates:
 - something with JWTs (which might be connected to the stuff above, but again, this is why I need the Auth0 dojo)
 - this could be done _without_ Auth0 necessarily, but their docs are super nice, so would be easy to get to grips with, and hopefully help cement some concepts.
 - a backend integration that deals with Auth0 something something...
+
+## 205) remotehack global view
+- would be cool if every last Saturday of the month we have a global map of everywhere doing a remotehack
+- use cloudflare workers and Edge sqlite database to set state for which countries are having remotehacks
+- either put a link on remotehack.space or some other domain (eg. remotehack.global or something)
