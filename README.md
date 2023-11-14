@@ -846,6 +846,7 @@ look at these for templates:
 - a simple micromaterial (similar to the mongo dojo) to practice common tasks in a MySQL database.
 - could be that we really just care about is just seeing different failure modes for this database, so maybe we just set up a containerized database with prometheus and grafana to monitor, then create different ways to load it to failure
 - one fun way to do this would be the web UI + k3s cluster + BOOM
+- what happens to running queries when the process that initiated them dies…does MySQL get a signal to stop the query, or does it just run forever?
 
 ## 192) Elastic Dojo
 - simple micromaterial to see how/when Elastic search fails
