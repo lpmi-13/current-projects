@@ -15,12 +15,10 @@
 - use some ideas from https://www.thevoid.community/ open incident database
 - for the failure scenarios include: 1 - A can't talk to B (networking issue, DNS, firewall, service not up etc etc)...2 - server degraded (high CPU, high IO, OOMs etc), this may come from runaway process or faulty code (say N+1 ORM issue)...3 - configuration issues (nginx or whatever with bad config, bad SSL cert etc) ...1 and 2 can be approached systematically and 3 depends on extra knowledge of particular tooling etc
 
-## 206) Network reconnaisance micromaterial
-- Get a number of containers fired up and drop the user into the first container
-- use nmap to see which ports on the local network are running openssh
-- just use one public key added to `authorized_keys` to let the user log in via the ssh key on each system
-- main focus is "find the ssh port via nmap and then ssh into it"
-- final container has a file to be found at `/tmp/flag`
+## 205) remotehack global view
+- would be cool if every last Saturday of the month we have a global map of everywhere doing a remotehack
+- use cloudflare workers and Edge sqlite database to set state for which countries are having remotehacks
+- either put a link on remotehack.space or some other domain (eg. remotehack.global or something)
 
 ---
 
@@ -609,13 +607,6 @@ look at these for templates:
 - It's an activity to contextualize what Google already does with Wheel of Misfortune
 - Need good examples to make it relatable
 
-## 142) Find some gaps in scaleway cli and submit a PR
-- Easiest way to do this would be to start working on the k8s-the-hard-way walkthrough with it and see where the gaps are
-
-## 143) K8s the hard way on scaleway
-- Possible that the CLI, which is very new, needs some functionality added to be able to complete the walkthrough
-
-
 ## 145) Homelab network expansion
 - get one pi for just prometheus/grafana
 - fire up three VMs on the mini (also decide what to put in three VMs)
@@ -922,10 +913,6 @@ look at these for templates:
 - this could be done _without_ Auth0 necessarily, but their docs are super nice, so would be easy to get to grips with, and hopefully help cement some concepts.
 - a backend integration that deals with Auth0 something something...
 
-## 205) remotehack global view
-- would be cool if every last Saturday of the month we have a global map of everywhere doing a remotehack
-- use cloudflare workers and Edge sqlite database to set state for which countries are having remotehacks
-- either put a link on remotehack.space or some other domain (eg. remotehack.global or something)
 
 ## 207) I do, we do, you do
 - for a very simple activity (maybe curling an endpoint or something), generate code that doesn't work, and get an automated system (chatGPT maybe?) to fix it.
@@ -942,4 +929,20 @@ look at these for templates:
 - network peering (VPC or otherwise)
 - setting up an observability pipeline (maybe just ELK though)
 - pentesting known vulnerable applications (WebGOAT, OWASP, etc)
+- pentesting fundamentals like the entirety of Black Hat Python, but in running VMs (possibly gitpod, iximiuz, etc?)
 - simple updates to make an app production-ready (containers, instrumentation, logging, etc)
+
+## 209) General DevOps skills to find use cases for (and then create micromaterials for)
+- port forwarding (either in simple containers or k8s)
+- attached to a process in a different container (application profiling in k8s)
+- if a pod is stuck in pending state,  how would you troubleshoot?   what might be the problem?  (cluster autoscaler, taints/tolerations)
+- a legacy app is in crashloopback, it takes a long time to startup and it's failing it's health checks / being restarted before it gets a chance to initialize.  what can we do to allow this app to startup correctly?
+- followup: how do you determine if a pod is healthy or not?  what are the three different probes for and when would you use them? (startup, liveness, readiness)
+- use cases for initcontainer
+
+## 210) Distributed tracing in a microservice architecture (related to #180)
+- set up a bunch of different microservices (auth/logging/billing/users/etc)
+- wire up the logging
+- add in some tracing
+- practice following the traces through the app
+- possibly also simulate some problems that we can find the bottlenecks in (latency + perf profling maybe?)
