@@ -894,6 +894,7 @@ look at these for templates:
 - add in some tracing
 - practice following the traces through the app
 - possibly also simulate some problems that we can find the bottlenecks in (latency + perf profling maybe?)
+- see if we can use https://github.com/hansehe/jaeger-all-in-one
 
 ## 211) custom GPT Micromaterials Assistant
 - get the assistant to be able to discriminate between a brainstorming request, when it can just respond with short suggestions, and a longer description of the process that it's planning to use (eg, to set up a micromaterial that's focused on k8s logging debugging).
