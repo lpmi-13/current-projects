@@ -6,14 +6,19 @@
 # don't have more than three things on the go at once
 ```
 
-## 148) set up a simple AWS environment with a three-tiered architecture and then break it
-- related to #140
-- https://jaxenter.com/chaos-engineering-cpu-spike-174107.html
-- get a list of other things to cause problems
-- figure out a good base domain to have for my examples (do-some-chaotic-good.com)?
-- figure out a good base domain to have for my examples (do-some-chaotic-good.com...?)...AWS can register .com domains, so just pick one and use that as the base piped into the terraform code
-- use some ideas from https://www.thevoid.community/ open incident database
-- for the failure scenarios include: 1 - A can't talk to B (networking issue, DNS, firewall, service not up etc etc)...2 - server degraded (high CPU, high IO, OOMs etc), this may come from runaway process or faulty code (say N+1 ORM issue)...3 - configuration issues (nginx or whatever with bad config, bad SSL cert etc) ...1 and 2 can be approached systematically and 3 depends on extra knowledge of particular tooling etc
+## 212) local k3s cluster to debug
+- simple repo that has configuration for various scenarios in a k3s cluster that need to be debugged and fixed, step by step
+- we provide the list of all things it could possibly be, along with the steps to work out what it actually is.
+- DNS, using the wrong IP address for the DNS server
+- DNS/networking, no route for inter-pod networking
+- Liveness, python flask app responds on 5000, but liveness probe set for 8000 so pods keep getting killed. Configure the unhealthy condition to wait long enough so that the pod doesn't get killed immediately.
+- Liveness/application, node express app that reponds on port 3000, and liveness probe checks that port, but on a non-existent path
+- Readiness, configure the readiness probe to check an endpoint that takes longer to become ready than the probe's initialDelaySeconds allows. It might be that we need to artificially slow down the initialization of the app so that it's not ready for 3-5 seconds, and the initial delay allows 1 seconds. Maybe make the endpoint require a network call or some other long-lasting operation to complete before returning a reponse with a 200 status code.
+- Readiness/application, configure a readiness probe to check for the presence of a static file, which is always available even before the application is ready to serve traffic.
+- ResourceLimits, set these to be way lower than needed (eg, 100m is 100 millicpu instead 100 something else). Also lower than necessary memory.
+- ResourceLimits, set the max limits of the node via a ResourceQuota in a specific namespace, and then just put everything in the same namespace.
+- Namespaces, put everything in the default namespace and configure multiple nodes. Make sure only one of the nodes gets all the default namespace pods (if this won't work, then make a different namespace and put everything in it) following: https://stackoverflow.com/questions/69449258/k3s-node-restriction-for-namespace. Then just add stuff till the node breaks.
+- Configure the kubernetes dashboard to be publicly accessible and then run a scan with trivy.
 
 ## 205) remotehack global view
 - would be cool if every last Saturday of the month we have a global map of everywhere doing a remotehack
@@ -36,6 +41,16 @@
 - Bump the memory for the ES container
 
 ---
+
+## 148) set up a simple AWS environment with a three-tiered architecture and then break it
+- related to #140
+- https://jaxenter.com/chaos-engineering-cpu-spike-174107.html
+- get a list of other things to cause problems
+- figure out a good base domain to have for my examples (do-some-chaotic-good.com)?
+- figure out a good base domain to have for my examples (do-some-chaotic-good.com...?)...AWS can register .com domains, so just pick one and use that as the base piped into the terraform code
+- use some ideas from https://www.thevoid.community/ open incident database
+- for the failure scenarios include: 1 - A can't talk to B (networking issue, DNS, firewall, service not up etc etc)...2 - server degraded (high CPU, high IO, OOMs etc), this may come from runaway process or faulty code (say N+1 ORM issue)...3 - configuration issues (nginx or whatever with bad config, bad SSL cert etc) ...1 and 2 can be approached systematically and 3 depends on extra knowledge of particular tooling etc
+
 
 ## 128) Micromaterial to show app/load balancer latencies and how it affects autoscaling groups
 - When EC2 instances have processes that can't respond fast enough, requests start backing up.
@@ -900,9 +915,11 @@ look at these for templates:
 - get the assistant to be able to discriminate between a brainstorming request, when it can just respond with short suggestions, and a longer description of the process that it's planning to use (eg, to set up a micromaterial that's focused on k8s logging debugging).
 - ask the assistant to be able to provide pratical steps to follow while debugging/troubleshooting, and also have it express those in discrete small steps.
 
-## 212) local k3s cluster to debug
-- simple repo that has configuration for various scenarios in a k3s cluster that need to be debugged and fixed, step by step
-- we provide the list of all things it could possibly be, along with the steps to work out what it actually is.
-- DNS, using the wrong IP address for the DNS server
-- DNS/networking, no route for inter-pod networking
-- 
+## 213) Index impacts
+- Add a few different indexes (maybe even just have a few scripted so the user doesn't need to decide which indexes to try) and see what the impact is across other measurements (inspired by Observability Engineering, 2022)
+- Is the main query scanning fewer rows than before or more?
+- How often is the new index being chosen by the query planner, and for which queries (this implies that we have a number of different read operations being executing continuously against the database)
+- Are write latencies up overall, on average, or just at the p95/p99s? (we'll also need some background write operations to measure this)
+- Are queries faster or slower with this new index
+- What other indexes are also used along with the new index (assuming index intersection)
+- Has this index made other indexes obselete (need to work out a good way to measure/show this)
