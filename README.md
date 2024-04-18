@@ -909,3 +909,8 @@ look at these for templates:
 - Are queries faster or slower with this new index
 - What other indexes are also used along with the new index (assuming index intersection)
 - Has this index made other indexes obselete (need to work out a good way to measure/show this)
+
+
+## 216) run a veilod node on exoscale
+- just do the needful, should be fairly simple
+ - make sure ipv6 works 
