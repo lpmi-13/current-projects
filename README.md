@@ -6,20 +6,6 @@
 # don't have more than three things on the go at once
 ```
 
-## 212) local k3s cluster to debug
-- simple repo that has configuration for various scenarios in a k3s cluster that need to be debugged and fixed, step by step
-- we provide the list of all things it could possibly be, along with the steps to work out what it actually is.
-- DNS, using the wrong IP address for the DNS server
-- DNS/networking, no route for inter-pod networking
-- Liveness, python flask app responds on 5000, but liveness probe set for 8000 so pods keep getting killed. Configure the unhealthy condition to wait long enough so that the pod doesn't get killed immediately.
-- Liveness/application, node express app that reponds on port 3000, and liveness probe checks that port, but on a non-existent path
-- Readiness, configure the readiness probe to check an endpoint that takes longer to become ready than the probe's initialDelaySeconds allows. It might be that we need to artificially slow down the initialization of the app so that it's not ready for 3-5 seconds, and the initial delay allows 1 seconds. Maybe make the endpoint require a network call or some other long-lasting operation to complete before returning a reponse with a 200 status code.
-- Readiness/application, configure a readiness probe to check for the presence of a static file, which is always available even before the application is ready to serve traffic.
-- ResourceLimits, set these to be way lower than needed (eg, 100m is 100 millicpu instead 100 something else). Also lower than necessary memory.
-- ResourceLimits, set the max limits of the node via a ResourceQuota in a specific namespace, and then just put everything in the same namespace.
-- Namespaces, put everything in the default namespace and configure multiple nodes. Make sure only one of the nodes gets all the default namespace pods (if this won't work, then make a different namespace and put everything in it) following: https://stackoverflow.com/questions/69449258/k3s-node-restriction-for-namespace. Then just add stuff till the node breaks.
-- Configure the kubernetes dashboard to be publicly accessible and then run a scan with trivy.
-
 ## 205) remotehack global view
 - would be cool if every last Saturday of the month we have a global map of everywhere doing a remotehack
 - use cloudflare workers and Edge sqlite database to set state for which countries are having remotehacks
