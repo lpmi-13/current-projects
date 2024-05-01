@@ -914,4 +914,4 @@ look at these for templates:
 
 ## 216) run a veilod node on exoscale
 - just do the needful, should be fairly simple
- - make sure ipv6 works 
+- make sure ipv6 works
