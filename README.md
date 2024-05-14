@@ -25,6 +25,7 @@
 - Implement connection pooling
 - Add an index
 - Bump the memory for the ES container
+- (this is a bit of a stretch, but would be nice to show a transition from a pull-based architecture to an event-based push architecture...something like requests from rando devices want to get updates about things but the service they call has upstream dependencies it needs to wait for to aggregate things...transition from those upstream dependencies notifying (via whatever method) the downstream service of changes via some sort of message passing, and then it's able to respond more or less immediately to the calling device)
 
 ---
 
@@ -615,6 +616,7 @@ look at these for templates:
 - get one pi for just prometheus/grafana
 - we need somewhere for a git server (gitea/gogs/etc)
 - we need somewhere for an ArgoCD cluster to run
+- we need somewhere for OSSEC to run
 - fire up three VMs on the mini (also decide what to put in three VMs)
 - step though https://grafana.com/blog/2019/08/22/homelab-security-with-ossec-loki-prometheus-and-grafana-on-a-raspberry-pi/
 
@@ -915,3 +917,13 @@ look at these for templates:
 ## 216) run a veilod node on exoscale
 - just do the needful, should be fairly simple
 - make sure ipv6 works
+
+## 217) specific index investigation
+- based on [this thread](https://twitter.com/mikecodemonkey/status/1787973145523274169?t=CcylBV0U_jmWcEFFFYcmyA&s=19), set up a simple web app that loads things (users, accounts, reviews, whatevers), but it loads super slow
+- query is select count(\*) as `numrows` from `user_logs` where `date` >= '2024-04-07' and `date` < '2024.05-07' and `event` = 'login' and `client_id` = SOME_CLIENT_ID
+- involves indexes on "date", "event" and "client_id"
+- see in an explain query that mysql is merging the indexes and has to deal with all the rows
+- goal is to cut out as many rows as you can as fast as you can
+- composite index needs to be in the right order (most selective equality first, so client_id here), and range condition last (date, in this example).
+- order of WHERE clauses doesn't matter (MySQL optimizes this anyway), only order of indexes in the composite index...so we can have date first in the where even though it's last in the composite index
+- this should be about a 950x improvement.
