@@ -927,3 +927,19 @@ look at these for templates:
 - composite index needs to be in the right order (most selective equality first, so client_id here), and range condition last (date, in this example).
 - order of WHERE clauses doesn't matter (MySQL optimizes this anyway), only order of indexes in the composite index...so we can have date first in the where even though it's last in the composite index
 - this should be about a 950x improvement.
+
+## 218) Troubleshoot keep-alive issues
+- based on https://iximiuz.com/en/posts/reverse-proxy-http-keep-alive-and-502s/
+- set this up in a place where we can reproduce the issue...start with ludicrous values for the keep alive on the application end, like 20 ms or something, and update the setting for the load balancer (preferably traefik) to be closer to 2 seconds (default is 3 minutes). In theory, if the values are way out of wack, we should be able to reproduce even without super high traffic loads, which will be more challenging locally.
+- another way to do it would be to introduce artificial latency via `tc`, and run that in either gitpod or iximiuz.
+- also https://www.tessian.com/blog/how-to-fix-http-502-errors/
+- https://github.com/h2o/h2o/issues/281 has good troubleshooting steps
+- for node-specific issues, https://stackoverflow.com/questions/45626787/nodejs-application-behind-amazon-elb-throws-502, and https://stackoverflow.com/questions/12651466/how-to-set-the-http-keep-alive-timeout-in-a-nodejs-server
+- good simple post https://shuheikagawa.com/blog/2019/04/25/keep-alive-timeout/
+
+## 219) Replay optimizing CI
+- based on https://owaiskhan.me/post/improve-ci-build-time-and-reduce-cost.html
+- as with everything, measure first, then optimize, then measure again (ideally at each step).
+- the actual learning objective is moreso around how to measure whether changes are improvements or not...the above repo is a rails build, and also uses Circle-CI, so it could be that with other combinations (eg, Node + GitHub Actions) that some things aren't actually improvements, so the practice in measuring is definitely the main takeaway.
+- depending on how many times we intend for users to run CI, then measure, then change, then re-run...it might mean that they use up the build-minutes quite quickly, so keep an eye on that.
+- ...possibly turn this into a blog post with long-form explanation of stuff tried (especially since I'm probably gonna do this with Node instead of rails).
