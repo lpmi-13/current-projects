@@ -943,3 +943,31 @@ look at these for templates:
 - the actual learning objective is moreso around how to measure whether changes are improvements or not...the above repo is a rails build, and also uses Circle-CI, so it could be that with other combinations (eg, Node + GitHub Actions) that some things aren't actually improvements, so the practice in measuring is definitely the main takeaway.
 - depending on how many times we intend for users to run CI, then measure, then change, then re-run...it might mean that they use up the build-minutes quite quickly, so keep an eye on that.
 - ...possibly turn this into a blog post with long-form explanation of stuff tried (especially since I'm probably gonna do this with Node instead of rails).
+
+## 220) Turn Linux Perf Analysis blog into micromaterial
+- https://netflixtechblog.com/linux-performance-analysis-in-60-000-milliseconds-accc10403c55
+
+## 221) Simple Webapp to demo different "catch" behavior
+- it's confusing what we should put in the `catch` block of a javascript `try/catch` block, so we should have some examples available in source code (and show it in the UI), alongside the behavior that the user sees.
+- based on https://x.com/vponamariov/status/1795122912627695817?t=HyuLmYIAIEHvTyCkAFGutA&s=19
+- log something out for later investigation, but don't show an error to the user
+- present a dialog in the UI for the user to try again
+- don't catch anything, and the error shows up in the console.log
+- automatic retry something (async call to a backend) and don't show anything to the user
+- for the unanticipated edge case, just a default "something went wrong, please try again later" message to the user.
+- for another approach to unanticipated edge case, just display to the user what the error was (this is likely to be stacktrace gibberish).
+- also potentially discriminate between 4xx/5xx
+
+## 222) Generate minimal pairs with AI
+
+- use https://github.com/coqui-ai/TTS to generate a bunch of minimal pairs via AI-generated voices.
+- in theory...we could also take transcripts that have a bunch of minimal pairs (this would basically be any large enough corpus or normal speech), pick out the minimal pairs, and then just change the voices, a la Drake AI songs.
+
+## 223) Distributed Dojo
+- this might be just one thing, or it might be decomposed into multiple smaller things...
+- retrying
+- queueing
+- caching
+- load shedding
+- sharding
+- potentially start with a monolith system and practice decomposing it...or maybe we have a distributed system that does none of these things and we need to add them in in order to make it better/smoother/faster/stronger.
