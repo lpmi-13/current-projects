@@ -12,16 +12,19 @@
 - either put a link on remotehack.space or some other domain (eg. remotehack.global or something)
 
 ## 196) SLOConf submission
+- Run this all on a custom playground in labs.iximiuz.com
 - Make a simple webapp that "does stuff"
-- Show the compose stack dashboards in grafana
+- Show the system dashboards in grafana
 - Make the Login buggy (maybe every 10th login fails)
 - Make the sessions slow (store them in the DB)
+- Make the queries always hit the database (not stored in a caching layer)
 - Make the DB requests generally slow (don't use connection pooling)
 - Have the query not use an index
 - Constrain the memory (for containers with Elasticsearch)
 - Show the SLOs in the grafana instance and walk people through fixing the three issues so that the SLO's are no longer breaching
 - Fix buggy code
 - Move sessions to a caching layer
+- Move common query results to a caching layer
 - Implement connection pooling
 - Add an index
 - Bump the memory for the ES container
@@ -808,11 +811,12 @@ look at these for templates:
 - intent is to _show_ how parititioning on things with higher variation (eg, users' location) is "better" than paritioning on things with lower variation (eg, users' gender).
 - could we include the idea/visualization of a "hot" partition?
 
-## 191) MySQL Dojo
+## 191) MySQL/PostgreSQL Dojo
 - a simple micromaterial (similar to the mongo dojo) to practice common tasks in a MySQL database.
 - could be that we really just care about is just seeing different failure modes for this database, so maybe we just set up a containerized database with prometheus and grafana to monitor, then create different ways to load it to failure
 - one fun way to do this would be the web UI + k3s cluster + BOOM
 - what happens to running queries when the process that initiated them dies…does MySQL get a signal to stop the query, or does it just run forever?
+- add in stuff from https://blog.lawrencejones.dev/isolation-levels
 
 ## 192) Elastic Dojo
 - simple micromaterial to see how/when Elastic search fails
@@ -971,3 +975,7 @@ look at these for templates:
 - load shedding
 - sharding
 - potentially start with a monolith system and practice decomposing it...or maybe we have a distributed system that does none of these things and we need to add them in in order to make it better/smoother/faster/stronger.
+
+## 224) Fixing memory leaks in nodeJS
+- https://marmelab.com/blog/2018/04/03/how-to-track-and-fix-memory-leak-with-nodejs.html
+- if feasible, figure out how to get this into gitpod/iximiuz/other
