@@ -424,11 +424,6 @@ where:
 * 1.3 — buffer capacity you want to reserve for workload spikes (Note: 1.3 value may not fit everyone’s needs, it’s just a baseline)
 - knowreservations.netlify.com
 
-## 91) Add quadratic and linear regression to graphit
-- quadratic is just ploting the start/end/highest-lowest point
-- linear regression is create points on a scatter plot and see how it changes the line
-(possibly do something similar for logistic regression, but that might be way too complex)
-
 ## 94) Create micromaterial for practicing CI stuff
 - possibly use Henry's approach to accessing github and committing
 - github actions fire on commit
