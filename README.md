@@ -918,10 +918,6 @@ look at these for templates:
 - Has this index made other indexes obselete (need to work out a good way to measure/show this)
 
 
-## 216) run a veilod node on exoscale
-- just do the needful, should be fairly simple
-- make sure ipv6 works
-
 ## 217) specific index investigation
 - based on [this thread](https://twitter.com/mikecodemonkey/status/1787973145523274169?t=CcylBV0U_jmWcEFFFYcmyA&s=19), set up a simple web app that loads things (users, accounts, reviews, whatevers), but it loads super slow
 - query is select count(\*) as `numrows` from `user_logs` where `date` >= '2024-04-07' and `date` < '2024.05-07' and `event` = 'login' and `client_id` = SOME_CLIENT_ID
