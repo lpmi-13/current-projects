@@ -970,3 +970,7 @@ look at these for templates:
 ## 224) Fixing memory leaks in nodeJS
 - https://marmelab.com/blog/2018/04/03/how-to-track-and-fix-memory-leak-with-nodejs.html
 - if feasible, figure out how to get this into gitpod/iximiuz/other
+
+## 225) things to speed run on iximiuz 
+
+- https://itnext.io/distributed-tinyurl-architecture-how-to-handle-100k-urls-per-second-54182403117e
