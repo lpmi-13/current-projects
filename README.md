@@ -30,6 +30,13 @@
 - Bump the memory for the ES container
 - (this is a bit of a stretch, but would be nice to show a transition from a pull-based architecture to an event-based push architecture...something like requests from rando devices want to get updates about things but the service they call has upstream dependencies it needs to wait for to aggregate things...transition from those upstream dependencies notifying (via whatever method) the downstream service of changes via some sort of message passing, and then it's able to respond more or less immediately to the calling device)
 
+
+## 30) Turn Stress in the Speech Stream into a Python module to take in a word and output the reasons why it has a given pronunciation
+- key syllable
+- prefixes
+- affixes
+- origin of the root
+
 ---
 
 ## 148) set up a simple AWS environment with a three-tiered architecture and then break it
@@ -220,11 +227,8 @@ to write a method to replace it...give feedback on whether the
 user's method "functions the same"
 
 
-## 30) Turn Stress in the Speech Stream into a Python module to take in a word and output the reasons why it has a given pronunciation
-- key syllable
-- prefixes
-- affixes
-- origin of the root
+
+...we could also possible just one (or several) shot this with LLMs...
 
 
 
