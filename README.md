@@ -979,6 +979,4 @@ look at these for templates:
 
 - https://itnext.io/distributed-tinyurl-architecture-how-to-handle-100k-urls-per-second-54182403117e
 
-## 226) veilid node on civo
-
 ## 227) k8s the hard way on civo
