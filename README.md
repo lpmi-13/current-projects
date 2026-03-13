@@ -6,6 +6,19 @@
 # don't have more than three things on the go at once
 ```
 
+## 6) React Native shaker App
+- need a proof of concept hello world made and installing on a
+local device
+https://medium.com/react-native-training/using-sensors-in-react-native-b194d0ad9167
+- need a list of words (2-syllable, alternating stress)
+- game with shaking based on the stress patterns on 10 of these words
+
+## 133) Turn pulse game concept into an app (or something)
+- incorporate the 120 scenarios from Hooper's old Pulse concept
+- would probably have to be a mobile app
+- paired with a bluetooth device that can sense heartrate
+
+
 ## 205) remotehack global view
 - would be cool if every last Saturday of the month we have a global map of everywhere doing a remotehack
 - use cloudflare workers and Edge sqlite database to set state for which countries are having remotehacks
@@ -116,17 +129,6 @@ differences...possibly yield a higher dataset (since we're not concerned with th
 for this particular app)
 - eventually would be nice to track logins and aggregate progress
 
-## 5) minimals
-- use youtube data api to get data for the whole channel
--need to revamp the processing pipeline to garbage collect after the conversion is done, also to stop and clean up after 100(?) videos have been processed.
-- need to update pipeline to only care about vowels
-
-## 6) React Native shaker App
-- need a proof of concept hello world made and installing on a
-local device
-https://medium.com/react-native-training/using-sensors-in-react-native-b194d0ad9167
-- need a list of words (2-syllable, alternating stress)
-- game with shaking based on the stress patterns on 10 of these words
 
 ## 7) BrokeRobot shirts
 - need to get more source data across different genres
@@ -144,14 +146,6 @@ https://talkpython.fm/episodes/show/1/eve-restful-apis-for-humans
 - investigate only storing the beginning/ending of the function lines from the github source code and using github as an open API to grab this stuff at runtime (disadvantage would be that code changes, though this is also technically an issue if we are storing pointers to line numbers anyway)
 - see if there's a way to turn loops (maybe this should be in a different micromaterial) into blocks, as evan suggested.
 
-## 9) Stress Maze
-- need a list of words (both general and academic lists) of 2/3/4
-syllables. The list needs to be filterable on number of syllables
-as well as which syllable has the primary stress (there could be two stresses for 4-syllable words, so possible major and minor stress)
-- need a way to procedurally generate a path through squares in a
-react UI (MVP is squares, eventually we do hexagons)
-- possibly use https://github.com/Hellenic/react-hexgrid
-- need to map the stress patterns onto these hexagons
 
 ## 10) Pypobot
 - add in tests for the bare minimum NLP module:
@@ -215,26 +209,9 @@ Micromaterials-API, derivations-API, avl-API)
 - make sure all frontends have cypress a11y tests
 
 
-
 ## 22) What to Expect when you're Expect-ing
 - simple static page that shows which APIs go with which
 JS assertions library (chai/expect/enzyme/etc)
-
-## 23) CBMC in Docker container
-- need to test form of inputs/outputs
-- programmatically remove particular methods and ask the user
-to write a method to replace it...give feedback on whether the
-user's method "functions the same"
-
-
-
-...we could also possible just one (or several) shot this with LLMs...
-
-
-
-## 37) Attempt to redo text highlighting in textarea
-- https://github.com/keustma/react-highlighted-textarea
-- https://github.com/mcamac/react-text-annotate
 
 
 ## 40) Command line sentence parser
@@ -268,8 +245,6 @@ user's method "functions the same"
 - never cache for sw, always cache for others?
 
 ## 49) Create simple micromaterials for call/bind/apply
-
-## 50) Make a gatsby site for https://github.com/florinpop17/app-ideas
 
 ## 51) Compare spoken interview prep to "average" developer corpus
 - train speech-to-text model for one specific user
@@ -356,20 +331,6 @@ questions students got correct/incorrect?
 - eg, creating incomplete recursive functions
 - then after a time delay, showing the solution
 - unclear what other input would be helpful/useful during this visual input...sounds?
-
-## 72) Use Kialo to generate compare/contrast materials
-- still need to export discussions manually (boo)
-- Kialo-Parser only works with python2 (possibly PR?)
-- generate a more robust data structure to ingest into a web app
-- create simple web interface to show one argument, and have users select the either a supporting statement or a counterstatement (possibly add adverbial conjunctions?)
-
-## 74) Implement BookFace as a mobile app in React Native
-- working title: Solodex
-- Facebook, but no data leaves
-- A place to write notes in a well-designed format about family/friends
-- Set reminders for yourself to send Xmas cards, birthday cards, etc
-- Instead of people adding you, only you add people
-- Kind of like a digital rolodex
 
 
 ## 77) map out different tech skill areas to target with TechEd
@@ -575,10 +536,6 @@ look at these for templates:
 - maaaaaaybe could be grabbed in a github action and hardcoded?
 - a very far way off from this, but a similar-minded project that could benefit from authentic examples from real code
 
-## 133) Turn pulse game concept into an app (or something)
-- incorporate the 120 scenarios from Hooper's old Pulse concept
-- would probably have to be a mobile app
-- paired with a bluetooth device that can sense heartrate
 
 ## 135) Visualize crashing a DB with connections
 - when services scale up, if they're expecting to create a connection to a database, a massive scale up means a flood of new connections.
@@ -701,12 +658,6 @@ look at these for templates:
 - traffic control...simulate dropped packets and corrupted packets and all kinds of network issues.
 - this would be a better tool to see what happens when network conditions change, as opposed to actually debugging things, since you wouldn't normally encounter running tc in a production system.
 
-
-## 172) Make a codewords implemenation
-- based on https://github.com/jaredreisinger/react-crossword
-- then take away clues
-- then get a dataset for the words
-- then decide on how to organize the dataset for each letter occurring how many times (or whatever codewords uses)
 
 ## 173) List of all public GitHub repositories
 - available at https://docs.github.com/en/rest/repos/repos#list-public-repositories
@@ -978,7 +929,5 @@ look at these for templates:
 ## 225) things to speed run on iximiuz 
 
 - https://itnext.io/distributed-tinyurl-architecture-how-to-handle-100k-urls-per-second-54182403117e
-
-## 227) k8s the hard way on civo
 
 ## 228) add updating linear regression on mathbuffet
