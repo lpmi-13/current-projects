@@ -214,13 +214,6 @@ Micromaterials-API, derivations-API, avl-API)
 JS assertions library (chai/expect/enzyme/etc)
 
 
-## 40) Command line sentence parser
-- start with parse trees
-- look at the source code for ascii art generators in python
-- possibly also linux package?
-- v2 is a full dependency parse
-
-
 ## 42) Academic corpus to analyze form/function stuff
 - how are writers critiquing existing research
 - how are writers hedging
