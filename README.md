@@ -924,3 +924,8 @@ look at these for templates:
 - https://itnext.io/distributed-tinyurl-architecture-how-to-handle-100k-urls-per-second-54182403117e
 
 ## 228) add updating linear regression on mathbuffet
+
+## 229) Visualize a linux filesystem, specifically to show users moving through it and running commands
+
+- use something like https://github.com/jlandersen/k8s-unix-system
+- gets much more interesting if we can show more than one user at a time in the same system
