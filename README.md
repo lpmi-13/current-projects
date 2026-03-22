@@ -929,3 +929,6 @@ look at these for templates:
 
 - use something like https://github.com/jlandersen/k8s-unix-system
 - gets much more interesting if we can show more than one user at a time in the same system
+
+## 230) generate some micromaterial ideas
+- use https://github.com/devops-interviews/devops-interview-questions
