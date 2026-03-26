@@ -76,14 +76,6 @@ https://medium.com/react-native-training/using-sensors-in-react-native-b194d0ad9
 - set up montoring dashboards and logging (grafana and ELK stuff)
 - plan out 3 "fail scenarios", and fire one randomly
 
-## 171) Micromaterial to practice parsing logs via the commandline
-- Mix terminal and web UI via gitpod
-- Take initial dataset and ask things like "how many times does X" occur, then have them press a button in the Web UI
-- Ideally, the question/answer pairs can be at least a bit random, so that it's not the same activity every time, but probably MVP will be just using a subset of hardcoded Q/A pairs for each "run" of the activity
-- eg, "how many times does this npm command use the bind() syscall?"
-- eg, with large dataset, "how many unique users are in these logs?"
-- most common IPs, unique clients, and success rate over the past hour
-- possibly combine with awksedfred
 
 ## 207) I do, we do, you do
 - for a very simple activity (maybe curling an endpoint or something), generate code that doesn't work, and get an automated system (chatGPT maybe?) to fix it.
@@ -929,6 +921,10 @@ look at these for templates:
 
 - use something like https://github.com/jlandersen/k8s-unix-system
 - gets much more interesting if we can show more than one user at a time in the same system
+- maybe we can even use some ebpf and/or tetragon and/or pixie for this...
 
 ## 230) generate some micromaterial ideas
 - use https://github.com/devops-interviews/devops-interview-questions
+
+## 231) get a demo playground with honeycomb and walk through a bad code path that needs fixing
+- use the free tier (generous), and hook it up to a k3s cluster where we find one poorly acting codepath.
