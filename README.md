@@ -831,13 +831,6 @@ look at these for templates:
 - followup: how do you determine if a pod is healthy or not?  what are the three different probes for and when would you use them? (startup, liveness, readiness)
 - use cases for initcontainer
 
-## 210) Distributed tracing in a microservice architecture (related to #180)
-- set up a bunch of different microservices (auth/logging/billing/users/etc)
-- wire up the logging
-- add in some tracing
-- practice following the traces through the app
-- possibly also simulate some problems that we can find the bottlenecks in (latency + perf profling maybe?)
-- see if we can use https://github.com/hansehe/jaeger-all-in-one
 
 ## 211) custom GPT Micromaterials Assistant
 - get the assistant to be able to discriminate between a brainstorming request, when it can just respond with short suggestions, and a longer description of the process that it's planning to use (eg, to set up a micromaterial that's focused on k8s logging debugging).
@@ -928,3 +921,10 @@ look at these for templates:
 
 ## 231) get a demo playground with honeycomb and walk through a bad code path that needs fixing
 - use the free tier (generous), and hook it up to a k3s cluster where we find one poorly acting codepath.
+
+## 232) constraint lab
+- network IO
+- disk IO
+- cpu
+- memory
+- It's possible we split this into 4 different labs, not sure, but this would be great to have built
