@@ -928,3 +928,9 @@ look at these for templates:
 - cpu
 - memory
 - It's possible we split this into 4 different labs, not sure, but this would be great to have built
+
+## 233) fruit ninja, but with syllable boundaries 
+- simple native app (could be web too I suppose)
+- words (probably AWL sourced, but wee if more recent lists exist)
+- one word flies up and down in a new arc and the user has to slice with their finger as to where the syllable boundary is
+- starts with 2 syllable, then maybe 3 a d 4
