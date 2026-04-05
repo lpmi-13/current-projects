@@ -931,6 +931,7 @@ look at these for templates:
 
 ## 233) fruit ninja, but with syllable boundaries 
 - simple native app (could be web too I suppose)
-- words (probably AWL sourced, but wee if more recent lists exist)
-- one word flies up and down in a new arc and the user has to slice with their finger as to where the syllable boundary is
-- starts with 2 syllable, then maybe 3 a d 4
+- words (probably AWL sourced, but see if more recent lists exist)
+- one word flies up and down in an arc and the user has to slice with their finger as to where the syllable boundary is
+- starts with 2 syllable, then maybe 3 and 4
+- also maybe word boundaries in written Thai is more useful
