@@ -6,6 +6,11 @@
 # don't have more than three things on the go at once
 ```
 
+## 222) Generate minimal pairs with AI
+
+- use https://github.com/coqui-ai/TTS to generate a bunch of minimal pairs via AI-generated voices.
+- in theory...we could also take transcripts that have a bunch of minimal pairs (this would basically be any large enough corpus or normal speech), pick out the minimal pairs, and then just change the voices, a la Drake AI songs.
+
 ## 6) React Native shaker App
 - need a proof of concept hello world made and installing on a
 local device
@@ -385,6 +390,7 @@ where:
 - how big is the network
 - how many subnets can we have? what size can they be
 - have CIDR ranges for all of them
+- maybe also make it a fun game like rollercoaster tycoon, but you just have a datacentre that needs a bunch of services run and you have to put them all visually and connect them together (network tycoon).
 
 ## 97) create micromaterial to generate and test the top ten OWASP vulnerabilities
 - possibly run a scanner across 10 github repos at a time
@@ -885,11 +891,6 @@ look at these for templates:
 - for the unanticipated edge case, just a default "something went wrong, please try again later" message to the user.
 - for another approach to unanticipated edge case, just display to the user what the error was (this is likely to be stacktrace gibberish).
 - also potentially discriminate between 4xx/5xx
-
-## 222) Generate minimal pairs with AI
-
-- use https://github.com/coqui-ai/TTS to generate a bunch of minimal pairs via AI-generated voices.
-- in theory...we could also take transcripts that have a bunch of minimal pairs (this would basically be any large enough corpus or normal speech), pick out the minimal pairs, and then just change the voices, a la Drake AI songs.
 
 ## 223) Distributed Dojo
 - this might be just one thing, or it might be decomposed into multiple smaller things...
