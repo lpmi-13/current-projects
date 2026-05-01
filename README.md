@@ -936,3 +936,6 @@ look at these for templates:
 - one word flies up and down in an arc and the user has to slice with their finger as to where the syllable boundary is
 - starts with 2 syllable, then maybe 3 and 4
 - also maybe word boundaries in written Thai is more useful
+
+## 234) Put this through the learning materials generator
+- https://github.com/jwasham/coding-interview-university
