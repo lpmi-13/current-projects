@@ -939,3 +939,8 @@ look at these for templates:
 
 ## 234) Put this through the learning materials generator
 - https://github.com/jwasham/coding-interview-university
+
+## 235) Add a micromaterial for helm
+- most likely something with how it merges between charts, or chart inheritance
+- possibly also syntax
+- would be great if there's some broken/malformed/etc charts in an iximiuz playground and we need to fix them
