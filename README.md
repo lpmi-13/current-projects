@@ -944,3 +944,8 @@ look at these for templates:
 - most likely something with how it merges between charts, or chart inheritance
 - possibly also syntax
 - would be great if there's some broken/malformed/etc charts in an iximiuz playground and we need to fix them
+
+## 236) bring https://adamleskis.com/ up to date
+- make sure all listed projects run
+- fix buggy UI in older projects (eg, stress match)
+- Add new projects (eg, word slice and stress maze)
