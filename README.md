@@ -954,3 +954,8 @@ look at these for templates:
 - get options for how to represent tone
 - target something simple, like tones that are common to a wide group of tonal languages
 - make it very very simple, and only later gamify it
+
+## 238) Visualizer for Hangul and how it maps to place/manner of articulation
+- maybe have quiz elements
+- ideally combine two modes: tap places in a simulated mouth based on a "character", and produce sounds based on a character.
+- maybe identify a character based on listening
