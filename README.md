@@ -949,3 +949,8 @@ look at these for templates:
 - make sure all listed projects run
 - fix buggy UI in older projects (eg, stress match)
 - Add new projects (eg, word slice and stress maze)
+
+## 237) simple tone visualizer
+- get options for how to represent tone
+- target something simple, like tones that are common to a wide group of tonal languages
+- make it very very simple, and only later gamify it
