@@ -180,13 +180,6 @@ levels
 - need a good readme for it
 - maybe gitpod is a better platform for this?
 
-
-
-## 18) Deploy static apps just from Netlify
-- SentenceFactory
-- AnRedd (once backend is dockerized)
-- AnTweet (frontend)
-
 ## 19) Audit all sites for security
 - Server-side enforcement of type/length for inputs
 (AnTweet, AnWriting, Convohelper, Github User Stats,
@@ -405,11 +398,6 @@ where:
 - possibly model after https://github.com/evykassirer/pink-trombone-bangbangcon
 - also check out https://github.com/zakaton/Pink-Trombone
 
-## 101) create micromaterial to practice DNS record stuff
-- understanding (select a particular record type from context)
-- application (write out the record type and value from context)
-- A/MX/AAAA/CNAME/ALIAS
-
 ## 102) create mobile app to connect images to core-meanings
 - based on the EFL Notes blog post "Funky Images"
 - one central character that does stuff based on how you swipe
@@ -455,9 +443,6 @@ look at these for templates:
 - use https://github.com/typescript-cheatsheets/react-typescript-cheatsheet/
 (basically `npx create-react-app --template typescript`)
 
-## 117) Make this into a webapp
-- https://github.com/cardsagainstcontainers
-- maybe also use typescript
 
 ## 118) Somehow contribute to a catalog of resources for Tech Ed (but ed in general)
 - https://hackeducation.com/
