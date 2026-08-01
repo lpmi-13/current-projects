@@ -944,3 +944,12 @@ look at these for templates:
 - maybe have quiz elements
 - ideally combine two modes: tap places in a simulated mouth based on a "character", and produce sounds based on a character.
 - maybe identify a character based on listening
+
+## 239) do factorio, but its a systems design problem
+- are you growing storage fast enough
+- is your computer fast enough
+- can you handle enough concurrent writes to the datastore
+- needs to be some cap/tradeoffs on allocating resources, or players could just max out everything
+- maybe the gate to getting kore resources is solving some envelopes math problems
+- is your caching geeod enough to handle traffic spikes
+- etc
