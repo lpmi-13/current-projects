@@ -953,3 +953,8 @@ look at these for templates:
 - maybe the gate to getting kore resources is solving some envelopes math problems
 - is your caching geeod enough to handle traffic spikes
 - etc
+
+## 240) worked examples of searching in kibana
+- generate some simple scenarios involving a slow search service
+- record headless beowser via playwright cli with an on-screen cursor to show what searching/filtering/drilling down looks like
+- stretch goal is an interactive websockets service that helps users do this themselves with various degrees of fading (interface of how the users interact with the system TBD)
