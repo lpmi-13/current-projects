@@ -663,11 +663,6 @@ look at these for templates:
 - a relevant action (maybe ask for clarification on this)
 - no unpredictable request parameters (maybe this just means not ignoring unexpected params)
 
-## 179) Micromaterial for fixing relative imports in python
-- just set up a simple app in gitpod that doesn't work because the imports are bad
-- then fix them
-- also do this for golang (separate repo)
-
 ## 180) Micromaterial to set and grep for correlation ID
 - set random UUID's in the HTTP request headers, and track a transaction across different services
 - set something like X-Correlation-Id
@@ -863,8 +858,6 @@ look at these for templates:
 - depending on how many times we intend for users to run CI, then measure, then change, then re-run...it might mean that they use up the build-minutes quite quickly, so keep an eye on that.
 - ...possibly turn this into a blog post with long-form explanation of stuff tried (especially since I'm probably gonna do this with Node instead of rails).
 
-## 220) Turn Linux Perf Analysis blog into micromaterial
-- https://netflixtechblog.com/linux-performance-analysis-in-60-000-milliseconds-accc10403c55
 
 ## 221) Simple Webapp to demo different "catch" behavior
 - it's confusing what we should put in the `catch` block of a javascript `try/catch` block, so we should have some examples available in source code (and show it in the UI), alongside the behavior that the user sees.
@@ -915,13 +908,6 @@ look at these for templates:
 - memory
 - It's possible we split this into 4 different labs, not sure, but this would be great to have built
 
-## 233) fruit ninja, but with syllable boundaries 
-- simple native app (could be web too I suppose)
-- words (probably AWL sourced, but see if more recent lists exist)
-- one word flies up and down in an arc and the user has to slice with their finger as to where the syllable boundary is
-- starts with 2 syllable, then maybe 3 and 4
-- also maybe word boundaries in written Thai is more useful
-
 ## 234) Put this through the learning materials generator
 - https://github.com/jwasham/coding-interview-university
 
@@ -929,11 +915,6 @@ look at these for templates:
 - most likely something with how it merges between charts, or chart inheritance
 - possibly also syntax
 - would be great if there's some broken/malformed/etc charts in an iximiuz playground and we need to fix them
-
-## 236) bring https://adamleskis.com/ up to date
-- make sure all listed projects run
-- fix buggy UI in older projects (eg, stress match)
-- Add new projects (eg, word slice and stress maze)
 
 ## 237) simple tone visualizer
 - get options for how to represent tone
@@ -956,5 +937,5 @@ look at these for templates:
 
 ## 240) worked examples of searching in kibana
 - generate some simple scenarios involving a slow search service
-- record headless beowser via playwright cli with an on-screen cursor to show what searching/filtering/drilling down looks like
+- record headless browser via playwright cli with an on-screen cursor to show what searching/filtering/drilling down looks like
 - stretch goal is an interactive websockets service that helps users do this themselves with various degrees of fading (interface of how the users interact with the system TBD)
