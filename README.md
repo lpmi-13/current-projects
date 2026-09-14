@@ -10,6 +10,7 @@
 
 - use https://github.com/coqui-ai/TTS to generate a bunch of minimal pairs via AI-generated voices.
 - in theory...we could also take transcripts that have a bunch of minimal pairs (this would basically be any large enough corpus or normal speech), pick out the minimal pairs, and then just change the voices, a la Drake AI songs.
+- we can generate a bunch via the voices on edge tts https://gist.github.com/BettyJJ/17cbaa1de96235a7f5773b8690a20462
 
 ## 6) React Native shaker App
 - need a proof of concept hello world made and installing on a
