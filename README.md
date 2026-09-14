@@ -6,29 +6,17 @@
 # don't have more than three things on the go at once
 ```
 
+## 240) worked examples of searching in kibana
+- generate some simple scenarios involving a slow search service
+- record headless browser via playwright cli with an on-screen cursor to show what searching/filtering/drilling down looks like
+- stretch goal is an interactive websockets service that helps users do this themselves with various degrees of fading (interface of how the users interact with the system TBD)
+
 ## 222) Generate minimal pairs with AI
 
 - use https://github.com/coqui-ai/TTS to generate a bunch of minimal pairs via AI-generated voices.
 - in theory...we could also take transcripts that have a bunch of minimal pairs (this would basically be any large enough corpus or normal speech), pick out the minimal pairs, and then just change the voices, a la Drake AI songs.
 - we can generate a bunch via the voices on edge tts https://gist.github.com/BettyJJ/17cbaa1de96235a7f5773b8690a20462
 
-## 6) React Native shaker App
-- need a proof of concept hello world made and installing on a
-local device
-https://medium.com/react-native-training/using-sensors-in-react-native-b194d0ad9167
-- need a list of words (2-syllable, alternating stress)
-- game with shaking based on the stress patterns on 10 of these words
-
-## 133) Turn pulse game concept into an app (or something)
-- incorporate the 120 scenarios from Hooper's old Pulse concept
-- would probably have to be a mobile app
-- paired with a bluetooth device that can sense heartrate
-
-
-## 205) remotehack global view
-- would be cool if every last Saturday of the month we have a global map of everywhere doing a remotehack
-- use cloudflare workers and Edge sqlite database to set state for which countries are having remotehacks
-- either put a link on remotehack.space or some other domain (eg. remotehack.global or something)
 
 ## 196) SLOConf submission
 - Run this all on a custom playground in labs.iximiuz.com
@@ -49,14 +37,20 @@ https://medium.com/react-native-training/using-sensors-in-react-native-b194d0ad9
 - Bump the memory for the ES container
 - (this is a bit of a stretch, but would be nice to show a transition from a pull-based architecture to an event-based push architecture...something like requests from rando devices want to get updates about things but the service they call has upstream dependencies it needs to wait for to aggregate things...transition from those upstream dependencies notifying (via whatever method) the downstream service of changes via some sort of message passing, and then it's able to respond more or less immediately to the calling device)
 
+---
+
+## 6) React Native shaker App
+- need a proof of concept hello world made and installing on a
+local device
+https://medium.com/react-native-training/using-sensors-in-react-native-b194d0ad9167
+- need a list of words (2-syllable, alternating stress)
+- game with shaking based on the stress patterns on 10 of these words
 
 ## 30) Turn Stress in the Speech Stream into a Python module to take in a word and output the reasons why it has a given pronunciation
 - key syllable
 - prefixes
 - affixes
 - origin of the root
-
----
 
 ## 148) set up a simple AWS environment with a three-tiered architecture and then break it
 - related to #140
@@ -513,6 +507,10 @@ look at these for templates:
 - maaaaaaybe could be grabbed in a github action and hardcoded?
 - a very far way off from this, but a similar-minded project that could benefit from authentic examples from real code
 
+## 133) Turn pulse game concept into an app (or something)
+- incorporate the 120 scenarios from Hooper's old Pulse concept
+- would probably have to be a mobile app
+- paired with a bluetooth device that can sense heartrate
 
 ## 135) Visualize crashing a DB with connections
 - when services scale up, if they're expecting to create a connection to a database, a massive scale up means a flood of new connections.
@@ -799,6 +797,10 @@ look at these for templates:
 - this could be done _without_ Auth0 necessarily, but their docs are super nice, so would be easy to get to grips with, and hopefully help cement some concepts.
 - a backend integration that deals with Auth0 something something...
 
+## 205) remotehack global view
+- would be cool if every last Saturday of the month we have a global map of everywhere doing a remotehack
+- use cloudflare workers and Edge sqlite database to set state for which countries are having remotehacks
+- either put a link on remotehack.space or some other domain (eg. remotehack.global or something)
 
 ## 208) Ideas for things that need more focused practice
 - creating a service mesh
@@ -935,8 +937,3 @@ look at these for templates:
 - maybe the gate to getting kore resources is solving some envelopes math problems
 - is your caching geeod enough to handle traffic spikes
 - etc
-
-## 240) worked examples of searching in kibana
-- generate some simple scenarios involving a slow search service
-- record headless browser via playwright cli with an on-screen cursor to show what searching/filtering/drilling down looks like
-- stretch goal is an interactive websockets service that helps users do this themselves with various degrees of fading (interface of how the users interact with the system TBD)
