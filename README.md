@@ -936,5 +936,6 @@ look at these for templates:
 - can you handle enough concurrent writes to the datastore
 - needs to be some cap/tradeoffs on allocating resources, or players could just max out everything
 - maybe the gate to getting kore resources is solving some envelopes math problems
-- is your caching geeod enough to handle traffic spikes
+- is your caching good enough to handle traffic spikes
 - etc
+- potentially design it like https://store.steampowered.com/app/4456190/Mighty_Tiny_Railways/
