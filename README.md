@@ -939,3 +939,10 @@ look at these for templates:
 - is your caching good enough to handle traffic spikes
 - etc
 - potentially design it like https://store.steampowered.com/app/4456190/Mighty_Tiny_Railways/
+
+## 241) Worked examples in Jaeger-UI
+- like the work in Kibana, and just revamp the entire cloud tracing lab to use that approach instead
+
+## 242) Worked example with MLFlow
+- same as above (https://github.com/mlflow/mlflow)
+- also see about presenting this at an ML, Data, or MLOps meetup
