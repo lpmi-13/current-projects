@@ -946,3 +946,10 @@ look at these for templates:
 ## 242) Worked example with MLFlow
 - same as above (https://github.com/mlflow/mlflow)
 - also see about presenting this at an ML, Data, or MLOps meetup
+
+## 243) Visualize autoscaling contention in EKS (HPA/KEDA vs Karpenter)
+- plan is in https://github.com/lpmi-13/plan-docs/blob/main/EKS_CONTENTION_PLAN.md
+- model it on forkscape: a library of production failure modes, each stepping through deterministic model states, with a one-change fix you can replay at the same step (and what the fix costs)
+- 3D scene of workload decks, a Pending "harbor", karpenter building nodes, and zone terraces where pods are packed by requests but glow by usage, plus a flat view with the same state
+- main failure modes where pod scaling and node scaling fight: NodePool limits, zone spread + insufficient capacity, subnet IP exhaustion, cold starts from zero with KEDA, consolidation thrash, preemption instead of waiting for a node, PDBs blocking node rotation, and requests that don't match usage
+- check the model's claims against real kube-scheduler/HPA/KEDA/karpenter on kind + KWOK in a labctl VM, and a short-lived EKS cluster for the AWS-specific timings and VPC CNI behavior
